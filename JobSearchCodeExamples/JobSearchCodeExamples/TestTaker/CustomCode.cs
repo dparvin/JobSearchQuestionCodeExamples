@@ -27,4 +27,19 @@ public static class CustomCode
         }
         return 0;
     }
+
+    /// <summary>
+    /// Versions the compare.
+    /// </summary>
+    /// <param name="version1">The version1.</param>
+    /// <param name="version2">The version2.</param>
+    /// <returns></returns>
+    public static int LongVersionCompare(string version1, string version2)
+    {
+        //Insert your code here 
+        var v1 = new LongVersion(version1);
+        var v2 = new LongVersion(version2);
+
+        return v1.CompareTo(v2);
+    }
 }
