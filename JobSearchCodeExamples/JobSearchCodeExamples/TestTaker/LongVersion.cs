@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace JobSearchCodeExamples.TestTaker
+﻿namespace JobSearchCodeExamples.TestTaker
 {
+    /// <summary>
+    /// A class that supports version numbers that are longer than the normal 
+    /// version object.
+    /// </summary>
+    /// <seealso cref="IComparable" />
     public class LongVersion : IComparable
     {
         /// <summary>
@@ -38,15 +37,8 @@ namespace JobSearchCodeExamples.TestTaker
         /// </returns>
         public override bool Equals(object obj)
         {
-            if (ReferenceEquals(this, obj))
-            {
-                return true;
-            }
-
-            if (obj is null)
-            {
-                return false;
-            }
+            if (ReferenceEquals(this, obj)) return true;
+            if (obj is null) return false;
 
             return CompareTo(obj) == 0;
         }
@@ -103,10 +95,7 @@ namespace JobSearchCodeExamples.TestTaker
         /// </returns>
         public static bool operator ==(LongVersion left, LongVersion right)
         {
-            if (left is null)
-            {
-                return right is null;
-            }
+            if (left is null) return right is null;
 
             return left.Equals(right);
         }
