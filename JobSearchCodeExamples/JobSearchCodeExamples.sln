@@ -7,9 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JobSearchCodeExamples", "Jo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JobSearchCodeExamples.Test", "JobSearchCodeExamples.Test\JobSearchCodeExamples.Test.csproj", "{995E7BE6-A63E-4E2A-BB5D-657F9FB7875C}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "JobSearchCodeExamples.VB", "JobSearchCodeExamples.VB\JobSearchCodeExamples.VB.vbproj", "{43C7F881-BAFA-4967-B7A5-0FF3A5BACD9C}"
+Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "JobSearchCodeExamples.VB", "JobSearchCodeExamples.VB\JobSearchCodeExamples.VB.vbproj", "{43C7F881-BAFA-4967-B7A5-0FF3A5BACD9C}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "JobSearchCodeExamples.VB.Test", "JobSearchCodeExamples.VB.Test\JobSearchCodeExamples.VB.Test.vbproj", "{A17641C5-E20B-4145-ACA8-6ACED2D2133C}"
+Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "JobSearchCodeExamples.VB.Test", "JobSearchCodeExamples.VB.Test\JobSearchCodeExamples.VB.Test.vbproj", "{A17641C5-E20B-4145-ACA8-6ACED2D2133C}"
+EndProject
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "JobSearchCodeExamples.FSharp", "JobSearchCodeExamples.FSharp\JobSearchCodeExamples.FSharp.fsproj", "{9E4646F9-53B3-4EDC-84F9-19896ABB8A41}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "JobSearchCodeExamples.FSharp.Test", "JobSearchCodeExamples.FSharp.Test\JobSearchCodeExamples.FSharp.Test.fsproj", "{44C2FA02-61AE-48BE-AAE0-9A6026C3D152}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{A17641C5-E20B-4145-ACA8-6ACED2D2133C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A17641C5-E20B-4145-ACA8-6ACED2D2133C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A17641C5-E20B-4145-ACA8-6ACED2D2133C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E4646F9-53B3-4EDC-84F9-19896ABB8A41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E4646F9-53B3-4EDC-84F9-19896ABB8A41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E4646F9-53B3-4EDC-84F9-19896ABB8A41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E4646F9-53B3-4EDC-84F9-19896ABB8A41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44C2FA02-61AE-48BE-AAE0-9A6026C3D152}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44C2FA02-61AE-48BE-AAE0-9A6026C3D152}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44C2FA02-61AE-48BE-AAE0-9A6026C3D152}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44C2FA02-61AE-48BE-AAE0-9A6026C3D152}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
