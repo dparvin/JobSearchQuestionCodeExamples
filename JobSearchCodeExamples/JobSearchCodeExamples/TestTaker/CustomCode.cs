@@ -12,7 +12,6 @@ public static class CustomCode
     /// <returns></returns>
     public static int VersionCompare(string version1, string version2)
     {
-        //Insert your code here 
         string[] v1 = version1.Split('.');
         string[] v2 = version2.Split('.');
         int longest = v1.Length < v2.Length ? v2.Length : v1.Length;
@@ -20,8 +19,8 @@ public static class CustomCode
         {
             int item1 = 0;
             int item2 = 0;
-            if (i < v1.Length) item1 = int.Parse(v1[i], System.Globalization.CultureInfo.InvariantCulture);
-            if (i < v2.Length) item2 = int.Parse(v2[i], System.Globalization.CultureInfo.InvariantCulture);
+            if (i < v1.Length) item1 = int.Parse(v1[i], CultureInfo.InvariantCulture);
+            if (i < v2.Length) item2 = int.Parse(v2[i], CultureInfo.InvariantCulture);
             int result = item1 < item2 ? -1 : item1 > item2 ? 1 : 0;
             if (result != 0) return result;
         }
@@ -36,7 +35,6 @@ public static class CustomCode
     /// <returns></returns>
     public static int LongVersionCompare(string version1, string version2)
     {
-        //Insert your code here 
         var v1 = new LongVersion(version1);
         var v2 = new LongVersion(version2);
 

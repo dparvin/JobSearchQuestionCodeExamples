@@ -17,7 +17,7 @@ public class LongVersion : IComparable
         Parts = new int[parts.Length];
         int i = 0;
         foreach (string part in parts)
-            Parts[i++] = int.Parse(part, System.Globalization.CultureInfo.InvariantCulture);
+            Parts[i++] = int.Parse(part, CultureInfo.InvariantCulture);
     }
 
     /// <summary>
