@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Collections.Generic;
-
-namespace JobSearchCodeExamples.TestTaker
+﻿namespace JobSearchCodeExamples.TestTaker
 {
     /// <summary>
-    /// 
+    /// Class for doing things with linked lists
     /// </summary>
     public static class LinkedLists
     {
