@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="TestTaker\EmployeeCoverageTest.fs" />
     <Compile Include="TestTaker\LinkedListTest.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>

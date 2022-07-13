@@ -10,11 +10,11 @@
 
         Dim combined As Integer() = New Integer(employees.Length - 1) {}
 
-        For i = 0 To employees.Length - 1
+        For i As Integer = 0 To employees.Length - 1
             Dim years = employees(i).Split("-")
             Dim startDate = Integer.Parse(years(0))
             Dim endDate = Integer.Parse(years(1))
-            For j = i + 1 To employees.Length - 1
+            For j As Integer = i + 1 To employees.Length - 1
                 Dim years2 = employees(j).Split("-")
                 Dim start = Integer.Parse(years2(0))
                 Dim [end] = Integer.Parse(years2(1))
@@ -28,7 +28,7 @@
             Next
         Next
         Dim maxValue = 0
-        For i = 0 To employees.Length - 1
+        For i As Integer = 0 To employees.Length - 1
             If combined(i) > maxValue Then maxValue = combined(i)
         Next
 
