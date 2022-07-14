@@ -6,6 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="TestTaker\LongVersion.fs" />
+    <Compile Include="TestTaker\CustomCode.fs" />
     <Compile Include="TestTaker\EmployeeCoverage.fs" />
     <Compile Include="TestTaker\LinkedList.fs" />
   </ItemGroup>
