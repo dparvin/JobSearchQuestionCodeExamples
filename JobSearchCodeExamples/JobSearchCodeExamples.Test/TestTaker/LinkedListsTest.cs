@@ -20,7 +20,7 @@ namespace JobSearchCodeExamples.Test.TestTaker
             list.AddLast("4");
             list.AddLast("5");
             var result = LinkedLists.ReverseList(list);
-            Assert.Equal(list.Last?.Value, result.First?.Value);
+            Assert.Equal(list.Last?.Value, result?.First?.Value);
         }
 
         /// <summary>
