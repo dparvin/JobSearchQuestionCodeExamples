@@ -112,11 +112,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="CustomCode.h" />
+    <ClInclude Include="EmployeeCoverage.h" />
     <ClInclude Include="LinkedLists.h" />
     <ClInclude Include="LongVersion.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CustomCode.cpp" />
+    <ClCompile Include="EmployeeCoverage.cpp" />
     <ClCompile Include="LinkedLists.cpp" />
     <ClCompile Include="LongVersion.cpp" />
   </ItemGroup>
