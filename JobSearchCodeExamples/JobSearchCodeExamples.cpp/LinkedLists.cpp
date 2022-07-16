@@ -1,5 +1,10 @@
 #include "LinkedLists.h"
 
+/// <summary>
+/// Reverses the list.
+/// </summary>
+/// <param name="list">The list.</param>
+/// <returns></returns>
 generic<typename T>
 LinkedList<T>^ LinkedLists::ReverseList(LinkedList<T>^ list)
 {
