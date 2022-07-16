@@ -16,4 +16,26 @@ public class LinkedListsTest
         var result = LinkedLists.ReverseList(list);
         Assert.Equal(list.Last?.Value, result?.First?.Value);
     }
+
+    /// <summary>
+    /// Tests the linked list reverse.
+    /// </summary>
+    [Fact]
+    public void TestLinkedListNull()
+    {
+        LinkedList<string>? list = null;
+        var result = LinkedLists.ReverseList(list);
+        Assert.Null(result);
+    }
+
+    /// <summary>
+    /// Tests the linked list reverse.
+    /// </summary>
+    [Fact]
+    public void TestLinkedListEmpty()
+    {
+        LinkedList<string>? list = new();
+        var result = LinkedLists.ReverseList(list);
+        Assert.Empty(result);
+    }
 }
