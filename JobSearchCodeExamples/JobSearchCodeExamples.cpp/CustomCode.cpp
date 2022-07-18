@@ -37,3 +37,13 @@ int CustomCode::LongVersionCompare(String^ version1, String^ version2)
 
 	return v1->CompareTo(v2);
 }
+
+/// <summary>
+/// Finds the missing entry.
+/// </summary>
+/// <param name="values">The values.</param>
+/// <returns></returns>
+int CustomCode::FindMissingEntry(array<int>^ values)
+{
+	return ((values->Length + 1) * (values->Length + 2) / 2) - Enumerable::Sum(values);
+}

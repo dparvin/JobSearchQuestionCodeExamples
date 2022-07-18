@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace JobSearchCodeExamples.cpp.Test.TestTaker
+﻿namespace JobSearchCodeExamples.cpp.Test.TestTaker
 {
     public class EmployeeCoverageTest
     {

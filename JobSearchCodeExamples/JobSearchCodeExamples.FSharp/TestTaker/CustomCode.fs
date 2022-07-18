@@ -1,6 +1,7 @@
 ﻿namespace JobSearchCodeExamples.FSharp.TestTaker
 
 open System
+open System.Linq
 
 module CustomCode =
     let VersionCompare (version1 : string, version2 : string) : int =
@@ -21,3 +22,6 @@ module CustomCode =
         let v1 : LongVersion = new LongVersion(version1)
         let v2 : LongVersion = new LongVersion(version2)
         (v1 :> IComparable).CompareTo(v2)
+
+    let FindMissingEntry(values : int array) =
+        ((values.Length + 1) * (values.Length + 2) / 2) - values.Sum()

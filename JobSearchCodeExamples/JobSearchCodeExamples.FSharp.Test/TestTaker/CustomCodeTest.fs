@@ -1,5 +1,7 @@
 ﻿namespace JobSearchCodeExamples.FSharp.Test.TestTaker
 
+open System
+
 module CustomCodeTest =
     open Xunit
     open JobSearchCodeExamples.FSharp.TestTaker
@@ -33,3 +35,20 @@ module CustomCodeTest =
         let result = CustomCode.LongVersionCompare(version1, version2)
         Assert.Equal(expectedResult, result)
 
+    [<Fact>]
+    let FindMissingNumber() =
+        // Arrange
+        let expectedMax : int = 100
+        let a : int array = Array.zeroCreate (expectedMax - 1)
+        let missing : int = (new Random()).Next(expectedMax) + 1
+        let mutable i = 1
+        for j = 0 to a.Length - 1 do
+            if i = missing then i <- i + 1
+            a[j] <- i
+            i <- i + 1 
+
+        // Act
+        let FoundMissing : int = CustomCode.FindMissingEntry(a)
+
+        // Assert
+        Assert.Equal(missing, FoundMissing)

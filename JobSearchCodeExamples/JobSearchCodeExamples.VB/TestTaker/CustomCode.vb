@@ -39,12 +39,31 @@ Namespace JobSeearchCodeExamples.VB.TestTaker
         ''' <paramname="version1">The version1.</param>
         ''' <paramname="version2">The version2.</param>
         ''' <returns></returns>
-        Public Shared Function LongVersionCompare(ByVal version1 As String, ByVal version2 As String) As Integer
-            'Insert your code here 
+        Public Shared Function LongVersionCompare(
+                ByVal version1 As String,
+                ByVal version2 As String) As Integer
+
             Dim v1 = New LongVersion(version1)
             Dim v2 = New LongVersion(version2)
 
             Return v1.CompareTo(v2)
+
+        End Function
+
+        ''' <summary>
+        ''' Finds the missing entry.
+        ''' </summary>
+        ''' <paramname="values">The array of integers that is missing an item.</param>
+        ''' <returns></returns>
+        ''' <remarks>
+        ''' This function only works when there is only one item missing in the array.  If
+        ''' there are more than one then the return will be a sum of the two missing items.
+        ''' </remarks>
+        Public Shared Function FindMissingEntry(
+                ByVal values As Integer()) As Integer
+
+            Return (values.Length + 1) * (values.Length + 2) / 2 - values.Sum()
+
         End Function
     End Class
 

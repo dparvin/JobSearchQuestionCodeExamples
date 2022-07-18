@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace JobSearchCodeExamples.Test.TestTaker;
+﻿namespace JobSearchCodeExamples.Test.TestTaker;
 
 /// <summary>
 /// Tests for Employee Coverage
