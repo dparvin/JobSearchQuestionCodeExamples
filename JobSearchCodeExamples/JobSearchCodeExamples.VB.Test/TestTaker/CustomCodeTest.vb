@@ -1,5 +1,4 @@
 Imports JobSearchCodeExamples.VB.JobSeearchCodeExamples.VB.TestTaker
-Imports JobSearchCodeExamples.VB.TestTaker
 Imports Xunit
 
 Namespace JobSearchCodeExamples.VB.Test
