@@ -17,6 +17,8 @@ jobs:
       uses: actions/setup-dotnet@v2
       with:
         dotnet-version: 6.0.x
+    - name: Setup C++ to build correctly
+      run: setx VCTargetsPath "C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\v140" /M
     - name: Restore dependencies
       run: dotnet restore ./JobSearchCodeExamples/JobSearchCodeExamples.sln --verbosity detailed
     - name: Build
