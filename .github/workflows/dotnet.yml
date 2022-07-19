@@ -17,11 +17,13 @@ jobs:
       uses: actions/setup-dotnet@v2
       with:
         dotnet-version: 6.0.x
-    - name: Setup C++ environment
-      uses: kurocha/setup-cpp@v1
+    - name: Add msbuild to PATH
+      uses: microsoft/setup-msbuild@v1.1
+
     - name: Restore dependencies
       run: dotnet restore ./JobSearchCodeExamples/JobSearchCodeExamples.sln --verbosity detailed
     - name: Build
-      run: dotnet build ./JobSearchCodeExamples/JobSearchCodeExamples.sln --no-restore
+      run: msbuild ./JobSearchCodeExamples/JobSearchCodeExamples.sln -t:build -verbosity:diag -property:Configuration=Debug
+
     - name: Test
       run: dotnet test ./JobSearchCodeExamples/JobSearchCodeExamples.sln --no-build --verbosity normal
