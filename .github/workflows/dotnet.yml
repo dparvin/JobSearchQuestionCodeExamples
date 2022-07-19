@@ -1,4 +1,4 @@
-name: .NET
+name: Build and test the solution
 
 on:
   push:
@@ -21,9 +21,9 @@ jobs:
       uses: microsoft/setup-msbuild@v1.1
 
     - name: Restore dependencies
-      run: dotnet restore ./JobSearchCodeExamples/JobSearchCodeExamples.sln --verbosity detailed
+      run: dotnet restore ${{ github.workspace }}\JobSearchCodeExamples\JobSearchCodeExamples.sln --verbosity detailed
     - name: Build
-      run: msbuild ./JobSearchCodeExamples/JobSearchCodeExamples.sln -t:build -verbosity:diag -property:Configuration=Debug
+      run: msbuild ${{ github.workspace }}\JobSearchCodeExamples\JobSearchCodeExamples.sln -t:build -property:Configuration=Debug
 
     - name: Test
-      run: dotnet test ./JobSearchCodeExamples/JobSearchCodeExamples.sln --no-build --verbosity normal
+      run: vstest.console.exe ${{ github.workspace }}\JobSearchCodeExamples\**\*.test.dll /ResultsDirectory:${{ github.workspace }}\TestResults
