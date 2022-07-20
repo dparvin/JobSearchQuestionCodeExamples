@@ -32,4 +32,4 @@ jobs:
       run: msbuild ${{ github.workspace }}\JobSearchCodeExamples\JobSearchCodeExamples.sln -t:build -p:Configuration=Debug -p:Platform=x64
 
     - name: Test
-      run: vstest.console.exe ${{ github.workspace }}\JobSearchCodeExamples\**\*.test.dll /ResultsDirectory:${{ github.workspace }}\TestResults /InIsolation /Platform:x64 /Framework:.NETFramework,Version=v6.0 /parallel /Enablecodecoverage /Logger:trx /TestAdapterPath:"${{ USERPROFILE }}\.nuget\packages\"
+      run: vstest.console.exe ${{ github.workspace }}\JobSearchCodeExamples\**\*.test.dll /ResultsDirectory:${{ github.workspace }}\TestResults /InIsolation /Platform:x64 /Framework:.NETFramework,Version=v6.0 /parallel /Enablecodecoverage /Logger:trx /TestAdapterPath:"$USERPROFILE\.nuget\packages\"
