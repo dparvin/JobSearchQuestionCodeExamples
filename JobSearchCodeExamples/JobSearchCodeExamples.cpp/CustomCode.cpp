@@ -32,8 +32,12 @@ int CustomCode::VersionCompare(String^ version1, String^ version2)
 /// <returns></returns>
 int CustomCode::LongVersionCompare(String^ version1, String^ version2)
 {
-	LongVersion^ v1 = gcnew LongVersion(version1);
-	LongVersion^ v2 = gcnew LongVersion(version2);
+	LongVersion^ v1;
+	LongVersion^ v2;
+	if (!String::IsNullOrEmpty(version1)) v1 = gcnew LongVersion(version1);
+	if (!String::IsNullOrEmpty(version2)) v2 = gcnew LongVersion(version2);
+
+	if (ReferenceEquals(v1, nullptr)) return ReferenceEquals(v2, nullptr) ? 0 : 1;
 
 	return v1->CompareTo(v2);
 }
@@ -46,4 +50,84 @@ int CustomCode::LongVersionCompare(String^ version1, String^ version2)
 int CustomCode::FindMissingEntry(array<int>^ values)
 {
 	return ((values->Length + 1) * (values->Length + 2) / 2) - Enumerable::Sum(values);
+}
+
+/// <summary>
+/// Longs the version equal.
+/// </summary>
+/// <param name="version1">The version1.</param>
+/// <param name="version2">The version2.</param>
+/// <returns></returns>
+bool CustomCode::LongVersionEqual(String^ version1, String^ version2)
+{
+	LongVersion^ v1;
+	LongVersion^ v2;
+	if (!String::IsNullOrEmpty(version1)) v1 = gcnew LongVersion(version1);
+	if (!String::IsNullOrEmpty(version2)) v2 = gcnew LongVersion(version2);
+
+	return v1 == v2;
+}
+
+/// <summary>
+/// Longs the version less.
+/// </summary>
+/// <param name="version1">The version1.</param>
+/// <param name="version2">The version2.</param>
+/// <returns></returns>
+bool CustomCode::LongVersionLess(String^ version1, String^ version2)
+{
+	LongVersion^ v1;
+	LongVersion^ v2;
+	if (!String::IsNullOrEmpty(version1)) v1 = gcnew LongVersion(version1);
+	if (!String::IsNullOrEmpty(version2)) v2 = gcnew LongVersion(version2);
+
+	return v1 < v2;
+}
+
+/// <summary>
+/// Longs the version less equal.
+/// </summary>
+/// <param name="version1">The version1.</param>
+/// <param name="version2">The version2.</param>
+/// <returns></returns>
+bool CustomCode::LongVersionLessEqual(String^ version1, String^ version2)
+{
+	LongVersion^ v1;
+	LongVersion^ v2;
+	if (!String::IsNullOrEmpty(version1)) v1 = gcnew LongVersion(version1);
+	if (!String::IsNullOrEmpty(version2)) v2 = gcnew LongVersion(version2);
+
+	return v1 <= v2;
+}
+
+/// <summary>
+/// Longs the version greater.
+/// </summary>
+/// <param name="version1">The version1.</param>
+/// <param name="version2">The version2.</param>
+/// <returns></returns>
+bool CustomCode::LongVersionGreater(String^ version1, String^ version2)
+{
+	LongVersion^ v1;
+	LongVersion^ v2;
+	if (!String::IsNullOrEmpty(version1)) v1 = gcnew LongVersion(version1);
+	if (!String::IsNullOrEmpty(version2)) v2 = gcnew LongVersion(version2);
+
+	return v1 > v2;
+}
+
+/// <summary>
+/// Longs the version greater equal.
+/// </summary>
+/// <param name="version1">The version1.</param>
+/// <param name="version2">The version2.</param>
+/// <returns></returns>
+bool CustomCode::LongVersionGreaterEqual(String^ version1, String^ version2)
+{
+	LongVersion^ v1;
+	LongVersion^ v2;
+	if (!String::IsNullOrEmpty(version1)) v1 = gcnew LongVersion(version1);
+	if (!String::IsNullOrEmpty(version2)) v2 = gcnew LongVersion(version2);
+
+	return v1 >= v2;
 }

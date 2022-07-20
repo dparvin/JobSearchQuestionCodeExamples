@@ -31,6 +31,9 @@
         /// <param name="version2">The version2.</param>
         /// <param name="ExpectedResult">The expected result.</param>
         [Theory]
+        [InlineData("", "", 0)]
+        [InlineData("", "2.0", 1)]
+        [InlineData("2", "", -1)]
         [InlineData("2", "2.0", 0)]
         [InlineData("2", "2.0.0", 0)]
         [InlineData("2", "2.0.0.0", 0)]
@@ -80,6 +83,101 @@
 
             // Assert
             Assert.Equal(missing, FoundMissing);
+        }
+
+        [Theory]
+        [InlineData("", "", true)]
+        [InlineData("", "2.0", false)]
+        [InlineData("2", "", false)]
+        [InlineData("2", "2.0", true)]
+        [InlineData("2", "2.0.0", true)]
+        [InlineData("2", "2.0.0.0", true)]
+        [InlineData("2", "2.0.0.0.0", true)]
+        [InlineData("2", "2.0.0.0.1", false)]
+        [InlineData("2", "2.1", false)]
+        [InlineData("2.1.0", "2.0.1", false)]
+        [InlineData("2.10.0.1", "2.1.0.10", false)]
+        [InlineData("2.0.1", "1.2000.1", false)]
+        public void LongVersionEqual(string version1, string version2, bool ExpectedResult)
+        {
+            var result = CustomCode.LongVersionEqual(version1, version2);
+            Assert.Equal(ExpectedResult, result);
+        }
+
+        [Theory]
+        [InlineData("", "", false)]
+        [InlineData("", "2.0", true)]
+        [InlineData("2", "", true)]
+        [InlineData("2", "2.0", false)]
+        [InlineData("2", "2.0.0", false)]
+        [InlineData("2", "2.0.0.0", false)]
+        [InlineData("2", "2.0.0.0.0", false)]
+        [InlineData("2", "2.0.0.0.1", true)]
+        [InlineData("2", "2.1", true)]
+        [InlineData("2.1.0", "2.0.1", false)]
+        [InlineData("2.10.0.1", "2.1.0.10", false)]
+        [InlineData("2.0.1", "1.2000.1", false)]
+        public void LongVersionLess(string version1, string version2, bool ExpectedResult)
+        {
+            var result = CustomCode.LongVersionLess(version1, version2);
+            Assert.Equal(ExpectedResult, result);
+        }
+
+        [Theory]
+        [InlineData("", "", true)]
+        [InlineData("", "2.0", true)]
+        [InlineData("2", "", true)]
+        [InlineData("2", "2.0", true)]
+        [InlineData("2", "2.0.0", true)]
+        [InlineData("2", "2.0.0.0", true)]
+        [InlineData("2", "2.0.0.0.0", true)]
+        [InlineData("2", "2.0.0.0.1", true)]
+        [InlineData("2", "2.1", true)]
+        [InlineData("2.1.0", "2.0.1", false)]
+        [InlineData("2.10.0.1", "2.1.0.10", false)]
+        [InlineData("2.0.1", "1.2000.1", false)]
+        public void LongVersionLessEqual(string version1, string version2, bool ExpectedResult)
+        {
+            var result = CustomCode.LongVersionLessEqual(version1, version2);
+            Assert.Equal(ExpectedResult, result);
+        }
+
+        [Theory]
+        [InlineData("", "", false)]
+        [InlineData("", "2.0", true)]
+        [InlineData("2", "", false)]
+        [InlineData("2", "2.0", false)]
+        [InlineData("2", "2.0.0", false)]
+        [InlineData("2", "2.0.0.0", false)]
+        [InlineData("2", "2.0.0.0.0", false)]
+        [InlineData("2", "2.0.0.0.1", false)]
+        [InlineData("2", "2.1", false)]
+        [InlineData("2.1.0", "2.0.1", true)]
+        [InlineData("2.10.0.1", "2.1.0.10", true)]
+        [InlineData("2.0.1", "1.2000.1", true)]
+        public void LongVersionGreater(string version1, string version2, bool ExpectedResult)
+        {
+            var result = CustomCode.LongVersionGreater(version1, version2);
+            Assert.Equal(ExpectedResult, result);
+        }
+
+        [Theory]
+        [InlineData("", "", true)]
+        [InlineData("", "2.0", false)]
+        [InlineData("2", "", false)]
+        [InlineData("2", "2.0", true)]
+        [InlineData("2", "2.0.0", true)]
+        [InlineData("2", "2.0.0.0", true)]
+        [InlineData("2", "2.0.0.0.0", true)]
+        [InlineData("2", "2.0.0.0.1", false)]
+        [InlineData("2", "2.1", false)]
+        [InlineData("2.1.0", "2.0.1", true)]
+        [InlineData("2.10.0.1", "2.1.0.10", true)]
+        [InlineData("2.0.1", "1.2000.1", true)]
+        public void LongVersionGreaterEqual(string version1, string version2, bool ExpectedResult)
+        {
+            var result = CustomCode.LongVersionGreaterEqual(version1, version2);
+            Assert.Equal(ExpectedResult, result);
         }
     }
 }

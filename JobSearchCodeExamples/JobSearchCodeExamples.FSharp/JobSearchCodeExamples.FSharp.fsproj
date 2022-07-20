@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <Platforms>AnyCPU;x64;x86;ARM32;ARM64</Platforms>
   </PropertyGroup>
 
   <ItemGroup>
