@@ -33,4 +33,4 @@ jobs:
 
     - name: Test
  ##     run: vstest.console.exe ${{ github.workspace }}\JobSearchCodeExamples\Build\**\*.test.dll /ResultsDirectory:${{ github.workspace }}\TestResults /InIsolation /Platform:x64 /Framework:.NETFramework,Version=v6.0 /parallel /Enablecodecoverage /Logger:trx /TestAdapterPath:"C:\Users\runneradmin\.nuget\packages\"
-      run: dotnet test
+      run: dotnet test ${{ github.workspace }}\JobSearchCodeExamples\JobSearchCodeExamples.sln --verbosity detailed
