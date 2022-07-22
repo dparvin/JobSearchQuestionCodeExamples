@@ -31,6 +31,14 @@ jobs:
     - name: Build
       run: msbuild ${{ github.workspace }}\JobSearchCodeExamples\JobSearchCodeExamples.sln -t:build -p:Configuration=Debug -p:Platform=x64
 
-    - name: Test
+    - name: Test JobSearchCodeExamples.Test
  ##     run: vstest.console.exe ${{ github.workspace }}\JobSearchCodeExamples\Build\**\*.test.dll /ResultsDirectory:${{ github.workspace }}\TestResults /InIsolation /Platform:x64 /Framework:.NETFramework,Version=v6.0 /parallel /Enablecodecoverage /Logger:trx /TestAdapterPath:"C:\Users\runneradmin\.nuget\packages\"
-      run: dotnet test ${{ github.workspace }}\JobSearchCodeExamples\JobSearchCodeExamples.sln --verbosity detailed --results-directory ${{ github.workspace }}\TestResults --no-build
+      run: dotnet test ${{ github.workspace }}\JobSearchCodeExamples\JobSearchCodeExamples.Test\JobSearchCodeExamples.Test.csproj --verbosity detailed --results-directory ${{ github.workspace }}\TestResults --no-build
+
+    - name: Test JobSearchCodeExamples.VB.Test
+ ##     run: vstest.console.exe ${{ github.workspace }}\JobSearchCodeExamples\Build\**\*.test.dll /ResultsDirectory:${{ github.workspace }}\TestResults /InIsolation /Platform:x64 /Framework:.NETFramework,Version=v6.0 /parallel /Enablecodecoverage /Logger:trx /TestAdapterPath:"C:\Users\runneradmin\.nuget\packages\"
+      run: dotnet test ${{ github.workspace }}\JobSearchCodeExamples\JobSearchCodeExamples.VB.Test\JobSearchCodeExamples.VB.Test.vbproj --verbosity detailed --results-directory ${{ github.workspace }}\TestResults --no-build
+
+    - name: Test JobSearchCodeExamples.FSharp.Test
+ ##     run: vstest.console.exe ${{ github.workspace }}\JobSearchCodeExamples\Build\**\*.test.dll /ResultsDirectory:${{ github.workspace }}\TestResults /InIsolation /Platform:x64 /Framework:.NETFramework,Version=v6.0 /parallel /Enablecodecoverage /Logger:trx /TestAdapterPath:"C:\Users\runneradmin\.nuget\packages\"
+      run: dotnet test ${{ github.workspace }}\JobSearchCodeExamples\JobSearchCodeExamples.VB.Test\JobSearchCodeExamples.FSharp.Test.fsproj --verbosity detailed --results-directory ${{ github.workspace }}\TestResults --no-build
