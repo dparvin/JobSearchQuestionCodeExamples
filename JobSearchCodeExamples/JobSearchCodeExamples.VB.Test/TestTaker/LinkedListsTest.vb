@@ -1,4 +1,5 @@
-﻿Imports Xunit
+﻿Imports JobSearchCodeExamples.VB.TestTaker
+Imports Xunit
 
 Public Class LinkedListsTest
 

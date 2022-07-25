@@ -17,14 +17,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="..\ExecCodeCoverage.ps1" Link="ExecCodeCoverage.ps1" />
     <Compile Include="TestTaker\CustomCodeTest.fs" />
     <Compile Include="TestTaker\EmployeeCoverageTest.fs" />
     <Compile Include="TestTaker\LinkedListTest.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 
+  <ItemGroup />
+
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.2.0" />
+    <PackageReference Include="ReportGenerator" Version="5.1.9" />
     <PackageReference Include="Verify.Xunit" Version="17.2.1" />
     <PackageReference Include="xunit" Version="2.4.1" />
     <PackageReference Include="xunit.analyzers" Version="0.10.0" />

@@ -19,9 +19,53 @@ module CustomCode =
         result
 
     let LongVersionCompare (version1 : string, version2 : string) : int =
-        let v1 : LongVersion = new LongVersion(version1)
-        let v2 : LongVersion = new LongVersion(version2)
-        (v1 :> IComparable).CompareTo(v2)
+        let mutable v1 : LongVersion = null
+        let mutable v2 : LongVersion = null
+        if not (String.IsNullOrEmpty(version1)) then v1 <- new LongVersion(version1) 
+        if not (String.IsNullOrEmpty(version2)) then v2 <- new LongVersion(version2)
+        if isNull v1 then 
+            if isNull v2 then 
+                0
+            else
+                -1
+        else
+            (v1 :> IComparable).CompareTo(v2)
 
     let FindMissingEntry(values : int array) =
         ((values.Length + 1) * (values.Length + 2) / 2) - values.Sum()
+
+    let LongVersionEqual(version1 : string, version2 : string) : bool =
+        let mutable v1 : LongVersion = null
+        let mutable v2 : LongVersion = null
+        if not (String.IsNullOrEmpty(version1)) then v1 <- new LongVersion(version1) 
+        if not (String.IsNullOrEmpty(version2)) then v2 <- new LongVersion(version2) 
+        v1 = v2
+
+    let LongVersionGreater(version1 : string, version2 : string) : bool =
+        let mutable v1 : LongVersion = null
+        let mutable v2 : LongVersion = null
+        if not (String.IsNullOrEmpty(version1)) then v1 <- new LongVersion(version1) 
+        if not (String.IsNullOrEmpty(version2)) then v2 <- new LongVersion(version2) 
+        v1 > v2
+
+    let LongVersionGreaterEqual(version1 : string, version2 : string) : bool =
+        let mutable v1 : LongVersion = null
+        let mutable v2 : LongVersion = null
+        if not (String.IsNullOrEmpty(version1)) then v1 <- new LongVersion(version1) 
+        if not (String.IsNullOrEmpty(version2)) then v2 <- new LongVersion(version2) 
+        v1 >= v2
+
+    let LongVersionLess(version1 : string, version2 : string) : bool =
+        let mutable v1 : LongVersion = null
+        let mutable v2 : LongVersion = null
+        if not (String.IsNullOrEmpty(version1)) then v1 <- new LongVersion(version1) 
+        if not (String.IsNullOrEmpty(version2)) then v2 <- new LongVersion(version2) 
+        v1 < v2
+
+    let LongVersionLessEqual(version1 : string, version2 : string) : bool =
+        let mutable v1 : LongVersion = null
+        let mutable v2 : LongVersion = null
+        if not (String.IsNullOrEmpty(version1)) then v1 <- new LongVersion(version1) 
+        if not (String.IsNullOrEmpty(version2)) then v2 <- new LongVersion(version2) 
+        v1 <= v2
+

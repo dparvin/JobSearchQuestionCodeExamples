@@ -35,11 +35,8 @@ public class LongVersion : IComparable
     /// <returns>
     ///   <c>true</c> if the specified <see cref="object" /> is equal to this instance; otherwise, <c>false</c>.
     /// </returns>
-#pragma warning disable CS8765 // Nullability of type of parameter doesn't match overridden member (possibly because of nullability attributes).
-    public override bool Equals(object obj)
-#pragma warning restore CS8765 // Nullability of type of parameter doesn't match overridden member (possibly because of nullability attributes).
+    public override bool Equals(object? obj)
     {
-        if (ReferenceEquals(this, obj)) return true;
         if (obj is null) return false;
 
         return CompareTo(obj) == 0;
@@ -72,15 +69,15 @@ public class LongVersion : IComparable
     public int CompareTo(object? obj)
     {
         if (ReferenceEquals(this, obj)) return 0;
-        if (obj is null) return 0;
         LongVersion? other = obj as LongVersion;
-        int? longest = Parts.Length < other?.Parts.Length ? other?.Parts.Length : Parts.Length;
+        if (other is null) return 1;
+        int longest = Parts.Length < other.Parts.Length ? other.Parts.Length : Parts.Length;
         for (int i = 0; i < longest; i++)
         {
             int item1 = 0;
             int item2 = 0;
             if (i < Parts.Length) item1 = Parts[i];
-            if (i < other?.Parts.Length) item2 = other.Parts[i];
+            if (i < other.Parts.Length) item2 = other.Parts[i];
             int result = item1 < item2 ? -1 : item1 > item2 ? 1 : 0;
             if (result != 0) return result;
         }
@@ -95,7 +92,7 @@ public class LongVersion : IComparable
     /// <returns>
     /// The result of the operator.
     /// </returns>
-    public static bool operator ==(LongVersion left, LongVersion right)
+    public static bool operator ==(LongVersion? left, LongVersion? right)
     {
         if (left is null) return right is null;
 
@@ -110,7 +107,7 @@ public class LongVersion : IComparable
     /// <returns>
     /// The result of the operator.
     /// </returns>
-    public static bool operator !=(LongVersion left, LongVersion right)
+    public static bool operator !=(LongVersion? left, LongVersion? right)
     {
         return !(left == right);
     }
@@ -123,9 +120,10 @@ public class LongVersion : IComparable
     /// <returns>
     /// The result of the operator.
     /// </returns>
-    public static bool operator <(LongVersion left, LongVersion right)
+    public static bool operator <(LongVersion? left, LongVersion? right)
     {
-        return left is null ? right is not null : left.CompareTo(right) < 0;
+        if (left is null) return !(right is null);
+        return left.CompareTo(right) < 0;
     }
 
     /// <summary>
@@ -136,9 +134,10 @@ public class LongVersion : IComparable
     /// <returns>
     /// The result of the operator.
     /// </returns>
-    public static bool operator <=(LongVersion left, LongVersion right)
+    public static bool operator <=(LongVersion? left, LongVersion? right)
     {
-        return left is null || left.CompareTo(right) <= 0;
+        if (left == null) return true;
+        return left.CompareTo(right) <= 0;
     }
 
     /// <summary>
@@ -149,9 +148,10 @@ public class LongVersion : IComparable
     /// <returns>
     /// The result of the operator.
     /// </returns>
-    public static bool operator >(LongVersion left, LongVersion right)
+    public static bool operator >(LongVersion? left, LongVersion? right)
     {
-        return left is not null && left.CompareTo(right) > 0;
+        if (left is null) return false;
+        return left.CompareTo(right) > 0;
     }
 
     /// <summary>
@@ -162,9 +162,10 @@ public class LongVersion : IComparable
     /// <returns>
     /// The result of the operator.
     /// </returns>
-    public static bool operator >=(LongVersion left, LongVersion right)
+    public static bool operator >=(LongVersion? left, LongVersion? right)
     {
-        return left is null ? right is null : left.CompareTo(right) >= 0;
+        if (left is null) return right is null;
+        return left.CompareTo(right) >= 0;
     }
 
     /// <summary>

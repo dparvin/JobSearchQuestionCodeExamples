@@ -12,6 +12,9 @@ public:
 	static int LongVersionCompare(String^ version1, String^ version2);
 	static int FindMissingEntry(array<int>^ values);
 	static bool LongVersionEqual(String^ version1, String^ version2);
+	static bool LongVersionEqualSame(String^ version);
+	static int LongVersionGetHashCode();
+	static bool LongVersionNotEqual(String^ version1, String^ version2);
 	static bool LongVersionLess(String^ version1, String^ version2);
 	static bool LongVersionLessEqual(String^ version1, String^ version2);
 	static bool LongVersionGreater(String^ version1, String^ version2);

@@ -1,6 +1,6 @@
 Imports System.Globalization
 
-Namespace JobSeearchCodeExamples.VB.TestTaker
+Namespace TestTaker
 
     ''' <summary>
     ''' 
@@ -43,8 +43,13 @@ Namespace JobSeearchCodeExamples.VB.TestTaker
                 ByVal version1 As String,
                 ByVal version2 As String) As Integer
 
-            Dim v1 = New LongVersion(version1)
-            Dim v2 = New LongVersion(version2)
+            Dim v1 As LongVersion = Nothing
+            Dim v2 As LongVersion = Nothing
+            If Not String.IsNullOrEmpty(version1) Then v1 = New LongVersion(version1)
+            If Not String.IsNullOrEmpty(version2) Then v2 = New LongVersion(version2)
+            If v1 Is Nothing Then
+                If v2 Is Nothing Then Return 0 Else Return -1
+            End If
 
             Return v1.CompareTo(v2)
 
@@ -65,6 +70,159 @@ Namespace JobSeearchCodeExamples.VB.TestTaker
             Return (values.Length + 1) * (values.Length + 2) / 2 - values.Sum()
 
         End Function
+
+        ''' <summary>
+        ''' Compare two long version numbers using equal.
+        ''' </summary>
+        ''' <param name="version1">The version1.</param>
+        ''' <param name="version2">The version2.</param>
+        ''' <returns></returns>
+        Public Shared Function LongVersionEqual(
+                version1 As String,
+                version2 As String) As Boolean
+
+            Dim v1 As LongVersion = Nothing
+            Dim v2 As LongVersion = Nothing
+            If Not String.IsNullOrEmpty(version1) Then v1 = New LongVersion(version1)
+            If Not String.IsNullOrEmpty(version2) Then v2 = New LongVersion(version2)
+
+            Return v1 = v2
+
+        End Function
+
+        ''' <summary>
+        ''' Compare two long version numbers using equal.
+        ''' </summary>
+        ''' <param name="version1">The version1.</param>
+        ''' <param name="version2">The version2.</param>
+        ''' <returns></returns>
+        Public Shared Function LongVersionNotEqual(
+                version1 As String,
+                version2 As String) As Boolean
+
+            Dim v1 As LongVersion = Nothing
+            Dim v2 As LongVersion = Nothing
+            If Not String.IsNullOrEmpty(version1) Then v1 = New LongVersion(version1)
+            If Not String.IsNullOrEmpty(version2) Then v2 = New LongVersion(version2)
+
+            Return v1 <> v2
+
+        End Function
+
+        ''' <summary>
+        ''' the version is the same object.
+        ''' </summary>
+        ''' <paramname="version">The version.</param>
+        ''' <returns></returns>
+        Public Shared Function LongVersionEqualSame(ByVal version As String) As Boolean
+
+            Dim v As LongVersion = Nothing
+            If Not String.IsNullOrEmpty(version) Then v = New LongVersion(version)
+
+            Return v = v
+
+        End Function
+
+        ''' <summary>
+        ''' Get the hash code for the version.
+        ''' </summary>
+        ''' <returns></returns>
+        Public Shared Function LongVersionGetHashCode() As Integer
+
+            Dim v = New LongVersion("2.0.0.1")
+
+            Return v.GetHashCode()
+
+        End Function
+
+        ''' <summary>
+        ''' Get the string version of the version.
+        ''' </summary>
+        ''' <returns></returns>
+        Public Shared Function LongVersionToString() As String
+
+            Dim v = New LongVersion("2.0.0.1")
+
+            Return v.ToString()
+
+        End Function
+
+        ''' <summary>
+        ''' Compare two long version numbers using Greater Than.
+        ''' </summary>
+        ''' <param name="version1">The version1.</param>
+        ''' <param name="version2">The version2.</param>
+        ''' <returns></returns>
+        Public Shared Function LongVersionGreater(
+                version1 As String,
+                version2 As String) As Boolean
+
+            Dim v1 As LongVersion = Nothing
+            Dim v2 As LongVersion = Nothing
+            If Not String.IsNullOrEmpty(version1) Then v1 = New LongVersion(version1)
+            If Not String.IsNullOrEmpty(version2) Then v2 = New LongVersion(version2)
+
+            Return v1 > v2
+
+        End Function
+
+        ''' <summary>
+        ''' Compare two long version numbers using Greater Than or equal to.
+        ''' </summary>
+        ''' <param name="version1">The version1.</param>
+        ''' <param name="version2">The version2.</param>
+        ''' <returns></returns>
+        Public Shared Function LongVersionGreaterEqual(
+                version1 As String,
+                version2 As String) As Boolean
+
+            Dim v1 As LongVersion = Nothing
+            Dim v2 As LongVersion = Nothing
+            If Not String.IsNullOrEmpty(version1) Then v1 = New LongVersion(version1)
+            If Not String.IsNullOrEmpty(version2) Then v2 = New LongVersion(version2)
+
+            Return v1 >= v2
+
+        End Function
+
+        ''' <summary>
+        ''' Compare two long version numbers using Less Than.
+        ''' </summary>
+        ''' <param name="version1">The version1.</param>
+        ''' <param name="version2">The version2.</param>
+        ''' <returns></returns>
+        Public Shared Function LongVersionLess(
+                version1 As String,
+                version2 As String) As Boolean
+
+            Dim v1 As LongVersion = Nothing
+            Dim v2 As LongVersion = Nothing
+            If Not String.IsNullOrEmpty(version1) Then v1 = New LongVersion(version1)
+            If Not String.IsNullOrEmpty(version2) Then v2 = New LongVersion(version2)
+
+            Return v1 < v2
+
+        End Function
+
+        ''' <summary>
+        ''' Compare two long version numbers using Less Than or equal to.
+        ''' </summary>
+        ''' <param name="version1">The version1.</param>
+        ''' <param name="version2">The version2.</param>
+        ''' <returns></returns>
+        Public Shared Function LongVersionLessEqual(
+                version1 As String,
+                version2 As String) As Boolean
+
+            Dim v1 As LongVersion = Nothing
+            Dim v2 As LongVersion = Nothing
+            If Not String.IsNullOrEmpty(version1) Then v1 = New LongVersion(version1)
+            If Not String.IsNullOrEmpty(version2) Then v2 = New LongVersion(version2)
+
+            Return v1 <= v2
+
+        End Function
+
     End Class
 
 End Namespace

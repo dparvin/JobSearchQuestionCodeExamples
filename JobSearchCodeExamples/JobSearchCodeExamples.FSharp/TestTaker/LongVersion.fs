@@ -21,8 +21,10 @@ type public LongVersion(version : string) =
 
         interface IComparable with
             member this.CompareTo(obj : obj) : int = 
-                if System.Object.ReferenceEquals(this, obj) || isNull obj then
+                if System.Object.ReferenceEquals(this, obj) then
                     0
+                elif isNull obj then
+                    1
                 else
                     let other : LongVersion = obj :?> LongVersion
                     let longest : int = if this.Parts.Length < other.Parts.Length then other.Parts.Length else this.Parts.Length
@@ -63,10 +65,16 @@ type public LongVersion(version : string) =
                 (left :> IComparable).CompareTo(right) < 0
 
         static member op_LessThanOrEqual (left : LongVersion, right : LongVersion) : bool =
-            isNull left || (left :> IComparable).CompareTo(right) <= 0
+            if isNull left then
+                true
+            else
+                (left :> IComparable).CompareTo(right) <= 0
 
         static member op_GreaterThan (left : LongVersion, right : LongVersion) : bool =
-            not (isNull left) && (left :> IComparable).CompareTo(right) > 0
+            if isNull left then
+                false
+            else
+                (left :> IComparable).CompareTo(right) > 0
 
         static member op_GreaterThanOrEqual (left : LongVersion, right : LongVersion) : bool =
             if isNull left then

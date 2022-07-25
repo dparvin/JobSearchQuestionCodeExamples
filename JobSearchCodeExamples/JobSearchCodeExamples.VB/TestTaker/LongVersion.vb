@@ -1,6 +1,6 @@
 ﻿Imports System.Globalization
 
-Namespace JobSeearchCodeExamples.VB.TestTaker
+Namespace TestTaker
 
     ''' <summary>
     ''' A class that supports version numbers that are longer than the normal
@@ -44,7 +44,6 @@ Namespace JobSeearchCodeExamples.VB.TestTaker
         ''' </returns>
         Public Overrides Function Equals(obj As Object) As Boolean
 
-            If ReferenceEquals(Me, obj) Then Return True
             If obj Is Nothing Then Return False
 
             Return CompareTo(obj) = 0
@@ -79,7 +78,7 @@ Namespace JobSeearchCodeExamples.VB.TestTaker
             obj As Object) As Integer Implements IComparable.CompareTo
 
             If ReferenceEquals(Me, obj) Then Return 0
-            If obj Is Nothing Then Return 0
+            If obj Is Nothing Then Return 1
             Dim other As LongVersion = obj
             Dim longest As Integer = If(Parts.Length < other.Parts.Length, other.Parts.Length, Parts.Length)
             For i As Integer = 0 To longest
@@ -140,7 +139,8 @@ Namespace JobSeearchCodeExamples.VB.TestTaker
                 left As LongVersion,
                 right As LongVersion) As Boolean
 
-            Return If(left Is Nothing, right IsNot Nothing, left.CompareTo(right) < 0)
+            If left Is Nothing Then Return Not (right Is Nothing)
+            Return left.CompareTo(right) < 0
 
         End Operator
 
@@ -156,7 +156,8 @@ Namespace JobSeearchCodeExamples.VB.TestTaker
                 left As LongVersion,
                 right As LongVersion) As Boolean
 
-            Return left Is Nothing OrElse left.CompareTo(right) <= 0
+            If left Is Nothing Then Return True
+            Return left.CompareTo(right) <= 0
 
         End Operator
 
@@ -172,7 +173,8 @@ Namespace JobSeearchCodeExamples.VB.TestTaker
                 left As LongVersion,
                 right As LongVersion) As Boolean
 
-            Return left IsNot Nothing AndAlso left.CompareTo(right) > 0
+            If left Is Nothing Then Return False
+            Return left.CompareTo(right) > 0
 
         End Operator
 
@@ -188,7 +190,8 @@ Namespace JobSeearchCodeExamples.VB.TestTaker
                 left As LongVersion,
                 right As LongVersion) As Boolean
 
-            Return If(left Is Nothing, right Is Nothing, left.CompareTo(right) >= 0)
+            If left Is Nothing Then Return right Is Nothing
+            Return left.CompareTo(right) >= 0
 
         End Operator
 

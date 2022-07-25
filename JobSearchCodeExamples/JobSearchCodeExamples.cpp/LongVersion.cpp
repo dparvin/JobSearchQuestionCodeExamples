@@ -59,7 +59,7 @@ String^ LongVersion::ToString()
 int LongVersion::CompareTo(System::Object^ obj)
 {
 	if (ReferenceEquals(this, obj)) return 0;
-	if (obj == nullptr) return -1;
+	if (!obj) return 1;
 	LongVersion^ other = (LongVersion^)obj;
 	int longest = Parts->Length < other->Parts->Length ? other->Parts->Length : Parts->Length;
 	for (int i = 0; i < longest; i++)
@@ -82,7 +82,7 @@ int LongVersion::CompareTo(System::Object^ obj)
 /// <returns></returns>
 bool LongVersion::operator==(LongVersion^ left, LongVersion^ right)
 {
-	if (ReferenceEquals(left, nullptr)) return ReferenceEquals(right, nullptr);
+	if (!left) return (!right);
 	return left->Equals(right);
 }
 
@@ -105,7 +105,8 @@ bool LongVersion::operator!=(LongVersion^ left, LongVersion^ right)
 /// <returns></returns>
 bool LongVersion::operator<(LongVersion^ left, LongVersion^ right)
 {
-	return left == nullptr ? right != nullptr : left->CompareTo(right) < 0;
+	if (!left) return !(!right);
+	return left->CompareTo(right) < 0;
 }
 
 /// <summary>
@@ -116,7 +117,8 @@ bool LongVersion::operator<(LongVersion^ left, LongVersion^ right)
 /// <returns></returns>
 bool LongVersion::operator<=(LongVersion^ left, LongVersion^ right)
 {
-	return left == nullptr || left->CompareTo(right) <= 0;
+	if (!left) return true;
+	return left->CompareTo(right) <= 0;
 }
 
 /// <summary>
@@ -127,7 +129,8 @@ bool LongVersion::operator<=(LongVersion^ left, LongVersion^ right)
 /// <returns></returns>
 bool LongVersion::operator>(LongVersion^ left, LongVersion^ right)
 {
-	return left == nullptr ? right != nullptr : left->CompareTo(right) > 0;
+	if (!left) return false;
+	return left->CompareTo(right) > 0;
 }
 
 /// <summary>
@@ -138,5 +141,6 @@ bool LongVersion::operator>(LongVersion^ left, LongVersion^ right)
 /// <returns></returns>
 bool LongVersion::operator>=(LongVersion^ left, LongVersion^ right)
 {
-	return left == nullptr ? right == nullptr : left->CompareTo(right) >= 0;
+	if (!left) return !right;
+	return left->CompareTo(right) >= 0;
 }
