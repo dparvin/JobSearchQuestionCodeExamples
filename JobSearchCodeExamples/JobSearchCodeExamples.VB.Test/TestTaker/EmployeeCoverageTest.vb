@@ -1,43 +1,47 @@
 ﻿Imports JobSearchCodeExamples.VB.TestTaker
 Imports Xunit
 
-Public Class EmployeeCoverageTest
+Namespace TestTaker
 
-    ''' <summary>
-    ''' Maximums the coverage test.
-    ''' </summary>
-    <Fact>
-    Public Sub MaxCoverageTest()
+    Public Class EmployeeCoverageTest
 
-        Dim employees = {
+        ''' <summary>
+        ''' Maximums the coverage test.
+        ''' </summary>
+        <Fact>
+        Public Sub MaxCoverageTest()
+
+            Dim employees = {
             "79-84",
             "80-86",
             "75-83",
             "90-99",
             "87-95"}
-        Dim results = EmployeeCoverage.MaxCoverage(employees)
+            Dim results = EmployeeCoverage.MaxCoverage(employees)
 
-        Assert.Equal(3, results)
+            Assert.Equal(3, results)
 
-    End Sub
+        End Sub
 
-    ''' <summary>
-    ''' Maximums the coverage test.
-    ''' </summary>
-    <Fact>
-    Public Sub MaxCoverageFillBranchTest()
+        ''' <summary>
+        ''' Maximums the coverage test.
+        ''' </summary>
+        <Fact>
+        Public Sub MaxCoverageFillBranchTest()
 
-        Dim employees = {
+            Dim employees = {
             "79-84",
             "80-86",
             "75-83",
             "74-99",
             "87-95",
             "65-67"}
-        Dim results = EmployeeCoverage.MaxCoverage(employees)
+            Dim results = EmployeeCoverage.MaxCoverage(employees)
 
-        Assert.Equal(5, results)
+            Assert.Equal(5, results)
 
-    End Sub
+        End Sub
 
-End Class
+    End Class
+
+End Namespace

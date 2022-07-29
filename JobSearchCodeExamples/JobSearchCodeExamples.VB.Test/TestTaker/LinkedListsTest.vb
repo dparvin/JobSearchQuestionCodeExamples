@@ -1,52 +1,56 @@
 ﻿Imports JobSearchCodeExamples.VB.TestTaker
 Imports Xunit
 
-Public Class LinkedListsTest
+Namespace TestTaker
 
-    ''' <summary>
-    ''' Tests the linked list reverse.
-    ''' </summary>
-    <Fact>
-    Public Sub TestLinkedListReverse()
+    Public Class LinkedListsTest
 
-        Dim list As New LinkedList(Of String)
+        ''' <summary>
+        ''' Tests the linked list reverse.
+        ''' </summary>
+        <Fact>
+        Public Sub TestLinkedListReverse()
 
-        list.AddFirst("2")
-        list.AddLast("3")
-        list.AddLast("4")
-        list.AddLast("5")
+            Dim list As New LinkedList(Of String)
 
-        Dim result = LinkedLists.ReverseList(list)
+            list.AddFirst("2")
+            list.AddLast("3")
+            list.AddLast("4")
+            list.AddLast("5")
 
-        Assert.Equal(list.Last?.Value, result.First?.Value)
+            Dim result = LinkedLists.ReverseList(list)
 
-    End Sub
+            Assert.Equal(list.Last?.Value, result.First?.Value)
 
-    ''' <summary>
-    ''' Tests the linked list reverse.
-    ''' </summary>
-    <Fact>
-    Public Sub TestLinkedListNull()
+        End Sub
 
-        Dim list As LinkedList(Of String) = Nothing
+        ''' <summary>
+        ''' Tests the linked list reverse.
+        ''' </summary>
+        <Fact>
+        Public Sub TestLinkedListNull()
 
-        Dim result = LinkedLists.ReverseList(list)
+            Dim list As LinkedList(Of String) = Nothing
 
-        Assert.Null(result)
+            Dim result = LinkedLists.ReverseList(list)
 
-    End Sub
+            Assert.Null(result)
 
-    ''' <summary>
-    ''' Tests the linked list reverse.
-    ''' </summary>
-    <Fact>
-    Public Sub TestLinkedListEmpty()
+        End Sub
 
-        Dim list As New LinkedList(Of String)
+        ''' <summary>
+        ''' Tests the linked list reverse.
+        ''' </summary>
+        <Fact>
+        Public Sub TestLinkedListEmpty()
 
-        Dim result = LinkedLists.ReverseList(list)
+            Dim list As New LinkedList(Of String)
 
-        Assert.Empty(result)
-    End Sub
+            Dim result = LinkedLists.ReverseList(list)
 
-End Class
+            Assert.Empty(result)
+        End Sub
+
+    End Class
+
+End Namespace

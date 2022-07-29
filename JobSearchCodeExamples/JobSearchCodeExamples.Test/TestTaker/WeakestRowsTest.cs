@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using JobSearchCodeExamples.TestTaker;
+﻿namespace JobSearchCodeExamples.Test.TestTaker;
 
-namespace JobSearchCodeExamples.Test.TestTaker;
-
-public class WeakestRowTest
+public class WeakestRowsTest
 {
     [Fact]
     public void KWeakestRowsInAMatrixTest()
