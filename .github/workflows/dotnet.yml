@@ -33,7 +33,7 @@ jobs:
 
     - name: Test JobSearchCodeExamples.Test
  ##     run: vstest.console.exe ${{ github.workspace }}\JobSearchCodeExamples\Build\**\*.test.dll /ResultsDirectory:${{ github.workspace }}\TestResults /InIsolation /Platform:x64 /Framework:.NETFramework,Version=v6.0 /parallel /Enablecodecoverage /Logger:trx /TestAdapterPath:"C:\Users\runneradmin\.nuget\packages\"
-      run: dotnet test ${{ github.workspace }}\JobSearchCodeExamples\Build\Debug\net6.0\JobSearchCodeExamples.Test.csproj --verbosity detailed --results-directory ${{ github.workspace }}\TestResults --no-build
+      run: dotnet test ${{ github.workspace }}\JobSearchCodeExamples\JobSearchCodeExamples.Test\JobSearchCodeExamples.Test.csproj --verbosity detailed --results-directory ${{ github.workspace }}\TestResults --no-build
 
     - name: Test JobSearchCodeExamples.VB.Test
  ##     run: vstest.console.exe ${{ github.workspace }}\JobSearchCodeExamples\Build\**\*.test.dll /ResultsDirectory:${{ github.workspace }}\TestResults /InIsolation /Platform:x64 /Framework:.NETFramework,Version=v6.0 /parallel /Enablecodecoverage /Logger:trx /TestAdapterPath:"C:\Users\runneradmin\.nuget\packages\"
