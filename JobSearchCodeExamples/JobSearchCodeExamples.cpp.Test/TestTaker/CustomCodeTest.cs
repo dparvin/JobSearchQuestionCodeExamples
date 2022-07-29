@@ -118,6 +118,13 @@
             Assert.Equal(9827, result);
         }
 
+        [Fact]
+        public void LongVersionToString()
+        {
+            var result = CustomCode.LongVersionToString();
+            Assert.Equal("2.0.0.1", result);
+        }
+
         [Theory]
         [InlineData("", "", false)]
         [InlineData("", "2.0", true)]

@@ -1,0 +1,28 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using JobSearchCodeExamples.TestTaker;
+
+namespace JobSearchCodeExamples.Test.TestTaker;
+
+public class WeakestRowTest
+{
+    [Fact]
+    public void KWeakestRowsInAMatrixTest()
+    {
+        int[][] testArray =
+        {
+            new int[] {1,1,0,0,0},
+            new int[] {1,1,1,1,0},
+            new int[] {1,0,0,0,0},
+            new int[] {1,1,0,0,0},
+            new int[] {1,1,1,1,1}
+        };
+        int[] expectedResult = { 2, 0, 3 };
+        int[] result = KWeakestRowsInAMatrix.KWeakestRows(testArray, 3);
+        Assert.Equal(3, result.Length);
+        Assert.Equal(expectedResult, result);
+    }
+}

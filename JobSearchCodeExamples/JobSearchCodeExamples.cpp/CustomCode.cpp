@@ -96,6 +96,17 @@ int CustomCode::LongVersionGetHashCode()
 /// <summary>
 /// Longs the version equal.
 /// </summary>
+/// <returns></returns>
+String^ CustomCode::LongVersionToString()
+{
+	LongVersion^ v = gcnew LongVersion("2.0.0.1");
+
+	return v->ToString();
+}
+
+/// <summary>
+/// Longs the version equal.
+/// </summary>
 /// <param name="version1">The version1.</param>
 /// <param name="version2">The version2.</param>
 /// <returns></returns>

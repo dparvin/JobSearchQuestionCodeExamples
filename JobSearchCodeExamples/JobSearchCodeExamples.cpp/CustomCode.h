@@ -14,6 +14,7 @@ public:
 	static bool LongVersionEqual(String^ version1, String^ version2);
 	static bool LongVersionEqualSame(String^ version);
 	static int LongVersionGetHashCode();
+	static String^ LongVersionToString();
 	static bool LongVersionNotEqual(String^ version1, String^ version2);
 	static bool LongVersionLess(String^ version1, String^ version2);
 	static bool LongVersionLessEqual(String^ version1, String^ version2);
