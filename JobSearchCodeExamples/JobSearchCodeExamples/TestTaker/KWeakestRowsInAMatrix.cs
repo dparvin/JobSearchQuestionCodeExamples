@@ -1,5 +1,8 @@
 ﻿namespace JobSearchCodeExamples.TestTaker;
 
+/// <summary>
+/// Routines to get a list of the weakest battalion in a matrix
+/// </summary>
 public static class KWeakestRowsInAMatrix
 {
     /// <summary>

@@ -69,8 +69,7 @@ public class LongVersion : IComparable
     public int CompareTo(object? obj)
     {
         if (ReferenceEquals(this, obj)) return 0;
-        LongVersion? other = obj as LongVersion;
-        if (other is null) return 1;
+        if (obj is not LongVersion other) return 1;
         int longest = Parts.Length < other.Parts.Length ? other.Parts.Length : Parts.Length;
         for (int i = 0; i < longest; i++)
         {

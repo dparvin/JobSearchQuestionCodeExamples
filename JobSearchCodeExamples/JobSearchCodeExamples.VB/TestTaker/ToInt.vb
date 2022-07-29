@@ -5,7 +5,7 @@
         ''' <summary>
         ''' Romans to int.
         ''' </summary>
-        ''' <paramname="s">The s.</param>
+        ''' <param name="s">The s.</param>
         ''' <returns></returns>
         Public Shared Function RomanToInt(ByVal s As String) As Integer
 
@@ -63,9 +63,9 @@
         End Function
 
         ''' <summary>
-        ''' Romans to int.
+        ''' Romans to int2.
         ''' </summary>
-        ''' <paramname="s">The s.</param>
+        ''' <param name="s">The s.</param>
         ''' <returns></returns>
         Public Shared Function RomanToInt2(ByVal s As String) As Integer
 
@@ -99,9 +99,9 @@
         End Function
 
         ''' <summary>
-        ''' Romans to int.
+        ''' Romans to int3.
         ''' </summary>
-        ''' <paramname="s">The s.</param>
+        ''' <param name="s">The s.</param>
         ''' <returns></returns>
         Public Shared Function RomanToInt3(ByVal s As String) As Integer
 

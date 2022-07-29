@@ -35,11 +35,11 @@ Namespace TestTaker
         End Sub
 
         ''' <summary>
-        ''' Tests the version compare.
+        ''' Tests the long version compare.
         ''' </summary>
-        ''' <paramname="version1">The version1.</param>
-        ''' <paramname="version2">The version2.</param>
-        ''' <paramname="ExpectedResult">The expected result.</param>
+        ''' <param name="version1">The version1.</param>
+        ''' <param name="version2">The version2.</param>
+        ''' <param name="ExpectedResult">The expected result.</param>
         <Theory>
         <InlineData("", "", 0)>
         <InlineData("", "2.0", -1)>
