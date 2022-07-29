@@ -76,7 +76,7 @@ jobs:
       run: dotnet restore ${{ github.workspace }}\JobSearchCodeExamples\JobSearchCodeExamples.sln --verbosity detailed
       
     - name: Build
-      run: msbuild ${{ github.workspace }}\JobSearchCodeExamples\JobSearchCodeExamples.sln -t:build -p:Configuration=Debug -p:Platform=x64
+      run: msbuild ${{ github.workspace }}\JobSearchCodeExamples\JobSearchCodeExamples.sln -t:build -p:Configuration=Debug -p:Platform=x64 /p:UseSharedCompilation=false
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
