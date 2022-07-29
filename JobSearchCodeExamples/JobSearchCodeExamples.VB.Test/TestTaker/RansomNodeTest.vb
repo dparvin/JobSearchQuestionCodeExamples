@@ -3,6 +3,9 @@ Imports JobSearchCodeExamples.VB.TestTaker
 
 Namespace TestTaker
 
+    ''' <summary>
+    ''' 
+    ''' </summary>
     Public Class RansomNodeTest
 
         <Theory>

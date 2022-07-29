@@ -1,13 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace JobSearchCodeExamples.Test.TestTaker
+﻿namespace JobSearchCodeExamples.Test.TestTaker
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class RansomeNoteTest
     {
+        /// <summary>
+        /// Determines whether this instance test of CanConstruct the specified ransom note.
+        /// </summary>
+        /// <param name="ransomNote">The ransom note.</param>
+        /// <param name="magazine">The magazine.</param>
+        /// <param name="expectedResult">if set to the expected result.</param>
         [Theory]
         [InlineData("a", "b", false)]
         [InlineData("aa", "ab", false)]

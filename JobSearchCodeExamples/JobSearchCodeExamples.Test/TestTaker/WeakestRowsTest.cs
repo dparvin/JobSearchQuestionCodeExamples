@@ -2,6 +2,9 @@
 
 public class WeakestRowsTest
 {
+    /// <summary>
+    /// ks the weakest rows in a matrix test.
+    /// </summary>
     [Fact]
     public void KWeakestRowsInAMatrixTest()
     {

@@ -5,6 +5,9 @@ Namespace TestTaker
 
     Public Class WeakestRowsTest
 
+        ''' <summary>
+        ''' k the weakest rows in a matrix test.
+        ''' </summary>
         <Fact>
         Public Sub KWeakestRowsInAMatrixTest()
 
