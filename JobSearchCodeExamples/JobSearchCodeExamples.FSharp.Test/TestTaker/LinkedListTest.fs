@@ -1,9 +1,10 @@
 namespace JobSearchCodeExamples.FSharp.Test.TestTaker
 
+open Xunit
+open System.Collections.Generic
+open JobSearchCodeExamples.FSharp.TestTaker
+
 module LinkedListsTest =
-    open Xunit
-    open System.Collections.Generic
-    open JobSearchCodeExamples.FSharp.TestTaker
 
     [<Fact>]
     let TestLinkedListReverse () =

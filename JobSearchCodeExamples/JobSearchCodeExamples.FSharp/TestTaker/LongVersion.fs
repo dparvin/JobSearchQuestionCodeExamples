@@ -1,6 +1,7 @@
 ﻿namespace JobSearchCodeExamples.FSharp.TestTaker
 
 open System
+
 [<AllowNullLiteral>]
 type public LongVersion(version : string) =
     class

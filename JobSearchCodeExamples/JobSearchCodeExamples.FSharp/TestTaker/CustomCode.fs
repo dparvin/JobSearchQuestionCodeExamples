@@ -41,6 +41,27 @@ module CustomCode =
         if not (String.IsNullOrEmpty(version2)) then v2 <- new LongVersion(version2) 
         v1 = v2
 
+    let LongVersionNotEqual(version1 : string, version2 : string) : bool =
+        let mutable v1 : LongVersion = null
+        let mutable v2 : LongVersion = null
+        if not (String.IsNullOrEmpty(version1)) then v1 <- new LongVersion(version1) 
+        if not (String.IsNullOrEmpty(version2)) then v2 <- new LongVersion(version2) 
+        v1 <> v2
+
+    let LongVersionEqualSame(version : string) : bool =
+        let mutable v : LongVersion = null
+        if not (String.IsNullOrEmpty(version)) then 
+            v <- new LongVersion(version)
+        v = v
+
+    let LongVersionGetHashCode() : int =
+        let v = new LongVersion("2.0.0.1")
+        v.GetHashCode()
+
+    let LongVersionToString() : string =
+        let v = new LongVersion("2.0.0.1")
+        v.ToString()
+
     let LongVersionGreater(version1 : string, version2 : string) : bool =
         let mutable v1 : LongVersion = null
         let mutable v2 : LongVersion = null

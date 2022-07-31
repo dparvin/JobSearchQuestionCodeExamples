@@ -18,13 +18,14 @@
 
   <ItemGroup>
     <None Include="..\ExecCodeCoverage.ps1" Link="ExecCodeCoverage.ps1" />
+    <Compile Include="TestTaker\KWeakestRowsInAMatrixTest.fs" />
     <Compile Include="TestTaker\CustomCodeTest.fs" />
     <Compile Include="TestTaker\EmployeeCoverageTest.fs" />
     <Compile Include="TestTaker\LinkedListTest.fs" />
+    <Compile Include="TestTaker\RansonNoteTest.fs" />
+    <Compile Include="TestTaker\ToIntTest.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
-
-  <ItemGroup />
 
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.2.0" />

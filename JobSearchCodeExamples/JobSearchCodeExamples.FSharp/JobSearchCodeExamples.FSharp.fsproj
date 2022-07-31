@@ -18,7 +18,10 @@
     <Compile Include="TestTaker\LongVersion.fs" />
     <Compile Include="TestTaker\CustomCode.fs" />
     <Compile Include="TestTaker\EmployeeCoverage.fs" />
+    <Compile Include="TestTaker\KWeakestRowsInAMatrix.fs" />
     <Compile Include="TestTaker\LinkedList.fs" />
+    <Compile Include="TestTaker\RansomNode.fs" />
+    <Compile Include="TestTaker\ToInt.fs" />
   </ItemGroup>
 
 </Project>

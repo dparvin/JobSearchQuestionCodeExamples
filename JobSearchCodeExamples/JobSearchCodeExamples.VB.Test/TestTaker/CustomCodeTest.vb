@@ -53,7 +53,10 @@ Namespace TestTaker
         <InlineData("2.1.0", "2.0.1", 1)>
         <InlineData("2.10.0.1", "2.1.0.10", 1)>
         <InlineData("2.0.1", "1.2000.1", 1)>
-        Public Sub TestLongVersionCompare(ByVal version1 As String, ByVal version2 As String, ByVal ExpectedResult As Integer)
+        Public Sub TestLongVersionCompare(
+                ByVal version1 As String,
+                ByVal version2 As String,
+                ByVal ExpectedResult As Integer)
 
             Dim result = CustomCode.LongVersionCompare(version1, version2)
             Assert.Equal(ExpectedResult, result)
@@ -76,6 +79,7 @@ Namespace TestTaker
         ''' </remarks>
         <Fact>
         Public Sub FindMissingNumber()
+
             ' Arrange
             Dim expectedMax = 100
             Dim a As Integer()
@@ -93,6 +97,7 @@ Namespace TestTaker
 
             ' Assert
             Assert.Equal(missing, FoundMissing)
+
         End Sub
 
         ''' <summary>
@@ -114,7 +119,10 @@ Namespace TestTaker
         <InlineData("2.1.0", "2.0.1", False)>
         <InlineData("2.10.0.1", "2.1.0.10", False)>
         <InlineData("2.0.1", "1.2000.1", False)>
-        Public Sub TestLongVersionEqual(ByVal version1 As String, ByVal version2 As String, ByVal ExpectedResult As Boolean)
+        Public Sub TestLongVersionEqual(
+                ByVal version1 As String,
+                ByVal version2 As String,
+                ByVal ExpectedResult As Boolean)
 
             Dim result As Boolean = CustomCode.LongVersionEqual(version1, version2)
             Assert.Equal(ExpectedResult, result)
@@ -140,7 +148,10 @@ Namespace TestTaker
         <InlineData("2.1.0", "2.0.1", True)>
         <InlineData("2.10.0.1", "2.1.0.10", True)>
         <InlineData("2.0.1", "1.2000.1", True)>
-        Public Sub TestLongVersionNotEqual(ByVal version1 As String, ByVal version2 As String, ByVal ExpectedResult As Boolean)
+        Public Sub TestLongVersionNotEqual(
+                ByVal version1 As String,
+                ByVal version2 As String,
+                ByVal ExpectedResult As Boolean)
 
             Dim result As Boolean = CustomCode.LongVersionNotEqual(version1, version2)
             Assert.Equal(ExpectedResult, result)
@@ -155,8 +166,10 @@ Namespace TestTaker
         ''' <paramname="ExpectedResult">The expected result.</param>
         <Fact>
         Public Sub TestLongVersionEqualSame()
+
             Dim result = CustomCode.LongVersionEqualSame("2")
             Assert.True(result)
+
         End Sub
 
         ''' <summary>
@@ -164,8 +177,10 @@ Namespace TestTaker
         ''' </summary>
         <Fact>
         Public Sub LongVersionGetHashCode()
+
             Dim result = CustomCode.LongVersionGetHashCode()
             Assert.Equal(9827, result)
+
         End Sub
 
         ''' <summary>
@@ -173,8 +188,10 @@ Namespace TestTaker
         ''' </summary>
         <Fact>
         Public Sub LongVersionToString()
+
             Dim result = CustomCode.LongVersionToString()
             Assert.Equal("2.0.0.1", result)
+
         End Sub
 
         ''' <summary>
@@ -196,7 +213,10 @@ Namespace TestTaker
         <InlineData("2.1.0", "2.0.1", True)>
         <InlineData("2.10.0.1", "2.1.0.10", True)>
         <InlineData("2.0.1", "1.2000.1", True)>
-        Public Sub LongVersionGreater(ByVal version1 As String, ByVal version2 As String, ByVal ExpectedResult As Boolean)
+        Public Sub LongVersionGreater(
+                ByVal version1 As String,
+                ByVal version2 As String,
+                ByVal ExpectedResult As Boolean)
 
             Dim result As Boolean = CustomCode.LongVersionGreater(version1, version2)
             Assert.Equal(ExpectedResult, result)
@@ -222,7 +242,10 @@ Namespace TestTaker
         <InlineData("2.1.0", "2.0.1", True)>
         <InlineData("2.10.0.1", "2.1.0.10", True)>
         <InlineData("2.0.1", "1.2000.1", True)>
-        Public Sub LongVersionGreaterEqual(ByVal version1 As String, ByVal version2 As String, ByVal ExpectedResult As Boolean)
+        Public Sub LongVersionGreaterEqual(
+                ByVal version1 As String,
+                ByVal version2 As String,
+                ByVal ExpectedResult As Boolean)
 
             Dim result As Boolean = CustomCode.LongVersionGreaterEqual(version1, version2)
             Assert.Equal(ExpectedResult, result)
@@ -248,7 +271,10 @@ Namespace TestTaker
         <InlineData("2.1.0", "2.0.1", False)>
         <InlineData("2.10.0.1", "2.1.0.10", False)>
         <InlineData("2.0.1", "1.2000.1", False)>
-        Public Sub LongVersionLess(ByVal version1 As String, ByVal version2 As String, ByVal ExpectedResult As Boolean)
+        Public Sub LongVersionLess(
+                ByVal version1 As String,
+                ByVal version2 As String,
+                ByVal ExpectedResult As Boolean)
 
             Dim result As Boolean = CustomCode.LongVersionLess(version1, version2)
             Assert.Equal(ExpectedResult, result)
@@ -274,7 +300,10 @@ Namespace TestTaker
         <InlineData("2.1.0", "2.0.1", False)>
         <InlineData("2.10.0.1", "2.1.0.10", False)>
         <InlineData("2.0.1", "1.2000.1", False)>
-        Public Sub LongVersionLessEqual(ByVal version1 As String, ByVal version2 As String, ByVal ExpectedResult As Boolean)
+        Public Sub LongVersionLessEqual(
+                ByVal version1 As String,
+                ByVal version2 As String,
+                ByVal ExpectedResult As Boolean)
 
             Dim result As Boolean = CustomCode.LongVersionLessEqual(version1, version2)
             Assert.Equal(ExpectedResult, result)

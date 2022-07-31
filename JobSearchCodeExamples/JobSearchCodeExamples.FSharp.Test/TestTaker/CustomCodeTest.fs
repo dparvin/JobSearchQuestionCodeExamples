@@ -69,9 +69,41 @@ module CustomCodeTest =
     [<InlineData("2.1.0", "2.0.1", false)>]
     [<InlineData("2.10.0.1", "2.1.0.10", false)>]
     [<InlineData("2.0.1", "1.2000.1", false)>]
-    let LongVersionEqual(version1 : string, version2 : string, expectedResult : bool) =
-        let result = CustomCode.LongVersionEqual(version1, version2)
+    let TestLongVersionEqual (version1 : string, version2 : string, expectedResult : bool) =
+        let result : bool = CustomCode.LongVersionEqual(version1, version2)
         Assert.Equal(expectedResult, result)
+
+    [<Theory>]
+    [<InlineData("", "", false)>]
+    [<InlineData("", "2.0", true)>]
+    [<InlineData("2", "", true)>]
+    [<InlineData("2", "2.0", false)>]
+    [<InlineData("2", "2.0.0", false)>]
+    [<InlineData("2", "2.0.0.0", false)>]
+    [<InlineData("2", "2.0.0.0.0", false)>]
+    [<InlineData("2", "2.0.0.0.1", true)>]
+    [<InlineData("2", "2.1", true)>]
+    [<InlineData("2.1.0", "2.0.1", true)>]
+    [<InlineData("2.10.0.1", "2.1.0.10", true)>]
+    [<InlineData("2.0.1", "1.2000.1", true)>]
+    let TestLongVersionNotEqual(version1 : string, version2 : string, expectedResult : bool) =
+        let result = CustomCode.LongVersionNotEqual(version1, version2)
+        Assert.Equal(expectedResult, result)
+
+    [<Fact>]
+    let TestLongVersionEqualSame() =
+        let result : bool = CustomCode.LongVersionEqualSame("2")
+        Assert.True(result)
+
+    [<Fact>]
+    let LongVersionGetHashCode() =
+        let result : int = CustomCode.LongVersionGetHashCode()
+        Assert.Equal(9827, result)
+
+    [<Fact>]
+    let LongVersionToString() =
+        let result : string = CustomCode.LongVersionToString()
+        Assert.Equal("2.0.0.1", result)
 
     [<Theory>]
     [<InlineData("", "", false)>]
@@ -109,17 +141,17 @@ module CustomCodeTest =
 
     [<Theory>]
     [<InlineData("", "", false)>]
-    [<InlineData("", "2.0", false)>]
-    [<InlineData("2", "", true)>]
+    [<InlineData("", "2.0", true)>]
+    [<InlineData("2", "", false)>]
     [<InlineData("2", "2.0", false)>]
     [<InlineData("2", "2.0.0", false)>]
     [<InlineData("2", "2.0.0.0", false)>]
     [<InlineData("2", "2.0.0.0.0", false)>]
-    [<InlineData("2", "2.0.0.0.1", false)>]
-    [<InlineData("2", "2.1", false)>]
-    [<InlineData("2.1.0", "2.0.1", true)>]
-    [<InlineData("2.10.0.1", "2.1.0.10", true)>]
-    [<InlineData("2.0.1", "1.2000.1", true)>]
+    [<InlineData("2", "2.0.0.0.1", true)>]
+    [<InlineData("2", "2.1", true)>]
+    [<InlineData("2.1.0", "2.0.1", false)>]
+    [<InlineData("2.10.0.1", "2.1.0.10", false)>]
+    [<InlineData("2.0.1", "1.2000.1", false)>]
     let LongVersionLess(version1 : string, version2 : string, expectedResult : bool) =
         let result = CustomCode.LongVersionLess(version1, version2)
         Assert.Equal(expectedResult, result)
