@@ -27,6 +27,15 @@
     <ClInclude Include="EmployeeCoverage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="RansomeNote.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ToInt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="KWeakestRowsInAMatrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LinkedLists.cpp">
@@ -39,6 +48,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="EmployeeCoverage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RansomeNote.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ToInt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="KWeakestRowsInAMatrix.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -234,14 +234,20 @@
   <ItemGroup>
     <ClInclude Include="CustomCode.h" />
     <ClInclude Include="EmployeeCoverage.h" />
+    <ClInclude Include="KWeakestRowsInAMatrix.h" />
     <ClInclude Include="LinkedLists.h" />
     <ClInclude Include="LongVersion.h" />
+    <ClInclude Include="RansomeNote.h" />
+    <ClInclude Include="ToInt.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CustomCode.cpp" />
     <ClCompile Include="EmployeeCoverage.cpp" />
+    <ClCompile Include="KWeakestRowsInAMatrix.cpp" />
     <ClCompile Include="LinkedLists.cpp" />
     <ClCompile Include="LongVersion.cpp" />
+    <ClCompile Include="RansomeNote.cpp" />
+    <ClCompile Include="ToInt.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
