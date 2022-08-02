@@ -19,14 +19,10 @@ public static class RansomNote
 
         var source = magazine;
         for (var i = 0; i < ransomNote.Length; i++)
-        {
             if (source.Contains(ransomNote[i]))
-            {
                 source = source.Remove(source.IndexOf(ransomNote[i]), 1);
-            }
             else
                 return false;
-        }
         return true;
     }
 }

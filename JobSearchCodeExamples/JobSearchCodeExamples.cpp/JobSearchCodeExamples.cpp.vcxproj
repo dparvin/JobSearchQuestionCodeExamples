@@ -237,7 +237,7 @@
     <ClInclude Include="KWeakestRowsInAMatrix.h" />
     <ClInclude Include="LinkedLists.h" />
     <ClInclude Include="LongVersion.h" />
-    <ClInclude Include="RansomeNote.h" />
+    <ClInclude Include="RansomNote.h" />
     <ClInclude Include="ToInt.h" />
   </ItemGroup>
   <ItemGroup>
@@ -246,7 +246,7 @@
     <ClCompile Include="KWeakestRowsInAMatrix.cpp" />
     <ClCompile Include="LinkedLists.cpp" />
     <ClCompile Include="LongVersion.cpp" />
-    <ClCompile Include="RansomeNote.cpp" />
+    <ClCompile Include="RansomNote.cpp" />
     <ClCompile Include="ToInt.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

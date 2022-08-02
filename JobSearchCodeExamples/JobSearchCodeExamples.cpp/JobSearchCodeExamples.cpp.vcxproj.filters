@@ -27,7 +27,7 @@
     <ClInclude Include="EmployeeCoverage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="RansomeNote.h">
+    <ClInclude Include="RansomNote.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ToInt.h">
@@ -50,7 +50,7 @@
     <ClCompile Include="EmployeeCoverage.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="RansomeNote.cpp">
+    <ClCompile Include="RansomNote.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ToInt.cpp">
