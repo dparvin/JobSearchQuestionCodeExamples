@@ -29,7 +29,6 @@ jobs:
         
     - name: Add MSBuild to PATH (Windows)
       uses: microsoft/setup-msbuild@v1.0.2
-      if: matrix.os == 'windows-latest'
 
     - name: Setup VSTest Path
       uses: darenm/Setup-VSTest@v1
@@ -41,8 +40,8 @@ jobs:
       run: dotnet restore ${{ github.workspace }}\JobSearchCodeExamples\JobSearchCodeExamples.sln --verbosity detailed
       
     - name: Build
-      run: dotnet build ${{ github.workspace }}\JobSearchCodeExamples\JobSearchCodeExamples.sln  
-##      run: msbuild ${{ github.workspace }}\JobSearchCodeExamples\JobSearchCodeExamples.sln -t:build -p:Configuration=Debug -p:Platform=x64
+##      run: dotnet build ${{ github.workspace }}\JobSearchCodeExamples\JobSearchCodeExamples.sln  
+      run: msbuild ${{ github.workspace }}\JobSearchCodeExamples\JobSearchCodeExamples.sln -t:build -p:Configuration=Debug -p:Platform=x64
       
 ##    - name: Test JobSearchCodeExamples.Test
 ##      run: vstest.console.exe ${{ github.workspace }}\JobSearchCodeExamples\Build\**\*.test.dll /ResultsDirectory:${{ github.workspace }}\TestResults /InIsolation /Platform:x64 /Framework:.NETFramework,Version=v6.0 /parallel /Enablecodecoverage /Logger:trx /TestAdapterPath:"C:\Users\runneradmin\.nuget\packages\"
