@@ -45,7 +45,6 @@ module ToInt =
                 | _ -> result <- result + 100
             | "D" -> result <- result + 500
             | "M" -> result <- result + 1000
-            | _ -> ()
             pos <- pos + 1
         result
 
