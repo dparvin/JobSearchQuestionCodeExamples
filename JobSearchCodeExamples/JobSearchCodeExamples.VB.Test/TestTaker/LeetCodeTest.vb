@@ -137,9 +137,9 @@ Namespace TestTaker
 #Region " Test Support functions ------------------------------------ "
 
         ''' <summary>
-        ''' Converts to lListNode.
+        ''' Converts to ListNode.
         ''' </summary>
-        ''' <paramname="items">The items.</param>
+        ''' <param name="items">The items.</param>
         ''' <returns></returns>
         Private Shared Function ToListNode(ByVal items As Integer()) As LeetCode.ListNode
 

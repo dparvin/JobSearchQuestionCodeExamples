@@ -178,54 +178,6 @@ public static class LeetCode
         return curr;
     }
 
-    /// <summary>
-    /// Counts the specified head.
-    /// </summary>
-    /// <param name="head">The head.</param>
-    /// <returns></returns>
-    private static int Count(ListNode? head)
-    {
-        int result = 0;
-        ListNode? curr = head;
-        while (curr != null)
-        {
-            result++;
-            curr = curr.next;
-        }
-        return result;
-    }
-
-    #region single linked list --------------------------------------
-
-
-    /// <summary>
-    /// Definition for singly-linked list.
-    /// </summary>
-    public class ListNode
-    {
-        /// <summary>
-        /// The value
-        /// </summary>
-        public int val;
-        /// <summary>
-        /// The next
-        /// </summary>
-        public ListNode? next;
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ListNode"/> class.
-        /// </summary>
-        /// <param name="val">The value.</param>
-        /// <param name="next">The next.</param>
-        public ListNode(int val = 0, ListNode? next = null)
-        {
-            this.val = val;
-            this.next = next;
-        }
-    }
-
-
-    #endregion
-
     #endregion
 
     #region Palindrome Linked List? ---------------------------------
@@ -258,7 +210,7 @@ public static class LeetCode
         ListNode? rev = back;
         while (curr != null)
         {
-            if (curr.val != rev.val) return false;
+            if (curr.val != rev?.val) return false;
             curr = curr.next;
             rev = rev.next;
         }
@@ -281,7 +233,7 @@ public static class LeetCode
         var rev = Reverse(curr);
         while (curr != null)
         {
-            if (curr.val != rev.val)
+            if (curr.val != rev?.val)
                 return false;
             curr = curr.next;
             rev = rev.next;
@@ -360,6 +312,39 @@ public static class LeetCode
         return Reverse(result);
     }
 
+    #endregion
+
+    #region single linked list --------------------------------------
+
+
+    /// <summary>
+    /// Definition for singly-linked list.
+    /// </summary>
+    public class ListNode
+    {
+        /// <summary>
+        /// The value
+        /// </summary>
+        public int val;
+        /// <summary>
+        /// The next
+        /// </summary>
+        public ListNode? next;
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ListNode"/> class.
+        /// </summary>
+        /// <param name="val">The value.</param>
+        /// <param name="next">The next.</param>
+        public ListNode(int val = 0, ListNode? next = null)
+        {
+            this.val = val;
+            this.next = next;
+        }
+    }
+
+
+    #endregion
+
     #region Private Support Routines --------------------------------
 
     /// <summary>
@@ -384,6 +369,23 @@ public static class LeetCode
     /// </summary>
     /// <param name="head">The head.</param>
     /// <returns></returns>
+    private static int Count(ListNode? head)
+    {
+        int result = 0;
+        ListNode? curr = head;
+        while (curr != null)
+        {
+            result++;
+            curr = curr.next;
+        }
+        return result;
+    }
+
+    /// <summary>
+    /// Counts the specified head.
+    /// </summary>
+    /// <param name="head">The head.</param>
+    /// <returns></returns>
     private static int PalindromeCount(ListNode head)
     {
         int result = 0;
@@ -395,8 +397,6 @@ public static class LeetCode
         }
         return result;
     }
-
-    #endregion
 
     #endregion
 }
