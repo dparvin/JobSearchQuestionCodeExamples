@@ -294,9 +294,10 @@
 
         While curr IsNot Nothing
             If curr.val <> rev.val Then Return False
-            If count > midPoint Then Return True ' past the midpoint so we are done
+            If count > midPoint Then Exit While ' past the midpoint so we are done
             curr = curr.next
             rev = rev.next
+            count += 1
         End While
 
         Return True
@@ -351,7 +352,7 @@
     ''' <summary>
     ''' Reverses the specified head.
     ''' </summary>
-    ''' <paramname="head">The head.</param>
+    ''' <param name="head">The head.</param>
     ''' <returns></returns>
     Private Shared Function Reverse(ByVal head As ListNode) As ListNode
 

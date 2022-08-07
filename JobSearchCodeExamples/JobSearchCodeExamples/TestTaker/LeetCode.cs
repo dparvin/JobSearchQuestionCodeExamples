@@ -307,11 +307,12 @@ public static class LeetCode
         int count = 0;
         while (curr != null)
         {
-            if (curr.val != rev.val)
+            if (curr.val != rev?.val)
                 return false;
-            if (count > midPoint) return true; // past the midpoint so we are done
+            if (count > midPoint) break; // past the midpoint so we are done
             curr = curr.next;
             rev = rev.next;
+            count++;
         }
         return true;
     }
