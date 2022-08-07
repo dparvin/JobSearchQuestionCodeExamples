@@ -258,11 +258,7 @@ public static class LeetCode
         ListNode? rev = back;
         while (curr != null)
         {
-            if (curr.val != rev.val)
-            {
-                return false;
-            }
-
+            if (curr.val != rev.val) return false;
             curr = curr.next;
             rev = rev.next;
         }
