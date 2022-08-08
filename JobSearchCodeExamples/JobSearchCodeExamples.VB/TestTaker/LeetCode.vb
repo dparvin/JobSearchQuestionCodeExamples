@@ -160,7 +160,7 @@
     ''' <summary>
     ''' Middles the node.
     ''' </summary>
-    ''' <paramname="head">The head.</param>
+    ''' <param name="head">The head.</param>
     ''' <returns></returns>
     Public Shared Function MiddleNode(ByVal head As ListNode) As ListNode
 
