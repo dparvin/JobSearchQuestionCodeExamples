@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <None Include="..\ExecCodeCoverage.ps1" Link="ExecCodeCoverage.ps1" />
+    <Compile Include="TestTaker\LeetCodeTest.fs" />
     <Compile Include="TestTaker\KWeakestRowsInAMatrixTest.fs" />
     <Compile Include="TestTaker\CustomCodeTest.fs" />
     <Compile Include="TestTaker\EmployeeCoverageTest.fs" />

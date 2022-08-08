@@ -135,10 +135,10 @@
     Public Shared Function FizzBuzz6(ByVal n As Integer) As IList(Of String)
 
         Dim result = New String(n - 1) {}
-        For i = 0 To n - 1
+        For i As Integer = 0 To n - 1
             Dim value As Integer = i + 1
-            Dim byThree = value Mod 3 = 0
-            Dim byFive = value Mod 5 = 0
+            Dim byThree As Boolean = value Mod 3 = 0
+            Dim byFive As Boolean = value Mod 5 = 0
             If byThree AndAlso byFive Then
                 result(i) = "FizzBuzz"
             ElseIf byThree Then
@@ -165,58 +165,15 @@
     Public Shared Function MiddleNode(ByVal head As ListNode) As ListNode
 
         If head Is Nothing OrElse head.next Is Nothing Then Return head
-        Dim items = Count(head)
+        Dim items As Integer = Count(head)
         Dim mid As Integer = items / 2
-        Dim curr = head
+        Dim curr As ListNode = head
         For i = 0 To mid - 1
             curr = curr.next
         Next
         Return curr
 
     End Function
-
-    ''' <summary>
-    ''' Counts the specified head.
-    ''' </summary>
-    ''' <paramname="head">The head.</param>
-    ''' <returns></returns>
-    Private Shared Function Count(ByVal head As ListNode) As Integer
-        Dim result = 0
-        Dim curr = head
-        While curr IsNot Nothing
-            result += 1
-            curr = curr.next
-        End While
-        Return result
-    End Function
-
-#Region " single linked list ---------------------------------------- "
-
-    ''' <summary>
-    ''' Definition for singly-linked list.
-    ''' </summary>
-    Public Class ListNode
-        ''' <summary>
-        ''' The value
-        ''' </summary>
-        Public val As Integer
-        ''' <summary>
-        ''' The next
-        ''' </summary>
-        Public [next] As ListNode
-        ''' <summary>
-        ''' Initializes a new instance of the <seecref="ListNode"/> class.
-        ''' </summary>
-        ''' <paramname="val">The value.</param>
-        ''' <paramname="next">The next.</param>
-        Public Sub New(ByVal Optional val As Integer = 0, ByVal Optional [next] As ListNode = Nothing)
-            Me.val = val
-            Me.next = [next]
-        End Sub
-    End Class
-
-
-#End Region
 
 #End Region
 
@@ -304,6 +261,8 @@
 
     End Function
 
+#End Region
+
     ''' <summary>
     ''' Adds the two numbers.
     ''' </summary>
@@ -345,9 +304,50 @@
 
     End Function
 
+#Region " single linked list ---------------------------------------- "
+
+    ''' <summary>
+    ''' Definition for singly-linked list.
+    ''' </summary>
+    Public Class ListNode
+        ''' <summary>
+        ''' The value
+        ''' </summary>
+        Public val As Integer
+        ''' <summary>
+        ''' The next
+        ''' </summary>
+        Public [next] As ListNode
+        ''' <summary>
+        ''' Initializes a new instance of the <seecref="ListNode"/> class.
+        ''' </summary>
+        ''' <paramname="val">The value.</param>
+        ''' <paramname="next">The next.</param>
+        Public Sub New(ByVal Optional val As Integer = 0, ByVal Optional [next] As ListNode = Nothing)
+            Me.val = val
+            Me.next = [next]
+        End Sub
+    End Class
+
+
 #End Region
 
 #Region " Private Support Routines ---------------------------------- "
+
+    ''' <summary>
+    ''' Counts the specified head.
+    ''' </summary>
+    ''' <paramname="head">The head.</param>
+    ''' <returns></returns>
+    Private Shared Function Count(ByVal head As ListNode) As Integer
+        Dim result = 0
+        Dim curr = head
+        While curr IsNot Nothing
+            result += 1
+            curr = curr.next
+        End While
+        Return result
+    End Function
 
     ''' <summary>
     ''' Reverses the specified head.
@@ -369,9 +369,9 @@
     End Function
 
     ''' <summary>
-    ''' Counts the specified head.
+    ''' Palindromes the count.
     ''' </summary>
-    ''' <paramname="head">The head.</param>
+    ''' <param name="head">The head.</param>
     ''' <returns></returns>
     Private Shared Function PalindromeCount(ByVal head As ListNode) As Integer
 

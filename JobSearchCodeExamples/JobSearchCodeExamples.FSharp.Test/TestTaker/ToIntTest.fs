@@ -74,7 +74,6 @@ module ToIntTest =
 
             result
 
-
         [<Theory>]
         [<MemberData("TestData")>]
         static member RomanToInt1Test(romanNumber : string, expectedResult : int) =

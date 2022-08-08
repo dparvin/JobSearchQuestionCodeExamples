@@ -15,6 +15,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="TestTaker\LeetCode.fs" />
     <Compile Include="TestTaker\LongVersion.fs" />
     <Compile Include="TestTaker\CustomCode.fs" />
     <Compile Include="TestTaker\EmployeeCoverage.fs" />
