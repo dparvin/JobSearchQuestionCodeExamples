@@ -263,6 +263,8 @@
 
 #End Region
 
+#Region " Add Two Numbers in a Single Linked List ------------------- "
+
     ''' <summary>
     ''' Adds the two numbers.
     ''' </summary>
@@ -304,31 +306,40 @@
 
     End Function
 
+#End Region
+
 #Region " single linked list ---------------------------------------- "
 
     ''' <summary>
     ''' Definition for singly-linked list.
     ''' </summary>
     Public Class ListNode
+
         ''' <summary>
         ''' The value
         ''' </summary>
         Public val As Integer
+
         ''' <summary>
         ''' The next
         ''' </summary>
         Public [next] As ListNode
+
         ''' <summary>
         ''' Initializes a new instance of the <seecref="ListNode"/> class.
         ''' </summary>
         ''' <paramname="val">The value.</param>
         ''' <paramname="next">The next.</param>
-        Public Sub New(ByVal Optional val As Integer = 0, ByVal Optional [next] As ListNode = Nothing)
+        Public Sub New(
+                ByVal Optional val As Integer = 0,
+                ByVal Optional [next] As ListNode = Nothing)
+
             Me.val = val
             Me.next = [next]
-        End Sub
-    End Class
 
+        End Sub
+
+    End Class
 
 #End Region
 
@@ -337,16 +348,20 @@
     ''' <summary>
     ''' Counts the specified head.
     ''' </summary>
-    ''' <paramname="head">The head.</param>
+    ''' <param name="head">The head.</param>
     ''' <returns></returns>
-    Private Shared Function Count(ByVal head As ListNode) As Integer
+    Private Shared Function Count(
+            ByVal head As ListNode) As Integer
+
         Dim result = 0
         Dim curr = head
         While curr IsNot Nothing
             result += 1
             curr = curr.next
         End While
+
         Return result
+
     End Function
 
     ''' <summary>
@@ -354,7 +369,8 @@
     ''' </summary>
     ''' <param name="head">The head.</param>
     ''' <returns></returns>
-    Private Shared Function Reverse(ByVal head As ListNode) As ListNode
+    Private Shared Function Reverse(
+            ByVal head As ListNode) As ListNode
 
         Dim result As ListNode = Nothing
         Dim curr = head
@@ -373,7 +389,8 @@
     ''' </summary>
     ''' <param name="head">The head.</param>
     ''' <returns></returns>
-    Private Shared Function PalindromeCount(ByVal head As ListNode) As Integer
+    Private Shared Function PalindromeCount(
+            ByVal head As ListNode) As Integer
 
         Dim result = 0
         Dim curr As ListNode = head
