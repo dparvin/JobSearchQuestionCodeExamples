@@ -1,6 +1,4 @@
-﻿Imports System.Globalization
-
-Namespace TestTaker
+﻿Namespace TestTaker
 
     ''' <summary>
     ''' A class that supports version numbers that are longer than the normal

@@ -1,7 +1,4 @@
-﻿Imports Xunit
-Imports JobSearchCodeExamples.VB.TestTaker
-
-Namespace TestTaker
+﻿Namespace TestTaker
 
     ''' <summary>
     ''' 

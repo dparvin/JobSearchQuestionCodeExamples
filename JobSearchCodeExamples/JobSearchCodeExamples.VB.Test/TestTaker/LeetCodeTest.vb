@@ -1,6 +1,4 @@
-﻿Imports Xunit
-
-Namespace TestTaker
+﻿Namespace TestTaker
 
     ''' <summary>
     ''' tests for code from LeetCode
@@ -130,6 +128,26 @@ Namespace TestTaker
         <InlineData(Nothing, Nothing, Nothing)>
         Public Sub AddTwoNumbers1Test(ByVal items1 As Integer(), ByVal items2 As Integer(), ByVal expectedResult As Integer())
             Assert.Equal(expectedResult, ToArray(LeetCode.AddTwoNumbers(ToListNode(items1), ToListNode(items2))))
+        End Sub
+
+#End Region
+
+#Region " Median of Two Sorted Arrays ------------------------------- "
+
+        ''' <summary>
+        ''' Finds the median sorted arrays.
+        ''' </summary>
+        ''' <paramname="nums1">The nums1.</param>
+        ''' <paramname="nums2">The nums2.</param>
+        ''' <paramname="expectedResults">The expected results.</param>
+        <Theory>
+        <InlineData(New Integer() {1, 2}, New Integer() {3, 4}, 2.5)>
+        <InlineData(New Integer() {1, 3}, New Integer() {2}, 2)>
+        <InlineData(New Integer() {1, 3}, Nothing, 2)>
+        <InlineData(Nothing, New Integer() {2}, 2)>
+        <InlineData(Nothing, Nothing, 0)>
+        Public Sub FindMedianSortedArrays(ByVal nums1 As Integer(), ByVal nums2 As Integer(), ByVal expectedResults As Double)
+            Assert.Equal(expectedResults, LeetCode.FindMedianSortedArrays(nums1, nums2))
         End Sub
 
 #End Region

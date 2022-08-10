@@ -8,9 +8,9 @@
     ' footprint.
 
     ''' <summary>
-    ''' Fizz and buzz items.
+    ''' Fizzs the buzz.
     ''' </summary>
-    ''' <paramname="n">The n.</param>
+    ''' <param name="n">The n.</param>
     ''' <returns></returns>
     Public Shared Function FizzBuzz(ByVal n As Integer) As IList(Of String)
 
@@ -303,6 +303,44 @@
         End While
 
         Return Reverse(result)
+
+    End Function
+
+#End Region
+
+#Region " Median of Two Sorted Arrays ------------------------------- "
+
+    ''' <summary>
+    ''' Finds the median sorted arrays.
+    ''' </summary>
+    ''' <param name="nums1">The nums1.</param>
+    ''' <param name="nums2">The nums2.</param>
+    ''' <returns></returns>
+    Public Shared Function FindMedianSortedArrays(
+            ByVal nums1 As Integer(),
+            ByVal nums2 As Integer()) As Double
+
+        Dim result As Double = 0
+        Dim arrayLenth = 0
+        If nums1 IsNot Nothing Then arrayLenth += nums1.Length
+        If nums2 IsNot Nothing Then arrayLenth += nums2.Length
+        If arrayLenth = 0 Then Return result
+        Dim temp = New Integer(arrayLenth - 1) {}
+        Dim Start = 0
+        If nums1 IsNot Nothing Then
+            Array.Copy(nums1, 0, temp, Start, nums1.Length)
+            Start = nums1.Length
+        End If
+        If nums2 IsNot Nothing Then Array.Copy(nums2, 0, temp, Start, nums2.Length)
+        Array.Sort(temp)
+        If temp.Length Mod 2 = 0 Then
+            Dim pos As Integer = temp.Length / 2 - 1
+            result = (temp(pos) + temp(pos + 1)) / 2
+        Else
+            result = temp(temp.Length \ 2)
+        End If
+
+        Return result
 
     End Function
 

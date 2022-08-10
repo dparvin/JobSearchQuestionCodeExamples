@@ -1,5 +1,3 @@
-Imports System.Globalization
-
 Namespace TestTaker
 
     ''' <summary>

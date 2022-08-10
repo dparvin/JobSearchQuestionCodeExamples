@@ -314,8 +314,47 @@ public static class LeetCode
 
     #endregion
 
-    #region single linked list --------------------------------------
+    #region Median of Two Sorted Arrays -----------------------------
 
+    /// <summary>
+    /// Finds the median sorted arrays.
+    /// </summary>
+    /// <param name="nums1">The nums1.</param>
+    /// <param name="nums2">The nums2.</param>
+    /// <returns></returns>
+    public static double FindMedianSortedArrays(int[] nums1, int[] nums2)
+    {
+        double result = 0;
+        int arrayLenth = 0;
+        if (nums1 != null) arrayLenth += nums1.Length;
+        if (nums2 != null) arrayLenth += nums2.Length;
+        if (arrayLenth == 0) return result;
+        int[] temp = new int[arrayLenth];
+        int Start = 0;
+        if (nums1 != null)
+        {
+            Array.Copy(nums1, 0, temp, Start, nums1.Length);
+            Start = nums1.Length;
+        }
+        if (nums2 != null)
+            Array.Copy(nums2, 0, temp, Start, nums2.Length);
+        Array.Sort(temp);
+        if (temp.Length % 2 == 0)
+        {
+            int pos = (temp.Length / 2) - 1;
+            result = ((double)(temp[pos] + temp[pos + 1])) / 2;
+        }
+        else
+        {
+            result = temp[temp.Length / 2];
+        }
+
+        return result;
+    }
+
+    #endregion
+
+    #region single linked list --------------------------------------
 
     /// <summary>
     /// Definition for singly-linked list.
@@ -341,7 +380,6 @@ public static class LeetCode
             this.next = next;
         }
     }
-
 
     #endregion
 

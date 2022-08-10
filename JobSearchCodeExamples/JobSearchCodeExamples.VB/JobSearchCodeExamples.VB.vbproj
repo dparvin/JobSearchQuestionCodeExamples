@@ -14,4 +14,9 @@
     <OutputPath>..\Build\$(Configuration)\</OutputPath>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Import Include="System.Formats.Asn1" />
+    <Import Include="System.Globalization" />
+  </ItemGroup>
+
 </Project>

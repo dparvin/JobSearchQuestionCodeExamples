@@ -1,7 +1,4 @@
-﻿Imports JobSearchCodeExamples.VB.TestTaker
-Imports Xunit
-
-Namespace TestTaker
+﻿Namespace TestTaker
 
     Public Class LinkedListsTest
 

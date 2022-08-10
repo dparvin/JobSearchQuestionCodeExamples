@@ -43,4 +43,17 @@
     <ProjectReference Include="..\JobSearchCodeExamples.VB\JobSearchCodeExamples.VB.vbproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Import Include="EmptyFiles" />
+    <Import Include="JobSearchCodeExamples.VB" />
+    <Import Include="JobSearchCodeExamples.VB.Test.TestTaker" />
+    <Import Include="JobSearchCodeExamples.VB.TestTaker" />
+    <Import Include="VerifyTests" />
+    <Import Include="VerifyXunit" />
+    <Import Include="Xunit" />
+    <Import Include="Xunit.Abstractions" />
+    <Import Include="Xunit.ConsoleClient" />
+    <Import Include="Xunit.Extensions" />
+  </ItemGroup>
+
 </Project>

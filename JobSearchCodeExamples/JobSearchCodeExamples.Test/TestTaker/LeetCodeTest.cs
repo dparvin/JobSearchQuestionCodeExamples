@@ -143,6 +143,27 @@ public class LeetCodeTest
 
     #endregion
 
+    #region Median of Two Sorted Arrays -----------------------------
+
+    /// <summary>
+    /// Finds the median sorted arrays.
+    /// </summary>
+    /// <param name="nums1">The nums1.</param>
+    /// <param name="nums2">The nums2.</param>
+    /// <param name="expectedResults">The expected results.</param>
+    [Theory]
+    [InlineData(new int[] { 1, 2 }, new int[] { 3, 4 }, 2.5)]
+    [InlineData(new int[] { 1, 3 }, new int[] { 2 }, 2)]
+    [InlineData(new int[] { 1, 3 }, null, 2)]
+    [InlineData(null, new int[] { 2 }, 2)]
+    [InlineData(null, null, 0)]
+    public void FindMedianSortedArrays(int[] nums1, int[] nums2, double expectedResults)
+    {
+        Assert.Equal(expectedResults, LeetCode.FindMedianSortedArrays(nums1, nums2));
+    }
+
+    #endregion
+
     #region Test Support functions ----------------------------------
 
     /// <summary>
