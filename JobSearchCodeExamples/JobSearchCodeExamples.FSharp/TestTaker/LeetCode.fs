@@ -234,3 +234,24 @@ module LeetCode =
                     result <- new ListNode(carry, result)
 
             Reverse(result)
+
+    let FindMedianSortedArrays(nums1 : int[], nums2 : int[]) : double = 
+        let mutable result : double = 0
+        let mutable arrayLength : int = 0
+        if (not (isNull nums1)) then arrayLength <- arrayLength + nums1.Length
+        if (not (isNull nums2)) then arrayLength <- arrayLength + nums2.Length
+        if arrayLength > 0 then            
+            let mutable temp : int[] = Array.zeroCreate(arrayLength)
+            let mutable start : int = 0
+            if not (isNull nums1) then
+                array.Copy(nums1, 0, temp, start, nums1.Length)
+                start <- start + nums1.Length
+            if not (isNull nums2) then
+                array.Copy(nums2, 0, temp, start, nums2.Length)
+            array.Sort(temp)
+            if arrayLength % 2 = 0 then // even number of entries
+                let pos : int = (arrayLength / 2) - 1
+                result <- double (temp[pos] + temp[pos + 1]) / double 2
+            else
+                result <- double temp[arrayLength / 2]
+        result

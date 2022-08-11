@@ -137,9 +137,9 @@
         ''' <summary>
         ''' Finds the median sorted arrays.
         ''' </summary>
-        ''' <paramname="nums1">The nums1.</param>
-        ''' <paramname="nums2">The nums2.</param>
-        ''' <paramname="expectedResults">The expected results.</param>
+        ''' <param name="nums1">The nums1.</param>
+        ''' <param name="nums2">The nums2.</param>
+        ''' <param name="expectedResults">The expected results.</param>
         <Theory>
         <InlineData(New Integer() {1, 2}, New Integer() {3, 4}, 2.5)>
         <InlineData(New Integer() {1, 3}, New Integer() {2}, 2)>

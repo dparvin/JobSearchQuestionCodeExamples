@@ -339,14 +339,14 @@ public static class LeetCode
         if (nums2 != null)
             Array.Copy(nums2, 0, temp, Start, nums2.Length);
         Array.Sort(temp);
-        if (temp.Length % 2 == 0)
+        if (arrayLenth % 2 == 0)
         {
-            int pos = (temp.Length / 2) - 1;
+            int pos = (arrayLenth / 2) - 1;
             result = ((double)(temp[pos] + temp[pos + 1])) / 2;
         }
         else
         {
-            result = temp[temp.Length / 2];
+            result = temp[arrayLenth / 2];
         }
 
         return result;

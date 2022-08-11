@@ -50,6 +50,17 @@ module LeetCodeTest =
 
             result
 
+        static member FindMedianSortedArraysTestData
+            with get() : IEnumerable<obj[]>  = 
+            let mutable result : List<obj[]> = new List<obj[]>()
+            result.Add([| [| 1; 2 |]; [| 3; 4 |]; 2.5 |])
+            result.Add([| [| 1; 3 |]; [| 2 |]; 2 |])
+            result.Add([| [| 1; 3 |]; null; 2 |])
+            result.Add([| null; [| 2 |]; 2 |])
+            result.Add([| null; null; 0 |])
+
+            result
+
         static member ToListNode(items : int[]) : ListNode =
             let mutable result : ListNode = null
 
@@ -127,3 +138,8 @@ module LeetCodeTest =
         [<MemberData("AddTwoNumbersTestData")>]
         static member AddTwoNumbers1Test (items1 : int[], items2 : int[], expectedResult : int[]) =
             Assert.Equal<int[]>(expectedResult, UnitTests.ToArray(LeetCode.AddTwoNumbers(UnitTests.ToListNode(items1), UnitTests.ToListNode(items2))))
+
+        [<Theory>]
+        [<MemberData("FindMedianSortedArraysTestData")>]
+        static member FindMedianSortedArraysTest (items1 : int[], items2 : int[], expectedResult : double) =
+            Assert.Equal(expectedResult, LeetCode.FindMedianSortedArrays(items1, items2))

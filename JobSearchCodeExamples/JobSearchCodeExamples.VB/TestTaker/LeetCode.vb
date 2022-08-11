@@ -333,11 +333,11 @@
         End If
         If nums2 IsNot Nothing Then Array.Copy(nums2, 0, temp, Start, nums2.Length)
         Array.Sort(temp)
-        If temp.Length Mod 2 = 0 Then
-            Dim pos As Integer = temp.Length / 2 - 1
+        If arrayLenth Mod 2 = 0 Then
+            Dim pos As Integer = arrayLenth / 2 - 1
             result = (temp(pos) + temp(pos + 1)) / 2
         Else
-            result = temp(temp.Length \ 2)
+            result = temp(arrayLenth \ 2)
         End If
 
         Return result
