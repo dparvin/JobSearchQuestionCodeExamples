@@ -198,11 +198,7 @@ public static class LeetCode
         curr = curr.next;
         while (curr != null)
         {
-            ListNode newItem = new()
-            {
-                val = curr.val,
-                next = back
-            };
+            ListNode newItem = new(curr.val, back);
             back = newItem;
             curr = curr.next;
         }
@@ -226,11 +222,10 @@ public static class LeetCode
     /// </returns>
     public static bool IsPalindrome2(ListNode? head)
     {
-
         if (head?.next == null) return true;
 
         var curr = head;
-        var rev = Reverse(curr);
+        var rev = Reverse(head);
         while (curr != null)
         {
             if (curr.val != rev?.val)
@@ -250,7 +245,6 @@ public static class LeetCode
     /// </returns>
     public static bool IsPalindrome3(ListNode? head)
     {
-
         if (head?.next == null) return true;
 
         var midPoint = PalindromeCount(head) / 2 + 1;
@@ -268,6 +262,10 @@ public static class LeetCode
         }
         return true;
     }
+
+    #endregion
+
+    #region Add Two Number ------------------------------------------
 
     /// <summary>
     /// Adds the two numbers.
@@ -345,9 +343,7 @@ public static class LeetCode
             result = ((double)(temp[pos] + temp[pos + 1])) / 2;
         }
         else
-        {
             result = temp[arrayLenth / 2];
-        }
 
         return result;
     }
