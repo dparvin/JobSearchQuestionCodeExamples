@@ -433,4 +433,29 @@ public static class LeetCode
     }
 
     #endregion
+
+    #region Container With Most Water -------------------------------
+
+    /// <summary>
+    /// Maximums the area.
+    /// </summary>
+    /// <param name="height">The height.</param>
+    /// <returns></returns>
+    public static int MaxArea(int[] height)
+    {
+        var result = 0;
+        for (var i = 0; i < height.Length; i++)
+        {
+            for (var j = i + 1; j < height.Length; j++)
+            {
+                int smaller = Math.Min(height[i], height[j]);
+                int width = j - i;
+                int area = smaller * width;
+                result = Math.Max(result, area);
+            }
+        }
+        return result;
+    }
+
+    #endregion
 }
