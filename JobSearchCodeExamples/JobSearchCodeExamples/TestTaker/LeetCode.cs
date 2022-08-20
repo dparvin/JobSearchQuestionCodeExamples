@@ -457,5 +457,86 @@ public static class LeetCode
         return result;
     }
 
+    /// <summary>
+    /// Maximums the area.
+    /// </summary>
+    /// <param name="height">The height.</param>
+    /// <returns></returns>
+    public static int MaxArea2(int[] height)
+    {
+        var result = 0;
+        var beginnng = 0;
+        var ending = height.Length - 1;
+        while (beginnng < ending)
+        {
+            int smaller = Math.Min(height[beginnng], height[ending]);
+            int width = ending - beginnng;
+            int area = smaller * width;
+            result = Math.Max(result, area);
+            while (height[beginnng] <= smaller && beginnng < ending) beginnng++;
+            while (height[ending] <= smaller && beginnng < ending) ending--;
+        }
+        return result;
+    }
+
+    #endregion
+
+    #region Merge k Sorted Lists ------------------------------------
+
+    /// <summary>
+    /// Merges the k lists.
+    /// </summary>
+    /// <param name="lists">The lists.</param>
+    /// <returns></returns>
+    public static ListNode? MergeKLists(ListNode?[] lists)
+    {
+        int[] results = Array.Empty<int>();
+        int pos = 0;
+        for (int i = 0; i < lists.Length; i++)
+        {
+            int[]? items = ToArray(lists[i]);
+            if (items != null)
+            {
+                Array.Resize(ref results, items.Length + pos);
+                Array.Copy(items, 0, results, pos, items.Length);
+                pos += items.Length;
+            }
+        }
+        Array.Sort(results);
+        return ToListNode(results);
+    }
+
+    /// <summary>
+    /// Converts to listnode.
+    /// </summary>
+    /// <param name="items">The items.</param>
+    /// <returns></returns>
+    private static ListNode? ToListNode(int[] items)
+    {
+        if (items == null) return null;
+        ListNode? result = null;
+        for (int i = items.Length - 1; i >= 0; i--)
+            result = new(items[i], result);
+        return result;
+    }
+
+    /// <summary>
+    /// Converts to array.
+    /// </summary>
+    /// <param name="nodes">The nodes.</param>
+    /// <returns></returns>
+    private static int[]? ToArray(ListNode? nodes)
+    {
+        if (nodes == null) return null;
+        int[] result = Array.Empty<int>();
+        while (nodes != null)
+        {
+            Array.Resize(ref result, result.Length + 1);
+            result[^1] = nodes.val;
+            nodes = nodes.next;
+        }
+        return result;
+    }
+
     #endregion
 }
