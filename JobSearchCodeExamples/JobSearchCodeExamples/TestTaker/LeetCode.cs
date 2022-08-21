@@ -539,4 +539,65 @@ public static class LeetCode
     }
 
     #endregion
+
+    #region Substring with Concatenation of All Words ---------------
+
+    /// <summary>
+    /// Finds the substring.
+    /// </summary>
+    /// <param name="s">The s.</param>
+    /// <param name="words">The words.</param>
+    /// <returns></returns>
+    public static IList<int> FindSubstring(string s, string[] words)
+    {
+        var result = new List<int>();
+        if (string.IsNullOrEmpty(s) || words.Length == 0) return result;
+        var wordCount = words.Length;
+        var wordLength = words[0].Length;
+        var sectionLength = wordCount * wordLength;
+
+        if (sectionLength > s.Length) return result;
+
+        var maxSections = s.Length - sectionLength + 1;
+
+        for (int i = 0; i < maxSections; i++)
+        {
+            var section = s.Substring(i, sectionLength);
+            bool found;
+            for (int j = 0; j < wordCount; j++)
+            {
+                (section, found) = RemoveWord(section, words[j]);
+                // if the word was not found then go on to the next section
+                if (!found) break;
+            }
+            if (section.Length == 0) result.Add(i);
+        }
+
+        return result;
+    }
+
+    /// <summary>
+    /// Removes the word.
+    /// </summary>
+    /// <param name="section">The section.</param>
+    /// <param name="word">The word.</param>
+    /// <returns></returns>
+    private static (string, bool) RemoveWord(string section, string word)
+    {
+        var found = false;
+        var subindex = section.IndexOf(word);
+        // The index should be on a multiple of the word length
+        while (subindex % word.Length != 0 && subindex >= 0)
+            subindex = section.IndexOf(word, subindex + 1);
+        // if we found the word then remove it and return that we found it.
+        if (subindex >= 0)
+        {
+            section = section.Remove(subindex, word.Length);
+            found = true;
+        }
+
+        return (section, found);
+    }
+
+    #endregion
 }
