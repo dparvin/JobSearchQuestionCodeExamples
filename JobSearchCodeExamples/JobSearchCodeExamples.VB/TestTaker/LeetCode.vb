@@ -31,9 +31,9 @@
     End Function
 
     ''' <summary>
-    ''' Fizz and buzz items.
+    ''' Fizzs the buzz2.
     ''' </summary>
-    ''' <paramname="n">The n.</param>
+    ''' <param name="n">The n.</param>
     ''' <returns></returns>
     Public Shared Function FizzBuzz2(ByVal n As Integer) As IList(Of String)
 
