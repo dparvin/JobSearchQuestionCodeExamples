@@ -826,6 +826,17 @@ public class LeetCodeTest
 
     #endregion
 
+    #region Course Schedule -----------------------------------------
+
+    //    [Theory]
+    //    [InlineData(2, { { 1, 0 }, { 0, 1 } })]
+    //    public void CanFinishTest(int numCourses, int[][] prerequisites, bool expectedResult)
+    //{
+    //    Assert.Equal(expectedResult, LeetCode.CanFinish(numCourses, prerequisites));
+    //}
+
+    #endregion
+
     #region Test Support functions ----------------------------------
 
     /// <summary>

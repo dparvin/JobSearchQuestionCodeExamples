@@ -4,7 +4,7 @@ namespace JobSearchCodeExamples.Test.Contest;
 
 public partial class LeetCodeContest309Test
 {
-    #region Question 1 ----------------------------------------------
+    #region Check Distances Between Same Letters --------------------
 
     /// <summary>
     /// Question1s the test.
@@ -12,31 +12,33 @@ public partial class LeetCodeContest309Test
     /// <param name="value">The value.</param>
     /// <param name="expectedResult">The expected result.</param>
     [Theory]
-    [MemberData(nameof(Question1TestData))]
-    public void Question1Test(int value, int expectedResult)
+    [MemberData(nameof(CheckDistancesTestData))]
+    public void CheckDistancesTest(string s, int[] distance, bool expectedResult)
     {
-        Assert.Equal(expectedResult, LeetCodeContest309.Question1(value));
+        Assert.Equal(expectedResult, LeetCodeContest309.CheckDistances(s, distance));
     }
 
     #endregion
 
-    #region Question 2 ----------------------------------------------
+    #region Number of Ways to Reach a Position After Exactly k Steps
 
     /// <summary>
     /// Question2s the test.
     /// </summary>
-    /// <param name="value">The value.</param>
+    /// <param name="startPos">The start position.</param>
+    /// <param name="endPos">The end position.</param>
+    /// <param name="k">The k.</param>
     /// <param name="expectedResult">The expected result.</param>
     [Theory]
-    [MemberData(nameof(Question2TestData))]
-    public void Question2Test(int value, int expectedResult)
+    [MemberData(nameof(NumberOfWaysTestData))]
+    public void NumberOfWaysTest(int startPos, int endPos, int k, int expectedResult)
     {
-        Assert.Equal(expectedResult, LeetCodeContest309.Question2(value));
+        Assert.Equal(expectedResult, LeetCodeContest309.NumberOfWays(startPos, endPos, k));
     }
 
     #endregion
 
-    #region Question 3 ----------------------------------------------
+    #region Longest Nice Sub-array ----------------------------------
 
     /// <summary>
     /// Question3s the test.
@@ -44,15 +46,15 @@ public partial class LeetCodeContest309Test
     /// <param name="value">The value.</param>
     /// <param name="expectedResult">The expected result.</param>
     [Theory]
-    [MemberData(nameof(Question3TestData))]
-    public void Question3Test(int value, int expectedResult)
+    [MemberData(nameof(LongestNiceSubarrayTestData))]
+    public void LongestNiceSubarrayTest(int[] nums, int expectedResult)
     {
-        Assert.Equal(expectedResult, LeetCodeContest309.Question3(value));
+        Assert.Equal(expectedResult, LeetCodeContest309.LongestNiceSubarray(nums));
     }
 
     #endregion
 
-    #region Question 4 ----------------------------------------------
+    #region Meeting Rooms III ---------------------------------------
 
     /// <summary>
     /// Question4s the test.
@@ -60,10 +62,10 @@ public partial class LeetCodeContest309Test
     /// <param name="value">The value.</param>
     /// <param name="expectedResult">The expected result.</param>
     [Theory]
-    [MemberData(nameof(Question4TestData))]
-    public void Question4Test(int value, int expectedResult)
+    [MemberData(nameof(MostBookedTestData))]
+    public void MostBookedTest(int n, int[][] meetings, int expectedResult)
     {
-        Assert.Equal(expectedResult, LeetCodeContest309.Question4(value));
+        Assert.Equal(expectedResult, LeetCodeContest309.MostBooked(n, meetings));
     }
 
     #endregion

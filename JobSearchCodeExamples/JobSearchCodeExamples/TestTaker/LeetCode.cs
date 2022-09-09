@@ -600,4 +600,35 @@ public static class LeetCode
     }
 
     #endregion
+
+    #region Course Schedule -----------------------------------------
+
+    /// <summary>
+    /// Determines whether this instance can finish the specified number courses.
+    /// </summary>
+    /// <param name="numCourses">The number courses.</param>
+    /// <param name="prerequisites">The prerequisites.</param>
+    /// <returns>
+    ///   <c>true</c> if this instance can finish the specified number courses; otherwise, <c>false</c>.
+    /// </returns>
+    public static bool CanFinish(int numCourses, int[][] prerequisites)
+    {
+        if (numCourses == 0) return false;
+        if (prerequisites == null || prerequisites.Length == 0) return false;
+        List<int> l = new();
+        List<int> s = new();
+        for (var i = 0; i < numCourses; i++)
+            s.Add(i);
+        while (s.Count > 0)
+        {
+            int course = s[0];
+            s.Remove(course);
+            l.Add(course);
+
+        }
+
+        return prerequisites.Length == 0;
+    }
+
+    #endregion
 }
