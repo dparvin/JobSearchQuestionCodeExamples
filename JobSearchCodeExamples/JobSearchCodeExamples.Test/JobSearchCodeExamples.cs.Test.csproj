@@ -42,7 +42,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\JobSearchCodeExamples\JobSearchCodeExamples.csproj" />
+    <ProjectReference Include="..\JobSearchCodeExamples\JobSearchCodeExamples.cs.csproj" />
   </ItemGroup>
 
 </Project>

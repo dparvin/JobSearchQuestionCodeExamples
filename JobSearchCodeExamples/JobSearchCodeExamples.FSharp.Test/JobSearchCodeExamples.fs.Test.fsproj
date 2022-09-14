@@ -47,7 +47,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\JobSearchCodeExamples.FSharp\JobSearchCodeExamples.FSharp.fsproj" />
+    <ProjectReference Include="..\JobSearchCodeExamples.FSharp\JobSearchCodeExamples.fs.fsproj" />
   </ItemGroup>
 
 </Project>

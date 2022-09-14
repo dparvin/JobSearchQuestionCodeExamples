@@ -3,17 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JobSearchCodeExamples", "JobSearchCodeExamples\JobSearchCodeExamples.csproj", "{1660B789-CDB1-4D57-99E9-23184F5687BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JobSearchCodeExamples.cs", "JobSearchCodeExamples\JobSearchCodeExamples.cs.csproj", "{1660B789-CDB1-4D57-99E9-23184F5687BE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JobSearchCodeExamples.Test", "JobSearchCodeExamples.Test\JobSearchCodeExamples.Test.csproj", "{995E7BE6-A63E-4E2A-BB5D-657F9FB7875C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JobSearchCodeExamples.cs.Test", "JobSearchCodeExamples.Test\JobSearchCodeExamples.cs.Test.csproj", "{995E7BE6-A63E-4E2A-BB5D-657F9FB7875C}"
 EndProject
-Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "JobSearchCodeExamples.VB", "JobSearchCodeExamples.VB\JobSearchCodeExamples.VB.vbproj", "{43C7F881-BAFA-4967-B7A5-0FF3A5BACD9C}"
+Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "JobSearchCodeExamples.vb", "JobSearchCodeExamples.VB\JobSearchCodeExamples.vb.vbproj", "{43C7F881-BAFA-4967-B7A5-0FF3A5BACD9C}"
 EndProject
-Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "JobSearchCodeExamples.VB.Test", "JobSearchCodeExamples.VB.Test\JobSearchCodeExamples.VB.Test.vbproj", "{A17641C5-E20B-4145-ACA8-6ACED2D2133C}"
+Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "JobSearchCodeExamples.vb.Test", "JobSearchCodeExamples.VB.Test\JobSearchCodeExamples.vb.Test.vbproj", "{A17641C5-E20B-4145-ACA8-6ACED2D2133C}"
 EndProject
-Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "JobSearchCodeExamples.FSharp", "JobSearchCodeExamples.FSharp\JobSearchCodeExamples.FSharp.fsproj", "{9E4646F9-53B3-4EDC-84F9-19896ABB8A41}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "JobSearchCodeExamples.fs", "JobSearchCodeExamples.FSharp\JobSearchCodeExamples.fs.fsproj", "{9E4646F9-53B3-4EDC-84F9-19896ABB8A41}"
 EndProject
-Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "JobSearchCodeExamples.FSharp.Test", "JobSearchCodeExamples.FSharp.Test\JobSearchCodeExamples.FSharp.Test.fsproj", "{44C2FA02-61AE-48BE-AAE0-9A6026C3D152}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "JobSearchCodeExamples.fs.Test", "JobSearchCodeExamples.FSharp.Test\JobSearchCodeExamples.fs.Test.fsproj", "{44C2FA02-61AE-48BE-AAE0-9A6026C3D152}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "JobSearchCodeExamples.cpp", "JobSearchCodeExamples.cpp\JobSearchCodeExamples.cpp.vcxproj", "{662E2416-1C11-4D8B-BA57-AD8718B26C09}"
 EndProject

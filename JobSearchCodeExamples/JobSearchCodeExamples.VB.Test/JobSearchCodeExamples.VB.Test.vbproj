@@ -40,7 +40,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\JobSearchCodeExamples.VB\JobSearchCodeExamples.VB.vbproj" />
+    <ProjectReference Include="..\JobSearchCodeExamples.VB\JobSearchCodeExamples.vb.vbproj" />
   </ItemGroup>
 
   <ItemGroup>
