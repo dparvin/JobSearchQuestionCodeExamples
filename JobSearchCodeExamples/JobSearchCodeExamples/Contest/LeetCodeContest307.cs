@@ -164,6 +164,7 @@
             /// Initializes a new instance of the <see cref="TreeNode" /> class.
             /// </summary>
             /// <param name="val">The value.</param>
+            /// <param name="pos">The position.</param>
             /// <param name="left">The left.</param>
             /// <param name="right">The right.</param>
             public TreeNode(int val = 0, int pos = 0, TreeNode? left = null, TreeNode? right = null)
