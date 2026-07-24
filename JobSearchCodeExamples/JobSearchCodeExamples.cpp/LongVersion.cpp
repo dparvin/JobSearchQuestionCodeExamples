@@ -6,7 +6,7 @@
 /// <param name="version">The version.</param>
 LongVersion::LongVersion(String^ version)
 {
-	array<String^>^ parts = version->Split('.');
+	array<String^>^ parts = version->Split(L'.');
 	Parts = gcnew array<int>(parts->Length);
 	int i = 0;
 	for each (String ^ part in parts)

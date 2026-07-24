@@ -26,7 +26,7 @@ Namespace TestTaker
         version2 As String,
         ExpectedResults As Integer)
 
-            Dim result = CustomCode.VersionCompare(version1, version2)
+            Dim result As Integer = CustomCode.VersionCompare(version1, version2)
             Assert.Equal(ExpectedResults, result)
 
         End Sub

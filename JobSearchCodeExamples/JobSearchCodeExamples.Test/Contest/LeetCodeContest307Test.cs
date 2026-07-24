@@ -1,8 +1,12 @@
 ﻿using JobSearchCodeExamples.Contest;
+using JobSearchCodeExamples.Support;
 using static JobSearchCodeExamples.Contest.LeetCodeContest307;
 
 namespace JobSearchCodeExamples.Test.Contest
 {
+    /// <summary>
+    /// Represents the test class for LeetCode Contest 307 problems.
+    /// </summary>
     public partial class LeetCodeContest307Test
     {
         #region Minimum Hours of Training to Win a Competition ------
@@ -17,8 +21,12 @@ namespace JobSearchCodeExamples.Test.Contest
         /// <param name="expectedResult">The expected result.</param>
         [Theory]
         [InlineData(5, 3, new int[] { 1, 4, 3, 2 }, new int[] { 2, 6, 4, 1 }, 8)]
+        [InlineData(5, 3, new int[] { 1, 4 }, new int[] { 2, 5 }, 2)]
         [InlineData(2, 4, new int[] { 1 }, new int[] { 3 }, 0)]
-        [InlineData(100, 100, new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 }, new int[] { 1, 2, 3, 1, 2, 3, 1, 2, 10 }, 0)]
+        [InlineData(1, 1, new int[] { 1, 1, 1, 1 }, new int[] { 1, 1, 1, 50 }, 51)]
+        [InlineData(30, 178, new int[] { 24, 91, 63, 38, 31, 63, 22, 35, 91, 54, 88, 46, 80, 14, 12, 19, 57, 92 }, new int[] { 18, 43, 36, 88, 84, 21, 82, 54, 61, 80, 68, 54, 75, 27, 99, 14, 86, 95 }, 891)]
+        [InlineData(58, 100, new int[] { 64, 93, 52, 26, 1, 39, 7, 2, 80, 80 }, new int[] { 52, 36, 68, 32, 71, 86, 53, 57, 92, 50 }, 387)]
+        [InlineData(43, 76, new int[] { 11, 65, 22 }, new int[] { 85, 29, 22 }, 66)]
         public void MinNumberOfHoursTest(int initialEnergy, int initialExperience, int[] energy, int[] experience, int expectedResult)
         {
             Assert.Equal(expectedResult, LeetCodeContest307.MinNumberOfHours(initialEnergy, initialExperience, energy, experience));
@@ -73,33 +81,9 @@ namespace JobSearchCodeExamples.Test.Contest
         [InlineData(new int[] { 1 }, 1, 0)]
         public void AmountOfTimeTest(int[] nodes, int start, int expectedResult)
         {
-            var root = new TreeNode(nodes[0]);
-            var Index = 1;
-            var pos = 1;
-            while (Index < nodes.Length)
-            {
-                AddBranchs(ref root, nodes, pos, ref Index);
-                pos++;
-            }
+            var root = TreeNodeHelper.BuildTree(nodes);
 
             Assert.Equal(expectedResult, AmountOfTime(root, start));
-        }
-
-        private static void AddBranchs(ref TreeNode? parent, int[] nodes, int pos, ref int index, int currLevel = 0)
-        {
-            var posLevel = (int)Math.Pow(pos, .5);
-            var posLeft = Math.Round((pos - ((int)Math.Pow(2, posLevel)-1.0)) / (int)Math.Pow(posLevel, 2), 0);
-            if (parent == null && posLevel == currLevel && nodes[index] != 0)
-            {
-                parent = new TreeNode(nodes[index], pos);
-                index++;
-            }
-            else if (parent == null && posLevel == currLevel && nodes[index] == 0)
-                index++;
-            else if (parent != null && posLeft == 0)
-                AddBranchs(ref parent.left, nodes, pos, ref index, currLevel + 1);
-            else if (parent != null && posLeft == 1)
-                AddBranchs(ref parent.right, nodes, pos, ref index, currLevel + 1);
         }
 
         #endregion

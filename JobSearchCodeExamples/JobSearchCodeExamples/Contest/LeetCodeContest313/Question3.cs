@@ -9,7 +9,7 @@ public static class Question3
     /// Does the question3.
     /// </summary>
     /// <returns></returns>
-    public static bool DoQuestion3()
+    public static bool DoQuestion3(string s, int[] distance)
     {
         return true;
     }

@@ -13,7 +13,7 @@ Namespace TestTaker
         ''' <returns></returns>
         Public Shared Function VersionCompare(
             version1 As String,
-            version2 As String) As Object
+            version2 As String) As Integer
 
             Dim v1 As String() = version1.Split(".")
             Dim V2 As String() = version2.Split(".")

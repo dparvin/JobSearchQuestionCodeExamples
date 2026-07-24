@@ -9,8 +9,8 @@
 /// <returns></returns>
 int CustomCode::VersionCompare(String^ version1, String^ version2)
 {
-	array<String^>^ v1 = version1->Split('.');
-	array<String^>^ v2 = version2->Split('.');
+	array<String^>^ v1 = version1->Split(L'.');
+	array<String^>^ v2 = version2->Split(L'.');
 	int longest = v1->Length < v2->Length ? v2->Length : v1->Length;
 	for (int i = 0; i < longest; i++)
 	{

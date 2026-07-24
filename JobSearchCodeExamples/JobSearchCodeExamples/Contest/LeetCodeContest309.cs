@@ -53,11 +53,11 @@ public static class LeetCodeContest309
 
     private static int Distance(int[][] dp, int k, int d)
     {
-        const int mod = 10 ^ 9 + 7;
+        const int mod = 1000000007;
         if (d >= k)
             return d == k ? 1 : 0;
         if (dp[k][d] == 0)
-            dp[k][d] = (1 + Distance(dp, k - 1, d + 1) + Distance(dp, k - 1, Math.Abs(d - 1))) % mod;
+            dp[k][d] = (1 + (Distance(dp, k - 1, d + 1) + Distance(dp, k - 1, Math.Abs(d - 1)))) % mod;
 
         return Math.Abs(dp[k][d] - 1);
     }
@@ -67,13 +67,34 @@ public static class LeetCodeContest309
     #region Longest Nice Sub-array ----------------------------------
 
     /// <summary>
-    /// Question3s the specified value.
+    /// Question 3s Longest Nice SubArray.
     /// </summary>
-    /// <param name="nums">The nums.</param>
+    /// <param name="nums">The numbers to process.</param>
     /// <returns></returns>
-    public static int LongestNiceSubarray(int[] nums)
+    public static int LongestNiceSubArray(Int64[] nums)
     {
-        return 0;
+        int left = 0;
+        Int64 usedBits = 0;
+        int longest = 0;
+
+        for (int right = 0; right < nums.Length; right++)
+        {
+            // Remove elements from the left until nums[right]
+            // does not share any bits with the current window.
+            while ((usedBits & nums[right]) != 0)
+            {
+                usedBits ^= nums[left];
+                left++;
+            }
+
+            // Add the new number into the window
+            usedBits |= nums[right];
+
+            // Track the longest valid window
+            longest = Math.Max(longest, right - left + 1);
+        }
+
+        return longest;
     }
 
     #endregion

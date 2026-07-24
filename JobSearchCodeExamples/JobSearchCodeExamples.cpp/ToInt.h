@@ -10,4 +10,3 @@ public:
 	static int RomanToInt2(String^ s);
 	static int RomanToInt3(String^ s);
 };
-

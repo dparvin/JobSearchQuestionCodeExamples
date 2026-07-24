@@ -1,8 +1,11 @@
-﻿namespace JobSearchCodeExamples.Contest
+﻿using JobSearchCodeExamples.Support;
+
+namespace JobSearchCodeExamples.Contest
 {
     /// <summary>
     /// LeetCode Contest 307
     /// </summary>
+    /// <see cref="https://leetcode.com/contest/weekly-contest-307/"/>
     public static class LeetCodeContest307
     {
         #region Minimum Hours of Training to Win a Competition ------
@@ -134,46 +137,9 @@
         /// <summary>
         /// Question 3.
         /// </summary>
-        public static int AmountOfTime(TreeNode root, int start)
+        public static int AmountOfTime(TreeNode? root, int start)
         {
             return 0;
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public class TreeNode
-        {
-            /// <summary>
-            /// The value
-            /// </summary>
-            public int val;
-            /// <summary>
-            /// The position
-            /// </summary>
-            public int pos;
-            /// <summary>
-            /// The left
-            /// </summary>
-            public TreeNode? left;
-            /// <summary>
-            /// The right
-            /// </summary>
-            public TreeNode? right;
-            /// <summary>
-            /// Initializes a new instance of the <see cref="TreeNode" /> class.
-            /// </summary>
-            /// <param name="val">The value.</param>
-            /// <param name="pos">The position.</param>
-            /// <param name="left">The left.</param>
-            /// <param name="right">The right.</param>
-            public TreeNode(int val = 0, int pos = 0, TreeNode? left = null, TreeNode? right = null)
-            {
-                this.val = val;
-                this.pos = pos;
-                this.left = left;
-                this.right = right;
-            }
         }
 
         #endregion
@@ -218,6 +184,11 @@
             return sums[^1];
         }
 
+        /// <summary>
+        /// Adds to array.
+        /// </summary>
+        /// <param name="a">a.</param>
+        /// <param name="item">The item.</param>
         private static void AddToArray(ref long[] a, long item)
         {
             a ??= Array.Empty<long>();

@@ -9,13 +9,14 @@ public partial class Question1Test
     /// <summary>
     /// Question1s the test.
     /// </summary>
-    /// <param name="value">The value.</param>
+    /// <param name="s">The s.</param>
+    /// <param name="distance">The distance.</param>
     /// <param name="expectedResult">The expected result.</param>
     [Theory]
     [MemberData(nameof(Question1TestData))]
     public void DoQuestion1Test(string s, int[] distance, bool expectedResult)
     {
-        Assert.Equal(expectedResult, Question1.DoQuestion1());
+        Assert.Equal(expectedResult, Question1.DoQuestion1(s, distance));
     }
 
     #endregion

@@ -73,7 +73,7 @@ public class LeetCodeTest
     [InlineData(new int[] { 1, 2, 3, 4, 5, 6 }, new int[] { 4, 5, 6 })]
     [InlineData(new int[] { 3 }, new int[] { 3 })]
     [InlineData(null, new int[] { })]
-    public void MiddleNodeTest(int[] items, int[] expectedResult)
+    public void MiddleNodeTest(int[]? items, int[]? expectedResult)
     {
         Assert.Equal(expectedResult, ToArray(LeetCode.MiddleNode(ToListNode(items))));
     }
@@ -92,7 +92,7 @@ public class LeetCodeTest
     [InlineData(new int[] { 1, 2, 3, 3, 2, 1 }, true)]
     [InlineData(new int[] { 1, 2, 3, 4, 2, 1 }, false)]
     [InlineData(null, true)]
-    public void IsPalindrome1Test(int[] items, bool expectedResult)
+    public void IsPalindrome1Test(int[]? items, bool expectedResult)
     {
         Assert.Equal(expectedResult, LeetCode.IsPalindrome(ToListNode(items)));
     }
@@ -104,7 +104,7 @@ public class LeetCodeTest
     [InlineData(new int[] { 1, 2, 3, 3, 2, 1 }, true)]
     [InlineData(new int[] { 1, 2, 3, 4, 2, 1 }, false)]
     [InlineData(null, true)]
-    public void IsPalindrome2Test(int[] items, bool expectedResult)
+    public void IsPalindrome2Test(int[]? items, bool expectedResult)
     {
         Assert.Equal(expectedResult, LeetCode.IsPalindrome2(ToListNode(items)));
     }
@@ -116,7 +116,7 @@ public class LeetCodeTest
     [InlineData(new int[] { 1, 2, 3, 3, 2, 1 }, true)]
     [InlineData(new int[] { 1, 2, 3, 4, 2, 1 }, false)]
     [InlineData(null, true)]
-    public void IsPalindrome3Test(int[] items, bool expectedResult)
+    public void IsPalindrome3Test(int[]? items, bool expectedResult)
     {
         Assert.Equal(expectedResult, LeetCode.IsPalindrome3(ToListNode(items)));
     }
@@ -136,7 +136,7 @@ public class LeetCodeTest
     [InlineData(new int[] { 9 }, new int[] { 1, 9, 9, 9, 9, 9, 9, 9, 9, 9 }, new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 })]
     [InlineData(null, new int[] { 5, 6, 4 }, new int[] { 5, 6, 4 })]
     [InlineData(null, null, new int[] { })]
-    public void AddTwoNumbers1Test(int[] items1, int[] items2, int[] expectedResult)
+    public void AddTwoNumbers1Test(int[]? items1, int[]? items2, int[]? expectedResult)
     {
         Assert.Equal(expectedResult, ToArray(LeetCode.AddTwoNumbers(ToListNode(items1), ToListNode(items2))));
     }
@@ -157,7 +157,7 @@ public class LeetCodeTest
     [InlineData(new int[] { 1, 3 }, null, 2)]
     [InlineData(null, new int[] { 2 }, 2)]
     [InlineData(null, null, 0)]
-    public void FindMedianSortedArraysTest(int[] nums1, int[] nums2, double expectedResults)
+    public void FindMedianSortedArraysTest(int[]? nums1, int[]? nums2, double expectedResults)
     {
         Assert.Equal(expectedResults, LeetCode.FindMedianSortedArrays(nums1, nums2));
     }
@@ -844,7 +844,7 @@ public class LeetCodeTest
     /// </summary>
     /// <param name="items">The items.</param>
     /// <returns></returns>
-    private static LeetCode.ListNode? ToListNode(int[] items)
+    private static LeetCode.ListNode? ToListNode(int[]? items)
     {
         if (items == null) return null;
         LeetCode.ListNode? result = null;

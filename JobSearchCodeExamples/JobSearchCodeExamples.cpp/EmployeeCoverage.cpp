@@ -5,12 +5,12 @@ int EmployeeCoverage::MaxCoverage(array<String^>^ employees)
 	array<int>^ combined = gcnew array<int>(employees->Length);
 	for (int i = 0; i < employees->Length; i++)
 	{
-		array<String^>^ years = employees[i]->Split('-');
+		array<String^>^ years = employees[i]->Split(L'-');
 		int startDate = Int32::Parse(years[0]);
 		int endDate = Int32::Parse(years[1]);
 		for (int j = i + 1; j < employees->Length; j++)
 		{
-			array<String^>^ years2 = employees[j]->Split('-');
+			array<String^>^ years2 = employees[j]->Split(L'-');
 			int start = Int32::Parse(years2[0]);
 			int end = Int32::Parse(years2[1]);
 			if (startDate <= start && endDate >= start ||

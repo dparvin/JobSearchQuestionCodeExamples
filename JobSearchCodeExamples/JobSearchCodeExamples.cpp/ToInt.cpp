@@ -3,18 +3,19 @@
 /// <summary>
 /// Romans to int.
 /// </summary>
-/// <param name="s">The s.</param>
+/// <param name="s">The string containing the roman numerals to convert to an integer.</param>
 /// <returns></returns>
 int ToInt::RomanToInt(String^ s)
 {
 	int pos = 0;
 	int result = 0;
-	while (pos < s->Length)
+	array<System::Char>^ chars = s->ToCharArray();
+	while (pos < chars->Length)
 	{
-		char spos = s[pos];
-		char snext = 0;
-		if (pos < s->Length - 1)
-			snext = s[pos + 1];
+		System::Char spos = chars[pos];
+		System::Char snext = 0;
+		if (pos < chars->Length - 1)
+			snext = chars[pos + 1];
 		if (spos == L'I')
 		{
 			if (snext == L'V')
@@ -78,12 +79,13 @@ int ToInt::RomanToInt2(String^ s)
 	array<array<int>^>^ extraValues = { { 4, 9 }, { 40, 90 }, { 400, 900 } };
 	int pos = 0;
 	int result = 0;
-	while (pos < s->Length)
+	array<System::Char>^ chars = s->ToCharArray();
+	while (pos < chars->Length)
 	{
-		String^ spos = s[pos].ToString();
+		String^ spos = chars[pos].ToString();
 		String^ snext = "";
-		if (pos < s->Length - 1)
-			snext = s[pos + 1].ToString();
+		if (pos < chars->Length - 1)
+			snext = chars[pos + 1].ToString();
 		int romanIndex = Array::IndexOf(roman, spos);
 		int beforeIndex = Array::IndexOf(before, spos);
 		if (beforeIndex >= 0 && !String::IsNullOrEmpty(snext))
@@ -106,7 +108,7 @@ int ToInt::RomanToInt2(String^ s)
 
 int ToInt::RomanToInt3(String^ s)
 {
-	Dictionary<String^, int>^ RomanValues = gcnew Dictionary<String^, int>();
+	Dictionary<System::String^, int>^ RomanValues = gcnew Dictionary<System::String^, int>();
 	RomanValues->Add("I", 1);
 	RomanValues->Add("V", 5);
 	RomanValues->Add("X", 10);
@@ -116,18 +118,24 @@ int ToInt::RomanToInt3(String^ s)
 	RomanValues->Add("M", 1000);
 	int pos = 0;
 	int result = 0;
-	while (pos < s->Length)
+	array<System::Char>^ chars = s->ToCharArray();
+	while (pos < chars->Length)
 	{
-		String^ spos = s[pos].ToString();
+		String^ spos = chars[pos].ToString();
 		String^ snext = "";
-		if (pos < s->Length - 1)
-			snext = s[pos + 1].ToString();
+		if (pos < chars->Length - 1)
+			snext = chars[pos + 1].ToString();
+		int val = 0;
+		if (!RomanValues->TryGetValue(spos, val))
+			throw gcnew ArgumentException("Invalid Roman numeral character: " + spos);
+		int valNext = 0;
+		RomanValues->TryGetValue(snext, valNext);
 		if (String::IsNullOrEmpty(snext))
-			result += RomanValues[spos];
-		else if (RomanValues[spos] < RomanValues[snext])
-			result -= RomanValues[spos];
+			result += val;
+		else if (val < valNext)
+			result -= val;
 		else
-			result += RomanValues[spos];
+			result += val;
 		pos++;
 	}
 	return result;

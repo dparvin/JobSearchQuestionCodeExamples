@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Platforms>AnyCPU;x64;x86;ARM32;ARM64</Platforms>
   </PropertyGroup>
@@ -23,6 +23,10 @@
     <Compile Include="TestTaker\LinkedList.fs" />
     <Compile Include="TestTaker\RansomNode.fs" />
     <Compile Include="TestTaker\ToInt.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Update="FSharp.Core" Version="10.1.302" />
   </ItemGroup>
 
 </Project>

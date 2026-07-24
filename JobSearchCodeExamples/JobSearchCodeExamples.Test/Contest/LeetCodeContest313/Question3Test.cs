@@ -15,7 +15,7 @@ public partial class Question3Test
     [MemberData(nameof(Question3TestData))]
     public void DoQuestion3Test(string s, int[] distance, bool expectedResult)
     {
-        Assert.Equal(expectedResult, Question3.DoQuestion3());
+        Assert.Equal(expectedResult, Question3.DoQuestion3(s, distance));
     }
 
     #endregion

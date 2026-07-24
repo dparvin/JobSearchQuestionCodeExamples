@@ -1,7 +1,11 @@
 ﻿using JobSearchCodeExamples.Contest;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace JobSearchCodeExamples.Test.Contest;
 
+/// <summary>
+/// 
+/// </summary>
 public partial class LeetCodeContest309Test
 {
     #region Check Distances Between Same Letters --------------------
@@ -45,11 +49,23 @@ public partial class LeetCodeContest309Test
     /// </summary>
     /// <param name="value">The value.</param>
     /// <param name="expectedResult">The expected result.</param>
+    /// <remarks>
+    /// 2401. Longest Nice SubArray
+    /// You are given an array nums consisting of positive integers.    
+    /// 
+    /// We call a sub-array of nums nice if the bitwise AND of every pair of elements that are in different positions in the sub-array is equal to 0.
+    /// 
+    /// Return the length of the longest nice sub-array.
+    /// 
+    /// A sub-array is a contiguous part of an array.
+    /// 
+    /// Note that sub-arrays of length 1 are always considered nice.
+    /// </remarks>
     [Theory]
-    [MemberData(nameof(LongestNiceSubarrayTestData))]
-    public void LongestNiceSubarrayTest(int[] nums, int expectedResult)
+    [MemberData(nameof(LongestNiceSubArrayTestData))]
+    public void LongestNiceSubArrayTest(Int64[] nums, int expectedResult)
     {
-        Assert.Equal(expectedResult, LeetCodeContest309.LongestNiceSubarray(nums));
+        Assert.Equal(expectedResult, LeetCodeContest309.LongestNiceSubArray(nums));
     }
 
     #endregion

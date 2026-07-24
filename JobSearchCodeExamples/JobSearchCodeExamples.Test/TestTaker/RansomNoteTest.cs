@@ -1,9 +1,9 @@
-﻿namespace JobSearchCodeExamples.Test.TestTaker
+﻿namespace JobSearchCodeExamples.cs.Test.TestTaker
 {
     /// <summary>
-    /// 
+    /// Tests for the RansomNote class.
     /// </summary>
-    public class RansomeNoteTest
+    public class RansomNoteTest
     {
         /// <summary>
         /// Determines whether this instance test of CanConstruct the specified ransom note.

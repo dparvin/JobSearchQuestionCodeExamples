@@ -320,7 +320,7 @@ public static class LeetCode
     /// <param name="nums1">The nums1.</param>
     /// <param name="nums2">The nums2.</param>
     /// <returns></returns>
-    public static double FindMedianSortedArrays(int[] nums1, int[] nums2)
+    public static double FindMedianSortedArrays(int[]? nums1, int[]? nums2)
     {
         double result = 0;
         int arrayLenth = 0;
