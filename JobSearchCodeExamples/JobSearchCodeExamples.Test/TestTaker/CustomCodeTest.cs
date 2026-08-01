@@ -1,4 +1,4 @@
-﻿namespace JobSearchCodeExamples.Test.TestTaker;
+﻿namespace JobSearchCodeExamples.cs.Test.TestTaker;
 
 /// <summary>
 /// Tests for code that is in the Custom Code class

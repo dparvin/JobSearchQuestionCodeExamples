@@ -1,4 +1,4 @@
-﻿namespace JobSearchCodeExamples.Test.TestTaker;
+﻿namespace JobSearchCodeExamples.cs.Test.TestTaker;
 
 public class WeakestRowsTest
 {

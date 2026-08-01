@@ -1,4 +1,6 @@
-﻿namespace JobSearchCodeExamples.Test.TestTaker;
+﻿using JobSearchCodeExamples.cs.TestTaker;
+
+namespace JobSearchCodeExamples.cs.Test.TestTaker;
 
 /// <summary>
 /// tests for code from LeetCode

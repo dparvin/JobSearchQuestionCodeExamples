@@ -10,12 +10,13 @@
         /// </summary>
         /// <param name="values">The values.</param>
         /// <returns></returns>
-        public static TreeNode? BuildTree(int[] values)
+        public static TreeNode? BuildTree(int?[] values)
         {
             if (values == null || values.Length == 0 || values[0] == 0)
                 return null;
+            int first = (int)values[0];
 
-            var root = new TreeNode((int)values[0]);
+            var root = new TreeNode(first);
             var queue = new Queue<TreeNode>();
             queue.Enqueue(root);
 
@@ -26,17 +27,17 @@
                 var node = queue.Dequeue();
 
                 // Left child
-                if (index < values.Length && values[index] != 0)
+                if (index < values.Length && values[index] != null)
                 {
-                    node.left = new TreeNode(values[index]);
+                    node.left = new TreeNode((int)values[index]);
                     queue.Enqueue(node.left);
                 }
                 index++;
 
                 // Right child
-                if (index < values.Length && values[index] != 0)
+                if (index < values.Length && values[index] != null)
                 {
-                    node.right = new TreeNode(values[index]);
+                    node.right = new TreeNode((int)values[index]);
                     queue.Enqueue(node.right);
                 }
                 index++;

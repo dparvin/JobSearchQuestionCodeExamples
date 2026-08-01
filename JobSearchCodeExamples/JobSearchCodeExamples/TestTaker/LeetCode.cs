@@ -1,4 +1,4 @@
-﻿namespace JobSearchCodeExamples.TestTaker;
+﻿namespace JobSearchCodeExamples.cs.TestTaker;
 
 /// <summary>
 /// Questions from LeetCode
@@ -355,26 +355,21 @@ public static class LeetCode
     /// <summary>
     /// Definition for singly-linked list.
     /// </summary>
-    public class ListNode
+    /// <remarks>
+    /// Initializes a new instance of the <see cref="ListNode"/> class.
+    /// </remarks>
+    /// <param name="val">The value.</param>
+    /// <param name="next">The next.</param>
+    public class ListNode(int val = 0, LeetCode.ListNode? next = null)
     {
         /// <summary>
         /// The value
         /// </summary>
-        public int val;
+        public int val = val;
         /// <summary>
         /// The next
         /// </summary>
-        public ListNode? next;
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ListNode"/> class.
-        /// </summary>
-        /// <param name="val">The value.</param>
-        /// <param name="next">The next.</param>
-        public ListNode(int val = 0, ListNode? next = null)
-        {
-            this.val = val;
-            this.next = next;
-        }
+        public ListNode? next = next;
     }
 
     #endregion
@@ -490,7 +485,7 @@ public static class LeetCode
     /// <returns></returns>
     public static ListNode? MergeKLists(ListNode?[] lists)
     {
-        int[] results = Array.Empty<int>();
+        int[] results = [];
         int pos = 0;
         for (int i = 0; i < lists.Length; i++)
         {
@@ -528,7 +523,7 @@ public static class LeetCode
     private static int[]? ToArray(ListNode? nodes)
     {
         if (nodes == null) return null;
-        int[] result = Array.Empty<int>();
+        int[] result = [];
         while (nodes != null)
         {
             Array.Resize(ref result, result.Length + 1);
@@ -615,8 +610,8 @@ public static class LeetCode
     {
         if (numCourses == 0) return false;
         if (prerequisites == null || prerequisites.Length == 0) return false;
-        List<int> l = new();
-        List<int> s = new();
+        List<int> l = [];
+        List<int> s = [];
         for (var i = 0; i < numCourses; i++)
             s.Add(i);
         while (s.Count > 0)

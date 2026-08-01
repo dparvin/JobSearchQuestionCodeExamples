@@ -1,7 +1,6 @@
-﻿using JobSearchCodeExamples.Contest;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+﻿using JobSearchCodeExamples.cs.Contest;
 
-namespace JobSearchCodeExamples.Test.Contest;
+namespace JobSearchCodeExamples.cs.Test.Contest;
 
 /// <summary>
 /// 
@@ -11,9 +10,10 @@ public partial class LeetCodeContest309Test
     #region Check Distances Between Same Letters --------------------
 
     /// <summary>
-    /// Question1s the test.
+    /// Test for checking distances between same letters.
     /// </summary>
-    /// <param name="value">The value.</param>
+    /// <param name="s">The s.</param>
+    /// <param name="distance">The distance.</param>
     /// <param name="expectedResult">The expected result.</param>
     [Theory]
     [MemberData(nameof(CheckDistancesTestData))]
@@ -27,11 +27,11 @@ public partial class LeetCodeContest309Test
     #region Number of Ways to Reach a Position After Exactly k Steps
 
     /// <summary>
-    /// Question2s the test.
+    /// Test for the number of ways to reach a position after exactly k steps.
     /// </summary>
     /// <param name="startPos">The start position.</param>
     /// <param name="endPos">The end position.</param>
-    /// <param name="k">The k.</param>
+    /// <param name="k">The exact number of steps between the start and end positions.</param>
     /// <param name="expectedResult">The expected result.</param>
     [Theory]
     [MemberData(nameof(NumberOfWaysTestData))]
@@ -45,20 +45,17 @@ public partial class LeetCodeContest309Test
     #region Longest Nice Sub-array ----------------------------------
 
     /// <summary>
-    /// Question3s the test.
+    /// Test for the longest nice sub array.
     /// </summary>
-    /// <param name="value">The value.</param>
+    /// <param name="nums">The nums.</param>
     /// <param name="expectedResult">The expected result.</param>
     /// <remarks>
     /// 2401. Longest Nice SubArray
-    /// You are given an array nums consisting of positive integers.    
-    /// 
-    /// We call a sub-array of nums nice if the bitwise AND of every pair of elements that are in different positions in the sub-array is equal to 0.
-    /// 
+    /// You are given an array nums consisting of positive integers.
+    /// We call a sub-array of nums nice if the bitwise AND of every pair of elements
+    /// that are in different positions in the sub-array is equal to 0.
     /// Return the length of the longest nice sub-array.
-    /// 
     /// A sub-array is a contiguous part of an array.
-    /// 
     /// Note that sub-arrays of length 1 are always considered nice.
     /// </remarks>
     [Theory]
@@ -73,15 +70,29 @@ public partial class LeetCodeContest309Test
     #region Meeting Rooms III ---------------------------------------
 
     /// <summary>
-    /// Question4s the test.
+    /// Meeting Room III Brute Force test.
     /// </summary>
-    /// <param name="value">The value.</param>
+    /// <param name="n">The number of rooms.</param>
+    /// <param name="meetings">The meetings.</param>
     /// <param name="expectedResult">The expected result.</param>
     [Theory]
     [MemberData(nameof(MostBookedTestData))]
-    public void MostBookedTest(int n, int[][] meetings, int expectedResult)
+    public void MostBookedBruteForceTest(int n, int[][] meetings, int expectedResult)
     {
-        Assert.Equal(expectedResult, LeetCodeContest309.MostBooked(n, meetings));
+        Assert.Equal(expectedResult, LeetCodeContest309.MostBookedBruteForce(n, meetings));
+    }
+
+    /// <summary>
+    /// Meeting Room III Priority Queue test.
+    /// </summary>
+    /// <param name="n">The number of rooms.</param>
+    /// <param name="meetings">The meetings.</param>
+    /// <param name="expectedResult">The expected result.</param>
+    [Theory]
+    [MemberData(nameof(MostBookedTestData))]
+    public void MostBookedPriorityQueueTest(int n, int[][] meetings, int expectedResult)
+    {
+        Assert.Equal(expectedResult, LeetCodeContest309.MostBookedPriorityQueue(n, meetings));
     }
 
     #endregion

@@ -1,6 +1,6 @@
 ﻿using JobSearchCodeExamples.Contest;
 
-namespace JobSearchCodeExamples.Test.Contest;
+namespace JobSearchCodeExamples.cs.Test.Contest;
 
 public class LeetCodeContest306Test
 {
