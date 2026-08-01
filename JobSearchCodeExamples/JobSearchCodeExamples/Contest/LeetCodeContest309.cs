@@ -3,7 +3,7 @@
 /// <summary>
 /// Routines for contest questions for LeetCode Contest 309
 /// </summary>
-/// <see cref="https://leetcode.com/contest/weekly-contest-309/"/>
+/// <see href="https://leetcode.com/contest/weekly-contest-309/"/>
 public static class LeetCodeContest309
 {
     #region Check Distances Between Same Letters --------------------
@@ -132,7 +132,7 @@ public static class LeetCodeContest309
     /// <param name="n">The number of meeting rooms.</param>
     /// <param name="meetings">The meetings.</param>
     /// <returns></returns>
-    /// <see cref="https://leetcode.com/contest/weekly-contest-309/problems/meeting-rooms-iii/"/>
+    /// <see href="https://leetcode.com/contest/weekly-contest-309/problems/meeting-rooms-iii/"/>
     /// <remarks>
     /// 2402. Meeting Rooms III
     /// 
@@ -232,7 +232,7 @@ public static class LeetCodeContest309
     /// <param name="n">The number of meeting rooms.</param>
     /// <param name="meetings">The meetings.</param>
     /// <returns></returns>
-    /// <see cref="https://leetcode.com/contest/weekly-contest-309/problems/meeting-rooms-iii/"/>
+    /// <see href="https://leetcode.com/contest/weekly-contest-309/problems/meeting-rooms-iii/"/>
     /// <remarks>
     /// 2402. Meeting Rooms III
     /// 

@@ -5,7 +5,7 @@ namespace JobSearchCodeExamples.cs.Contest
     /// <summary>
     /// LeetCode Contest 307
     /// </summary>
-    /// <see cref="https://leetcode.com/contest/weekly-contest-307/"/>
+    /// <see href="https://leetcode.com/contest/weekly-contest-307/"/>
     public static class LeetCodeContest307
     {
         #region Minimum Hours of Training to Win a Competition ------
