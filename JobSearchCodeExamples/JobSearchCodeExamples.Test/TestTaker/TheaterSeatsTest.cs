@@ -3,9 +3,9 @@
 namespace JobSearchCodeExamples.cs.Test.TestTaker
 {
     /// <summary>
-    /// TheatorSeatsTest class contains unit tests for the TheaterSeats class.
+    /// TheaterSeatsTest class contains unit tests for the TheaterSeats class.
     /// </summary>
-    public class TheatorSeatsTest
+    public class TheaterSeatsTest
     {
         /// <summary>
         /// Assigns the seats test.
@@ -15,7 +15,7 @@ namespace JobSearchCodeExamples.cs.Test.TestTaker
         {
             int[] seatsAssign = new int[] { 1, 3, 5 };
             int[] seatsRequested = new int[] { 2, 3, 4 };
-            int[] expectedResult = new int[] { 2, 6, 4 };
+            int[] expectedResult = new int[] { 2, 4, 6 };
             int[] result = TheaterSeats.AssignSeats(ref seatsAssign, seatsRequested);
             Assert.Equal(expectedResult, result);
         }

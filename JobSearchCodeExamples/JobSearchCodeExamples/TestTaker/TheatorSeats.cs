@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace JobSearchCodeExamples.cs.TestTaker
+﻿namespace JobSearchCodeExamples.cs.TestTaker
 {
     /// <summary>
     /// Assign the theater seats.
@@ -19,8 +13,8 @@ namespace JobSearchCodeExamples.cs.TestTaker
         /// <returns></returns>
         public static int[] AssignSeats(ref int[] seatsAssign, int[] seatsRequested)
         {
-            List<int> results = new List<int>();
-            List<int> usedSeats = seatsAssign.ToList();
+            List<int> results = [];
+            List<int> usedSeats = [.. seatsAssign];
             foreach (int seat in seatsRequested)
             {
                 int nextAvailableSeat = FindNextAvailableSeat(usedSeats, seat);
@@ -28,8 +22,8 @@ namespace JobSearchCodeExamples.cs.TestTaker
                 usedSeats.Add(nextAvailableSeat);
             }
 
-            seatsAssign = usedSeats.ToArray();
-            return results.ToArray();
+            seatsAssign = [.. usedSeats];
+            return [.. results];
         }
 
         /// <summary>
@@ -46,7 +40,7 @@ namespace JobSearchCodeExamples.cs.TestTaker
             int diff = 1;
             while (true)
             {
-                if (!usedSeats.Contains(seat - diff))
+                if (seat - diff > 0 && !usedSeats.Contains(seat - diff))
                     return seat - diff;
                 if (!usedSeats.Contains(seat + diff))
                     return seat + diff;
