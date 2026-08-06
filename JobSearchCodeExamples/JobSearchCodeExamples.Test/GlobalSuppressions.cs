@@ -5,7 +5,6 @@
 
 using System.Diagnostics.CodeAnalysis;
 
-[assembly: SuppressMessage("Usage", "xUnit1042:The member referenced by the MemberData attribute returns untyped data rows", Justification = "<Pending>", Scope = "member", Target = "~M:JobSearchCodeExamples.cs.Test.Contest.LeetCodeContest313.Question1Test.DoQuestion1Test(System.String,System.Int32[],System.Boolean)")]
 [assembly: SuppressMessage("Usage", "xUnit1042:The member referenced by the MemberData attribute returns untyped data rows", Justification = "<Pending>", Scope = "member", Target = "~M:JobSearchCodeExamples.cs.Test.Contest.LeetCodeContest307Test.AmountOfTimeTest(System.Nullable{System.Int32}[],System.Int32,System.Int32)")]
 [assembly: SuppressMessage("Usage", "xUnit1042:The member referenced by the MemberData attribute returns untyped data rows", Justification = "<Pending>", Scope = "member", Target = "~M:JobSearchCodeExamples.cs.Test.Contest.LeetCodeContest307Test.KSumTest(System.Int32[],System.Int32,System.Int64)")]
 [assembly: SuppressMessage("Performance", "CA1861:Avoid constant arrays as arguments", Justification = "<Pending>", Scope = "member", Target = "~P:JobSearchCodeExamples.cs.Test.Contest.LeetCodeContest307Test.AmountOfTimeTestData")]
@@ -23,3 +22,5 @@ using System.Diagnostics.CodeAnalysis;
 [assembly: SuppressMessage("Usage", "xUnit1042:The member referenced by the MemberData attribute returns untyped data rows", Justification = "<Pending>", Scope = "member", Target = "~M:JobSearchCodeExamples.cs.Test.Contest.LeetCodeContest313.Question2Test.MaxSumTest(System.Int32[][],System.Int32)")]
 [assembly: SuppressMessage("Performance", "CA1861:Avoid constant arrays as arguments", Justification = "<Pending>", Scope = "member", Target = "~P:JobSearchCodeExamples.cs.Test.Contest.LeetCodeContest313.Question2Test.MaxSumTestData")]
 [assembly: SuppressMessage("Style", "IDE0300:Simplify collection initialization", Justification = "<Pending>", Scope = "member", Target = "~P:JobSearchCodeExamples.cs.Test.Contest.LeetCodeContest313.Question2Test.MaxSumTestData")]
+[assembly: SuppressMessage("Usage", "xUnit1042:The member referenced by the MemberData attribute returns untyped data rows", Justification = "<Pending>", Scope = "member", Target = "~M:JobSearchCodeExamples.cs.Test.Contest.LeetCodeContest313.Question3Test.MinimizeXorTest(System.Int32,System.Int32,System.Int32)")]
+[assembly: SuppressMessage("Usage", "xUnit1042:The member referenced by the MemberData attribute returns untyped data rows", Justification = "<Pending>", Scope = "member", Target = "~M:JobSearchCodeExamples.cs.Test.Contest.LeetCodeContest313.Question4Test.DeleteStringTest(System.String,System.Int32)")]

@@ -1,9 +1,12 @@
 ﻿using JobSearchCodeExamples.cs.Contest.LeetCodeContest313;
+using Xunit.Abstractions;
 
 namespace JobSearchCodeExamples.cs.Test.Contest.LeetCodeContest313;
 
-public partial class Question4Test
+public partial class Question4Test(ITestOutputHelper output)
 {
+    private readonly ITestOutputHelper _output = output;
+
     #region Question 4 Test -------------------------------------
 
     /// <summary>
@@ -13,10 +16,10 @@ public partial class Question4Test
     /// <param name="distance">The distance.</param>
     /// <param name="expectedResult">The expected result.</param>
     [Theory]
-    [MemberData(nameof(Question4TestData))]
-    public void DoQuestion4Test(string s, int[] distance, bool expectedResult)
+    [MemberData(nameof(DeleteStringTestData))]
+    public void DeleteStringTest(string s, int expectedResult)
     {
-        Assert.Equal(expectedResult, Question4.DoQuestion4(s, distance));
+        Assert.Equal(expectedResult, Question4.DeleteString(s, _output.WriteLine));
     }
 
     #endregion
