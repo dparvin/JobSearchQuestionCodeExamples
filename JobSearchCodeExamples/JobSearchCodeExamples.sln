@@ -35,7 +35,24 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "C#", "C#", "{02DDDDAF-DFEC-
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".NET", ".NET", "{9C7929CA-E68B-4E8C-817A-5B2D9CEE08B0}"
 	ProjectSection(SolutionItems) = preProject
+		Interview Study Guide\.NET\.NET Architecture.md = Interview Study Guide\.NET\.NET Architecture.md
+		Interview Study Guide\.NET\.NET Framework vs Modern .NET.md = Interview Study Guide\.NET\.NET Framework vs Modern .NET.md
+		Interview Study Guide\.NET\Assemblies and Deployment.md = Interview Study Guide\.NET\Assemblies and Deployment.md
+		Interview Study Guide\.NET\Asynchronous Programming.md = Interview Study Guide\.NET\Asynchronous Programming.md
+		Interview Study Guide\.NET\CLR.md = Interview Study Guide\.NET\CLR.md
+		Interview Study Guide\.NET\Configuration.md = Interview Study Guide\.NET\Configuration.md
 		Interview Study Guide\.NET\Dot NET.md = Interview Study Guide\.NET\Dot NET.md
+		Interview Study Guide\.NET\Entity Framework.md = Interview Study Guide\.NET\Entity Framework.md
+		Interview Study Guide\.NET\Exception Handling.md = Interview Study Guide\.NET\Exception Handling.md
+		Interview Study Guide\.NET\Garbage Collection.md = Interview Study Guide\.NET\Garbage Collection.md
+		Interview Study Guide\.NET\Interview Questions.md = Interview Study Guide\.NET\Interview Questions.md
+		Interview Study Guide\.NET\LINQ.md = Interview Study Guide\.NET\LINQ.md
+		Interview Study Guide\.NET\Logging.md = Interview Study Guide\.NET\Logging.md
+		Interview Study Guide\.NET\My .NET Experience.md = Interview Study Guide\.NET\My .NET Experience.md
+		Interview Study Guide\.NET\Native Interop.md = Interview Study Guide\.NET\Native Interop.md
+		Interview Study Guide\.NET\Performance Optimization.md = Interview Study Guide\.NET\Performance Optimization.md
+		Interview Study Guide\.NET\Testing.md = Interview Study Guide\.NET\Testing.md
+		Interview Study Guide\.NET\Threading and Parallel Programming.md = Interview Study Guide\.NET\Threading and Parallel Programming.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ASP.NET Core", "ASP.NET Core", "{7046C04B-A7B1-47D9-951C-93151E0316A0}"
@@ -56,12 +73,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "REST APIs", "REST APIs", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Design Patterns", "Design Patterns", "{3361D5D2-3A89-41E1-A54F-9EC79BF7D086}"
 	ProjectSection(SolutionItems) = preProject
+		Interview Study Guide\Design Patterns\Architectural Patterns.md = Interview Study Guide\Design Patterns\Architectural Patterns.md
+		Interview Study Guide\Design Patterns\Dependency Injection.md = Interview Study Guide\Design Patterns\Dependency Injection.md
 		Interview Study Guide\Design Patterns\Design Patterns.md = Interview Study Guide\Design Patterns\Design Patterns.md
+		Interview Study Guide\Design Patterns\Design Principles.md = Interview Study Guide\Design Patterns\Design Principles.md
+		Interview Study Guide\Design Patterns\Layered Architecture.md = Interview Study Guide\Design Patterns\Layered Architecture.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "System Design", "System Design", "{28155961-1271-4065-ABCB-EF087DE8A42A}"
 	ProjectSection(SolutionItems) = preProject
 		Interview Study Guide\System Design\API Connector.md = Interview Study Guide\System Design\API Connector.md
+		Interview Study Guide\System Design\Evolution of Enterprise Software.md = Interview Study Guide\System Design\Evolution of Enterprise Software.md
 		Interview Study Guide\System Design\System Design.md = Interview Study Guide\System Design\System Design.md
 	EndProjectSection
 EndProject
@@ -91,6 +113,159 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".NET Backend Developer", ".NET Backend Developer", "{9C0FB28E-E85D-4E95-BBF2-31D8DE70A12C}"
 	ProjectSection(SolutionItems) = preProject
 		Interview Study Guide\.NET Backend Developer\.NET Backend Developer.md = Interview Study Guide\.NET Backend Developer\.NET Backend Developer.md
+		Interview Study Guide\.NET Backend Developer\Interview Questions.md = Interview Study Guide\.NET Backend Developer\Interview Questions.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "C++", "C++", "{C69DC301-3524-4F76-88EB-7DE15C21A8B6}"
+	ProjectSection(SolutionItems) = preProject
+		Interview Study Guide\C++\C++.md = Interview Study Guide\C++\C++.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Software Development Life Cycle", "Software Development Life Cycle", "{84898AEE-64FF-4426-982E-6724FDCC9C33}"
+	ProjectSection(SolutionItems) = preProject
+		Interview Study Guide\Software Development Life Cycle\AcceptanceCriteria.md = Interview Study Guide\Software Development Life Cycle\AcceptanceCriteria.md
+		Interview Study Guide\Software Development Life Cycle\Agile.md = Interview Study Guide\Software Development Life Cycle\Agile.md
+		Interview Study Guide\Software Development Life Cycle\APIDesign.md = Interview Study Guide\Software Development Life Cycle\APIDesign.md
+		Interview Study Guide\Software Development Life Cycle\ArchitectureDecisions.md = Interview Study Guide\Software Development Life Cycle\ArchitectureDecisions.md
+		Interview Study Guide\Software Development Life Cycle\BranchingStrategies.md = Interview Study Guide\Software Development Life Cycle\BranchingStrategies.md
+		Interview Study Guide\Software Development Life Cycle\BugFixes.md = Interview Study Guide\Software Development Life Cycle\BugFixes.md
+		Interview Study Guide\Software Development Life Cycle\BuildPipelines.md = Interview Study Guide\Software Development Life Cycle\BuildPipelines.md
+		Interview Study Guide\Software Development Life Cycle\BusinessRequirements.md = Interview Study Guide\Software Development Life Cycle\BusinessRequirements.md
+		Interview Study Guide\Software Development Life Cycle\CICDImprovements.md = Interview Study Guide\Software Development Life Cycle\CICDImprovements.md
+		Interview Study Guide\Software Development Life Cycle\CodeReviews.md = Interview Study Guide\Software Development Life Cycle\CodeReviews.md
+		Interview Study Guide\Software Development Life Cycle\CodingStandards.md = Interview Study Guide\Software Development Life Cycle\CodingStandards.md
+		Interview Study Guide\Software Development Life Cycle\ConfigurationManagement.md = Interview Study Guide\Software Development Life Cycle\ConfigurationManagement.md
+		Interview Study Guide\Software Development Life Cycle\DatabaseDesign.md = Interview Study Guide\Software Development Life Cycle\DatabaseDesign.md
+		Interview Study Guide\Software Development Life Cycle\DesignReviews.md = Interview Study Guide\Software Development Life Cycle\DesignReviews.md
+		Interview Study Guide\Software Development Life Cycle\DeveloperTesting.md = Interview Study Guide\Software Development Life Cycle\DeveloperTesting.md
+		Interview Study Guide\Software Development Life Cycle\Documentation.md = Interview Study Guide\Software Development Life Cycle\Documentation.md
+		Interview Study Guide\Software Development Life Cycle\FeatureEnhancements.md = Interview Study Guide\Software Development Life Cycle\FeatureEnhancements.md
+		Interview Study Guide\Software Development Life Cycle\FunctionalRequirements.md = Interview Study Guide\Software Development Life Cycle\FunctionalRequirements.md
+		Interview Study Guide\Software Development Life Cycle\HybridApproaches.md = Interview Study Guide\Software Development Life Cycle\HybridApproaches.md
+		Interview Study Guide\Software Development Life Cycle\ImprovingAutomatedTesting.md = Interview Study Guide\Software Development Life Cycle\ImprovingAutomatedTesting.md
+		Interview Study Guide\Software Development Life Cycle\IntegrationTesting.md = Interview Study Guide\Software Development Life Cycle\IntegrationTesting.md
+		Interview Study Guide\Software Development Life Cycle\Kanban.md = Interview Study Guide\Software Development Life Cycle\Kanban.md
+		Interview Study Guide\Software Development Life Cycle\LargeEnterpriseApplicationMaintenance.md = Interview Study Guide\Software Development Life Cycle\LargeEnterpriseApplicationMaintenance.md
+		Interview Study Guide\Software Development Life Cycle\LegacySystemSupport.md = Interview Study Guide\Software Development Life Cycle\LegacySystemSupport.md
+		Interview Study Guide\Software Development Life Cycle\MigratingLegacyTechnologies.md = Interview Study Guide\Software Development Life Cycle\MigratingLegacyTechnologies.md
+		Interview Study Guide\Software Development Life Cycle\NonFunctionalRequirements.md = Interview Study Guide\Software Development Life Cycle\NonFunctionalRequirements.md
+		Interview Study Guide\Software Development Life Cycle\PerformanceTesting.md = Interview Study Guide\Software Development Life Cycle\PerformanceTesting.md
+		Interview Study Guide\Software Development Life Cycle\Refactoring.md = Interview Study Guide\Software Development Life Cycle\Refactoring.md
+		Interview Study Guide\Software Development Life Cycle\ReleaseManagement.md = Interview Study Guide\Software Development Life Cycle\ReleaseManagement.md
+		Interview Study Guide\Software Development Life Cycle\Scrum.md = Interview Study Guide\Software Development Life Cycle\Scrum.md
+		Interview Study Guide\Software Development Life Cycle\Software Development Life Cycle.md = Interview Study Guide\Software Development Life Cycle\Software Development Life Cycle.md
+		Interview Study Guide\Software Development Life Cycle\SystemTesting.md = Interview Study Guide\Software Development Life Cycle\SystemTesting.md
+		Interview Study Guide\Software Development Life Cycle\TechnicalDebt.md = Interview Study Guide\Software Development Life Cycle\TechnicalDebt.md
+		Interview Study Guide\Software Development Life Cycle\TechnologySelection.md = Interview Study Guide\Software Development Life Cycle\TechnologySelection.md
+		Interview Study Guide\Software Development Life Cycle\UnitTesting.md = Interview Study Guide\Software Development Life Cycle\UnitTesting.md
+		Interview Study Guide\Software Development Life Cycle\UserAcceptanceTesting.md = Interview Study Guide\Software Development Life Cycle\UserAcceptanceTesting.md
+		Interview Study Guide\Software Development Life Cycle\UserStories.md = Interview Study Guide\Software Development Life Cycle\UserStories.md
+		Interview Study Guide\Software Development Life Cycle\Waterfall.md = Interview Study Guide\Software Development Life Cycle\Waterfall.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Java", "Java", "{5E33E855-037E-4F78-8BE0-409F8AE5CBAF}"
+	ProjectSection(SolutionItems) = preProject
+		Interview Study Guide\Java\Java.md = Interview Study Guide\Java\Java.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Python", "Python", "{DE8A5B4F-72BA-48C0-8428-72DDC7C6DEFC}"
+	ProjectSection(SolutionItems) = preProject
+		Interview Study Guide\Python\Python.md = Interview Study Guide\Python\Python.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JaveScript", "JaveScript", "{D6C5745D-276A-48D9-BCD6-E319CDD4E5C2}"
+	ProjectSection(SolutionItems) = preProject
+		Interview Study Guide\JavaScript\JaveScript.md = Interview Study Guide\JavaScript\JaveScript.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TypeScript", "TypeScript", "{A79BB48F-9025-49DC-AB21-EA830917E1D9}"
+	ProjectSection(SolutionItems) = preProject
+		Interview Study Guide\TypeScript\TypeScript.md = Interview Study Guide\TypeScript\TypeScript.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Go", "Go", "{770EADAD-8210-4AB3-96E4-2B9085536E91}"
+	ProjectSection(SolutionItems) = preProject
+		Interview Study Guide\Go\Go.md = Interview Study Guide\Go\Go.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Rust", "Rust", "{D176FBF7-324C-4B05-A56C-8570448BCACA}"
+	ProjectSection(SolutionItems) = preProject
+		Interview Study Guide\Rust\Rust.md = Interview Study Guide\Rust\Rust.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Visual Basic.NET", "Visual Basic.NET", "{C3B73D69-2565-44EC-A21D-6519C964E765}"
+	ProjectSection(SolutionItems) = preProject
+		Interview Study Guide\Visual Basic.NET\Visual Basic.NET.md = Interview Study Guide\Visual Basic.NET\Visual Basic.NET.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PowerShell", "PowerShell", "{AC79C7D7-87D1-4ADE-8638-E4D30A319A7B}"
+	ProjectSection(SolutionItems) = preProject
+		Interview Study Guide\PowerShell\PowerShell.md = Interview Study Guide\PowerShell\PowerShell.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "F#", "F#", "{23760B9B-9629-417C-80DC-7709771E27A4}"
+	ProjectSection(SolutionItems) = preProject
+		Interview Study Guide\F#\F#.md = Interview Study Guide\F#\F#.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PHP", "PHP", "{D68E6CF6-8394-47C9-839C-22B24FD5B7D7}"
+	ProjectSection(SolutionItems) = preProject
+		Interview Study Guide\PHP\PHP.md = Interview Study Guide\PHP\PHP.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Git", "Git", "{405F561E-251D-4505-9548-280A9047C277}"
+	ProjectSection(SolutionItems) = preProject
+		Interview Study Guide\Git\Git.md = Interview Study Guide\Git\Git.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Azure DevOps", "Azure DevOps", "{C5C35C88-992B-4946-AF44-E3BF42310DBF}"
+	ProjectSection(SolutionItems) = preProject
+		Interview Study Guide\Azure DevOps\Azure DevOps.md = Interview Study Guide\Azure DevOps\Azure DevOps.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CI-CD", "CI-CD", "{7339C8AD-2A0A-4D00-8E43-476696E4795C}"
+	ProjectSection(SolutionItems) = preProject
+		Interview Study Guide\CI-CD\CI-CD.md = Interview Study Guide\CI-CD\CI-CD.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unit Testing", "Unit Testing", "{73E12ABA-23AE-48E4-A6BD-24B7D9AE8CE0}"
+	ProjectSection(SolutionItems) = preProject
+		Interview Study Guide\Unit Testing\Unit Testing.md = Interview Study Guide\Unit Testing\Unit Testing.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Code Coverage", "Code Coverage", "{A3825F90-A966-4254-BCEE-26BA159C288D}"
+	ProjectSection(SolutionItems) = preProject
+		Interview Study Guide\Code Coverage\Code Coverage.md = Interview Study Guide\Code Coverage\Code Coverage.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NuGet", "NuGet", "{BF6867BE-4783-422D-940E-173DF68FA765}"
+	ProjectSection(SolutionItems) = preProject
+		Interview Study Guide\NuGet\NuGet.md = Interview Study Guide\NuGet\NuGet.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MSBuild", "MSBuild", "{B4DAB1E5-D58C-4C46-98E7-EC5322DE8401}"
+	ProjectSection(SolutionItems) = preProject
+		Interview Study Guide\MSBuild\MSBuild.md = Interview Study Guide\MSBuild\MSBuild.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Full-Stack Developer", "Full-Stack Developer", "{8FE4C2CB-BC12-4AF4-A1DB-EAF45AC020C5}"
+	ProjectSection(SolutionItems) = preProject
+		Interview Study Guide\Full-Stack Developer\Full-Stack Developer.md = Interview Study Guide\Full-Stack Developer\Full-Stack Developer.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "System Architect", "System Architect", "{F5D767C8-1E11-440D-BA4E-5A6AC96A345D}"
+	ProjectSection(SolutionItems) = preProject
+		Interview Study Guide\System Architect\System Architect.md = Interview Study Guide\System Architect\System Architect.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DevOps Engineer", "DevOps Engineer", "{9FBFE052-A72F-4680-92A6-A246A8AF3D52}"
+	ProjectSection(SolutionItems) = preProject
+		Interview Study Guide\DevOps Engineer\DevOps Engineer.md = Interview Study Guide\DevOps Engineer\DevOps Engineer.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data Engineer", "Data Engineer", "{9E6BD4D3-772C-4FF5-96C8-14D036B6765D}"
+	ProjectSection(SolutionItems) = preProject
+		Interview Study Guide\Data Engineer\Data Engineer.md = Interview Study Guide\Data Engineer\Data Engineer.md
 	EndProjectSection
 EndProject
 Global
@@ -237,6 +412,29 @@ Global
 		{D6E0421F-BE96-4C1D-B21E-2A5AAB84F9F9} = {09885E49-51B2-49DE-A7A5-079AA08CD540}
 		{9A05B5C2-9B65-4151-8C6B-464E3ABDAD20} = {18E52B6A-BFC9-457C-AAEE-70BCE387960E}
 		{9C0FB28E-E85D-4E95-BBF2-31D8DE70A12C} = {09885E49-51B2-49DE-A7A5-079AA08CD540}
+		{C69DC301-3524-4F76-88EB-7DE15C21A8B6} = {09885E49-51B2-49DE-A7A5-079AA08CD540}
+		{84898AEE-64FF-4426-982E-6724FDCC9C33} = {09885E49-51B2-49DE-A7A5-079AA08CD540}
+		{5E33E855-037E-4F78-8BE0-409F8AE5CBAF} = {09885E49-51B2-49DE-A7A5-079AA08CD540}
+		{DE8A5B4F-72BA-48C0-8428-72DDC7C6DEFC} = {09885E49-51B2-49DE-A7A5-079AA08CD540}
+		{D6C5745D-276A-48D9-BCD6-E319CDD4E5C2} = {09885E49-51B2-49DE-A7A5-079AA08CD540}
+		{A79BB48F-9025-49DC-AB21-EA830917E1D9} = {09885E49-51B2-49DE-A7A5-079AA08CD540}
+		{770EADAD-8210-4AB3-96E4-2B9085536E91} = {09885E49-51B2-49DE-A7A5-079AA08CD540}
+		{D176FBF7-324C-4B05-A56C-8570448BCACA} = {09885E49-51B2-49DE-A7A5-079AA08CD540}
+		{C3B73D69-2565-44EC-A21D-6519C964E765} = {09885E49-51B2-49DE-A7A5-079AA08CD540}
+		{AC79C7D7-87D1-4ADE-8638-E4D30A319A7B} = {09885E49-51B2-49DE-A7A5-079AA08CD540}
+		{23760B9B-9629-417C-80DC-7709771E27A4} = {09885E49-51B2-49DE-A7A5-079AA08CD540}
+		{D68E6CF6-8394-47C9-839C-22B24FD5B7D7} = {09885E49-51B2-49DE-A7A5-079AA08CD540}
+		{405F561E-251D-4505-9548-280A9047C277} = {09885E49-51B2-49DE-A7A5-079AA08CD540}
+		{C5C35C88-992B-4946-AF44-E3BF42310DBF} = {09885E49-51B2-49DE-A7A5-079AA08CD540}
+		{7339C8AD-2A0A-4D00-8E43-476696E4795C} = {09885E49-51B2-49DE-A7A5-079AA08CD540}
+		{73E12ABA-23AE-48E4-A6BD-24B7D9AE8CE0} = {09885E49-51B2-49DE-A7A5-079AA08CD540}
+		{A3825F90-A966-4254-BCEE-26BA159C288D} = {09885E49-51B2-49DE-A7A5-079AA08CD540}
+		{BF6867BE-4783-422D-940E-173DF68FA765} = {09885E49-51B2-49DE-A7A5-079AA08CD540}
+		{B4DAB1E5-D58C-4C46-98E7-EC5322DE8401} = {09885E49-51B2-49DE-A7A5-079AA08CD540}
+		{8FE4C2CB-BC12-4AF4-A1DB-EAF45AC020C5} = {09885E49-51B2-49DE-A7A5-079AA08CD540}
+		{F5D767C8-1E11-440D-BA4E-5A6AC96A345D} = {09885E49-51B2-49DE-A7A5-079AA08CD540}
+		{9FBFE052-A72F-4680-92A6-A246A8AF3D52} = {09885E49-51B2-49DE-A7A5-079AA08CD540}
+		{9E6BD4D3-772C-4FF5-96C8-14D036B6765D} = {09885E49-51B2-49DE-A7A5-079AA08CD540}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AC8F5D60-2040-477F-AA82-78A5906B25FB}
