@@ -35,19 +35,32 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "C#", "C#", "{02DDDDAF-DFEC-
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".NET", ".NET", "{9C7929CA-E68B-4E8C-817A-5B2D9CEE08B0}"
 	ProjectSection(SolutionItems) = preProject
+		Interview Study Guide\.NET\.NET Application Models.md = Interview Study Guide\.NET\.NET Application Models.md
 		Interview Study Guide\.NET\.NET Architecture.md = Interview Study Guide\.NET\.NET Architecture.md
 		Interview Study Guide\.NET\.NET Framework vs Modern .NET.md = Interview Study Guide\.NET\.NET Framework vs Modern .NET.md
-		Interview Study Guide\.NET\Assemblies and Deployment.md = Interview Study Guide\.NET\Assemblies and Deployment.md
+		Interview Study Guide\.NET\.NET SDK and Runtime.md = Interview Study Guide\.NET\.NET SDK and Runtime.md
+		Interview Study Guide\.NET\Application Deployment.md = Interview Study Guide\.NET\Application Deployment.md
+		Interview Study Guide\.NET\Assemblies.md = Interview Study Guide\.NET\Assemblies.md
 		Interview Study Guide\.NET\Asynchronous Programming.md = Interview Study Guide\.NET\Asynchronous Programming.md
+		Interview Study Guide\.NET\Base Class Library.md = Interview Study Guide\.NET\Base Class Library.md
 		Interview Study Guide\.NET\CLR.md = Interview Study Guide\.NET\CLR.md
+		Interview Study Guide\.NET\Collections.md = Interview Study Guide\.NET\Collections.md
+		Interview Study Guide\.NET\Common Intermediate Language.md = Interview Study Guide\.NET\Common Intermediate Language.md
+		Interview Study Guide\.NET\Common Language Specification.md = Interview Study Guide\.NET\Common Language Specification.md
+		Interview Study Guide\.NET\Common Type System.md = Interview Study Guide\.NET\Common Type System.md
 		Interview Study Guide\.NET\Configuration.md = Interview Study Guide\.NET\Configuration.md
+		Interview Study Guide\.NET\Deployment.md = Interview Study Guide\.NET\Deployment.md
 		Interview Study Guide\.NET\Dot NET.md = Interview Study Guide\.NET\Dot NET.md
 		Interview Study Guide\.NET\Entity Framework.md = Interview Study Guide\.NET\Entity Framework.md
 		Interview Study Guide\.NET\Exception Handling.md = Interview Study Guide\.NET\Exception Handling.md
 		Interview Study Guide\.NET\Garbage Collection.md = Interview Study Guide\.NET\Garbage Collection.md
+		Interview Study Guide\.NET\Generics.md = Interview Study Guide\.NET\Generics.md
 		Interview Study Guide\.NET\Interview Questions.md = Interview Study Guide\.NET\Interview Questions.md
+		Interview Study Guide\.NET\Just-In-Time Compilation.md = Interview Study Guide\.NET\Just-In-Time Compilation.md
 		Interview Study Guide\.NET\LINQ.md = Interview Study Guide\.NET\LINQ.md
 		Interview Study Guide\.NET\Logging.md = Interview Study Guide\.NET\Logging.md
+		Interview Study Guide\.NET\Managed and Unmanaged Code.md = Interview Study Guide\.NET\Managed and Unmanaged Code.md
+		Interview Study Guide\.NET\Metadata.md = Interview Study Guide\.NET\Metadata.md
 		Interview Study Guide\.NET\My .NET Experience.md = Interview Study Guide\.NET\My .NET Experience.md
 		Interview Study Guide\.NET\Native Interop.md = Interview Study Guide\.NET\Native Interop.md
 		Interview Study Guide\.NET\Performance Optimization.md = Interview Study Guide\.NET\Performance Optimization.md
@@ -268,6 +281,43 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data Engineer", "Data Engin
 		Interview Study Guide\Data Engineer\Data Engineer.md = Interview Study Guide\Data Engineer\Data Engineer.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LINQ", "LINQ", "{4F4EA15E-2DC8-4C6A-AD47-C4B32857883A}"
+	ProjectSection(SolutionItems) = preProject
+		Interview Study Guide\.NET\LINQ\Average.md = Interview Study Guide\.NET\LINQ\Average.md
+		Interview Study Guide\.NET\LINQ\Count.md = Interview Study Guide\.NET\LINQ\Count.md
+		Interview Study Guide\.NET\LINQ\Database query translation.md = Interview Study Guide\.NET\LINQ\Database query translation.md
+		Interview Study Guide\.NET\LINQ\Deferred execution.md = Interview Study Guide\.NET\LINQ\Deferred execution.md
+		Interview Study Guide\.NET\LINQ\Deferred vs immediate execution.md = Interview Study Guide\.NET\LINQ\Deferred vs immediate execution.md
+		Interview Study Guide\.NET\LINQ\Distinct.md = Interview Study Guide\.NET\LINQ\Distinct.md
+		Interview Study Guide\.NET\LINQ\Except.md = Interview Study Guide\.NET\LINQ\Except.md
+		Interview Study Guide\.NET\LINQ\GroupBy.md = Interview Study Guide\.NET\LINQ\GroupBy.md
+		Interview Study Guide\.NET\LINQ\GroupJoin.md = Interview Study Guide\.NET\LINQ\GroupJoin.md
+		Interview Study Guide\.NET\LINQ\How does Entity Framework translate LINQ.md = Interview Study Guide\.NET\LINQ\How does Entity Framework translate LINQ.md
+		Interview Study Guide\.NET\LINQ\IEnumerable vs IQueryable.md = Interview Study Guide\.NET\LINQ\IEnumerable vs IQueryable.md
+		Interview Study Guide\.NET\LINQ\Intersect.md = Interview Study Guide\.NET\LINQ\Intersect.md
+		Interview Study Guide\.NET\LINQ\Join.md = Interview Study Guide\.NET\LINQ\Join.md
+		Interview Study Guide\.NET\LINQ\Lambda expressions.md = Interview Study Guide\.NET\LINQ\Lambda expressions.md
+		Interview Study Guide\.NET\LINQ\Large collections.md = Interview Study Guide\.NET\LINQ\Large collections.md
+		Interview Study Guide\.NET\LINQ\LINQ providers.md = Interview Study Guide\.NET\LINQ\LINQ providers.md
+		Interview Study Guide\.NET\LINQ\Max.md = Interview Study Guide\.NET\LINQ\Max.md
+		Interview Study Guide\.NET\LINQ\Method syntax.md = Interview Study Guide\.NET\LINQ\Method syntax.md
+		Interview Study Guide\.NET\LINQ\Min.md = Interview Study Guide\.NET\LINQ\Min.md
+		Interview Study Guide\.NET\LINQ\Multiple enumeration.md = Interview Study Guide\.NET\LINQ\Multiple enumeration.md
+		Interview Study Guide\.NET\LINQ\N+1 query problems.md = Interview Study Guide\.NET\LINQ\N+1 query problems.md
+		Interview Study Guide\.NET\LINQ\OrderBy.md = Interview Study Guide\.NET\LINQ\OrderBy.md
+		Interview Study Guide\.NET\LINQ\Query composition.md = Interview Study Guide\.NET\LINQ\Query composition.md
+		Interview Study Guide\.NET\LINQ\Query syntax.md = Interview Study Guide\.NET\LINQ\Query syntax.md
+		Interview Study Guide\.NET\LINQ\Select.md = Interview Study Guide\.NET\LINQ\Select.md
+		Interview Study Guide\.NET\LINQ\SelectMany.md = Interview Study Guide\.NET\LINQ\SelectMany.md
+		Interview Study Guide\.NET\LINQ\Sum.md = Interview Study Guide\.NET\LINQ\Sum.md
+		Interview Study Guide\.NET\LINQ\ThenBy.md = Interview Study Guide\.NET\LINQ\ThenBy.md
+		Interview Study Guide\.NET\LINQ\ToList vs ToArray.md = Interview Study Guide\.NET\LINQ\ToList vs ToArray.md
+		Interview Study Guide\.NET\LINQ\Union.md = Interview Study Guide\.NET\LINQ\Union.md
+		Interview Study Guide\.NET\LINQ\What is the difference between IEnumerable and IQueryable.md = Interview Study Guide\.NET\LINQ\What is the difference between IEnumerable and IQueryable.md
+		Interview Study Guide\.NET\LINQ\What problem LINQ solves.md = Interview Study Guide\.NET\LINQ\What problem LINQ solves.md
+		Interview Study Guide\.NET\LINQ\Where.md = Interview Study Guide\.NET\LINQ\Where.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -435,6 +485,7 @@ Global
 		{F5D767C8-1E11-440D-BA4E-5A6AC96A345D} = {09885E49-51B2-49DE-A7A5-079AA08CD540}
 		{9FBFE052-A72F-4680-92A6-A246A8AF3D52} = {09885E49-51B2-49DE-A7A5-079AA08CD540}
 		{9E6BD4D3-772C-4FF5-96C8-14D036B6765D} = {09885E49-51B2-49DE-A7A5-079AA08CD540}
+		{4F4EA15E-2DC8-4C6A-AD47-C4B32857883A} = {9C7929CA-E68B-4E8C-817A-5B2D9CEE08B0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AC8F5D60-2040-477F-AA82-78A5906B25FB}

@@ -1,3 +1,0 @@
-﻿# Assembilies and Deployment Guide
-
-
