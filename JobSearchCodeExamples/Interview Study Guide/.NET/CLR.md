@@ -89,7 +89,7 @@ is one reason the same assembly can generally run across different
 supported processor architectures without being compiled directly 
 into native code for each architecture.
 
-See [Just-In-Time Compilation](./Just-In-Time Compilation.md) for 
+See [Just-In-Time Compilation](./Just-In-Time%20Compilation.md) for 
 more information.
 
 ## Memory Management
@@ -120,7 +120,7 @@ and reclaims the memory they occupy.
 Garbage collection is an important part of the CLR's memory
 management system.
 
-See [Garbage Collection](./Garbage Collection.md) for more
+See [Garbage Collection](./Garbage%20Collection.md) for more
 information.
 
 ## Exception Handling
@@ -143,7 +143,7 @@ another incompatible type.
 The Common Type System (CTS) defines the types supported by the .NET
 runtime and how those types behave.
 
-See [Common Type System](./Common Type System.md) for more
+See [Common Type System](./Common%20Type%20System.md) for more
 information.
 
 ## Assembly Loading
@@ -180,7 +180,7 @@ interoperability mechanisms such as P/Invoke and COM interop.
 This distinction is particularly important when working with
 C++/CLI, native C++, or legacy Windows components.
 
-See [Managed and Unmanaged Code](./Managed and Unmanaged Code.md) for 
+See [Managed and Unmanaged Code](./Managed%20and%20Unmanaged%20Code.md) for 
 more information.
 
 ## CLR and .NET Languages
