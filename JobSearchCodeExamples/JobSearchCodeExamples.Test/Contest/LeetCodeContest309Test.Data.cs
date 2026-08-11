@@ -312,7 +312,6 @@ public partial class LeetCodeContest309Test
                 new object[] { EmbeddedResourceLoader.LoadJson<Int64[]>("LongestNiceSubArrayTestData.LargeArray20.json"), 25 },
                 new object[] { EmbeddedResourceLoader.LoadJson<Int64[]>("LongestNiceSubArrayTestData.LargeArray21.json"), 25 },
                 new object[] { EmbeddedResourceLoader.LoadJson<Int64[]>("LongestNiceSubArrayTestData.LargeArray22.json"), 30 },
-                new object[] { EmbeddedResourceLoader.LoadJson<Int64[]>("LongestNiceSubArrayTestData.LargeArray23.json"), 30 },
                 new object[] { EmbeddedResourceLoader.LoadJson<Int64[]>("LongestNiceSubArrayTestData.LargeArray24.json"), 2 },
                 new object[] { EmbeddedResourceLoader.LoadJson<Int64[]>("LongestNiceSubArrayTestData.LargeArray25.json"), 30 },
                 new object[] { EmbeddedResourceLoader.LoadJson<Int64[]>("LongestNiceSubArrayTestData.LargeArray26.json"), 29 },

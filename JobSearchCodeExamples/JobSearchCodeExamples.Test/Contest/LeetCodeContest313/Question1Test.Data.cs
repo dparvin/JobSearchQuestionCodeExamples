@@ -28,7 +28,6 @@
                     new object[] { 452, 392, 3 },
                     new object[] { 578, 878, 2 },
                     new object[] { 927, 513, 3 },
-                    new object[] { 927, 513, 3 },
                     new object[] { 683, 850, 1 },
                     new object[] { 506, 720, 2 },
                     new object[] { 956, 528, 3 },
