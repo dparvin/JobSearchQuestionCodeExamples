@@ -3,7 +3,7 @@
     ''' <summary>
     ''' 
     ''' </summary>
-    Public Class RansomNodeTest
+    Public Class RansomNoteTest
 
         <Theory>
         <InlineData("a", "b", False)>

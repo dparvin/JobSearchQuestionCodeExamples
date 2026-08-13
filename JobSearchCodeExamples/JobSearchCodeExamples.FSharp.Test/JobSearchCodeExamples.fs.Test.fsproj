@@ -24,6 +24,7 @@
     <Compile Include="TestTaker\EmployeeCoverageTest.fs" />
     <Compile Include="TestTaker\LinkedListTest.fs" />
     <Compile Include="TestTaker\RansonNoteTest.fs" />
+    <Compile Include="TestTaker\TheaterSeatsTest.fs" />
     <Compile Include="TestTaker\ToIntTest.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>

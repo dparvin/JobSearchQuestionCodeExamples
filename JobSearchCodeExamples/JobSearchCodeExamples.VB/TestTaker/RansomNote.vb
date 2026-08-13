@@ -3,7 +3,7 @@
     Public Class RansomNote
 
         ''' <summary>
-        ''' Determines whether this instance can construct the specified ransom node.
+        ''' Determines whether this instance can construct the specified ransom note.
         ''' </summary>
         ''' <param name="ransomNode">The ransom node.</param>
         ''' <param name="magazine">The magazine.</param>

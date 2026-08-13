@@ -175,6 +175,7 @@
     <ClInclude Include="LinkedLists.h" />
     <ClInclude Include="LongVersion.h" />
     <ClInclude Include="RansomNote.h" />
+    <ClInclude Include="TheaterSeats.h" />
     <ClInclude Include="ToInt.h" />
   </ItemGroup>
   <ItemGroup>
@@ -185,6 +186,7 @@
     <ClCompile Include="LinkedLists.cpp" />
     <ClCompile Include="LongVersion.cpp" />
     <ClCompile Include="RansomNote.cpp" />
+    <ClCompile Include="TheaterSeats.cpp" />
     <ClCompile Include="ToInt.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

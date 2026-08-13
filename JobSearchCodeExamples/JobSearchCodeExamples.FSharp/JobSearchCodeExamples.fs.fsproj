@@ -23,6 +23,7 @@
     <Compile Include="TestTaker\LinkedList.fs" />
     <Compile Include="TestTaker\RansomNode.fs" />
     <Compile Include="TestTaker\ToInt.fs" />
+    <Compile Include="TheaterSeats.fs" />
   </ItemGroup>
 
   <ItemGroup>
