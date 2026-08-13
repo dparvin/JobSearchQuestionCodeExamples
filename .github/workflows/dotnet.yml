@@ -20,18 +20,15 @@ jobs:
     runs-on: windows-2025-vs2026
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v5
     
     - name: Setup .NET
-      uses: actions/setup-dotnet@v2
+      uses: actions/setup-dotnet@v5
       with:
         dotnet-version: '10.0.x'
         
     - name: Add MSBuild to PATH (Windows)
-      uses: microsoft/setup-msbuild@v1.0.2
-
-    - name: Setup VSTest Path
-      uses: darenm/Setup-VSTest@v1
+      uses: microsoft/setup-msbuild@v3
 
     - name: Get .NET information
       run: dotnet --info
@@ -40,17 +37,16 @@ jobs:
       run: dotnet restore ${{ github.workspace }}\JobSearchCodeExamples\JobSearchCodeExamples.sln --verbosity detailed
       
     - name: Build
-##      run: dotnet build ${{ github.workspace }}\JobSearchCodeExamples\JobSearchCodeExamples.sln  
       run: msbuild ${{ github.workspace }}\JobSearchCodeExamples\JobSearchCodeExamples.sln -t:build -p:Configuration=Debug -p:Platform=x64
       
-##    - name: Test JobSearchCodeExamples.Test
-##      run: vstest.console.exe ${{ github.workspace }}\JobSearchCodeExamples\Build\**\*.test.dll /ResultsDirectory:${{ github.workspace }}\TestResults /InIsolation /Platform:x64 /Framework:.NETFramework,Version=v6.0 /parallel /Enablecodecoverage /Logger:trx /TestAdapterPath:"C:\Users\runneradmin\.nuget\packages\"
-##      run: dotnet test ${{ github.workspace }}\JobSearchCodeExamples\JobSearchCodeExamples.Test\JobSearchCodeExamples.Test.csproj --verbosity detailed --results-directory ${{ github.workspace }}\TestResults --no-build
+    - name: Test JobSearchCodeExamples.cpp.Test
+      run: dotnet test ${{ github.workspace }}\JobSearchCodeExamples\JobSearchCodeExamples.cpp.Test\JobSearchCodeExamples.cpp.Test.csproj --verbosity detailed --results-directory ${{ github.workspace }}\TestResults --no-build
 
-##    - name: Test JobSearchCodeExamples.VB.Test
-##      run: vstest.console.exe ${{ github.workspace }}\JobSearchCodeExamples\Build\**\*.test.dll /ResultsDirectory:${{ github.workspace }}\TestResults /InIsolation /Platform:x64 /Framework:.NETFramework,Version=v6.0 /parallel /Enablecodecoverage /Logger:trx /TestAdapterPath:"C:\Users\runneradmin\.nuget\packages\"
-##      run: dotnet test ${{ github.workspace }}\JobSearchCodeExamples\JobSearchCodeExamples.VB.Test\JobSearchCodeExamples.VB.Test.vbproj --verbosity detailed --results-directory ${{ github.workspace }}\TestResults --no-build
+    - name: Test JobSearchCodeExamples.cs.Test
+      run: dotnet test ${{ github.workspace }}\JobSearchCodeExamples\JobSearchCodeExamples.Test\JobSearchCodeExamples.cs.Test.csproj --verbosity detailed --results-directory ${{ github.workspace }}\TestResults --no-build
 
-##    - name: Test JobSearchCodeExamples.FSharp.Test
-##      run: vstest.console.exe ${{ github.workspace }}\JobSearchCodeExamples\Build\**\*.test.dll /ResultsDirectory:${{ github.workspace }}\TestResults /InIsolation /Platform:x64 /Framework:.NETFramework,Version=v6.0 /parallel /Enablecodecoverage /Logger:trx /TestAdapterPath:"C:\Users\runneradmin\.nuget\packages\"
-##      run: dotnet test ${{ github.workspace }}\JobSearchCodeExamples\JobSearchCodeExamples.VB.Test\JobSearchCodeExamples.FSharp.Test.fsproj --verbosity detailed --results-directory ${{ github.workspace }}\TestResults --no-build
+    - name: Test JobSearchCodeExamples.VB.Test
+      run: dotnet test ${{ github.workspace }}\JobSearchCodeExamples\JobSearchCodeExamples.VB.Test\JobSearchCodeExamples.VB.Test.vbproj --verbosity detailed --results-directory ${{ github.workspace }}\TestResults --no-build
+
+    - name: Test JobSearchCodeExamples.FSharp.Test
+      run: dotnet test ${{ github.workspace }}\JobSearchCodeExamples\JobSearchCodeExamples.FSharp.Test\JobSearchCodeExamples.fs.Test.fsproj --verbosity detailed --results-directory ${{ github.workspace }}\TestResults --no-build
