@@ -40,13 +40,13 @@ jobs:
       run: msbuild ${{ github.workspace }}\JobSearchCodeExamples\JobSearchCodeExamples.sln -t:build -p:Configuration=Debug -p:Platform=x64
       
     - name: Test JobSearchCodeExamples.cpp.Test
-      run: dotnet test ${{ github.workspace }}\JobSearchCodeExamples\JobSearchCodeExamples.cpp.Test\JobSearchCodeExamples.cpp.Test.csproj --verbosity detailed --results-directory ${{ github.workspace }}\TestResults --no-build
+      run: dotnet test ${{ github.workspace }}\JobSearchCodeExamples\JobSearchCodeExamples.cpp.Test\JobSearchCodeExamples.cpp.Test.csproj -p:Configuration=Debug -p:Platform=x64 --verbosity detailed --results-directory ${{ github.workspace }}\TestResults --no-build
 
     - name: Test JobSearchCodeExamples.cs.Test
-      run: dotnet test ${{ github.workspace }}\JobSearchCodeExamples\JobSearchCodeExamples.Test\JobSearchCodeExamples.cs.Test.csproj --verbosity detailed --results-directory ${{ github.workspace }}\TestResults --no-build
+      run: dotnet test ${{ github.workspace }}\JobSearchCodeExamples\JobSearchCodeExamples.Test\JobSearchCodeExamples.cs.Test.csproj -p:Configuration=Debug -p:Platform=x64 --verbosity detailed --results-directory ${{ github.workspace }}\TestResults --no-build
 
     - name: Test JobSearchCodeExamples.VB.Test
-      run: dotnet test ${{ github.workspace }}\JobSearchCodeExamples\JobSearchCodeExamples.VB.Test\JobSearchCodeExamples.VB.Test.vbproj --verbosity detailed --results-directory ${{ github.workspace }}\TestResults --no-build
+      run: dotnet test ${{ github.workspace }}\JobSearchCodeExamples\JobSearchCodeExamples.VB.Test\JobSearchCodeExamples.VB.Test.vbproj -p:Configuration=Debug -p:Platform=x64 --verbosity detailed --results-directory ${{ github.workspace }}\TestResults --no-build
 
     - name: Test JobSearchCodeExamples.FSharp.Test
-      run: dotnet test ${{ github.workspace }}\JobSearchCodeExamples\JobSearchCodeExamples.FSharp.Test\JobSearchCodeExamples.fs.Test.fsproj --verbosity detailed --results-directory ${{ github.workspace }}\TestResults --no-build
+      run: dotnet test ${{ github.workspace }}\JobSearchCodeExamples\JobSearchCodeExamples.FSharp.Test\JobSearchCodeExamples.fs.Test.fsproj -p:Configuration=Debug -p:Platform=x64 --verbosity detailed --results-directory ${{ github.workspace }}\TestResults --no-build
