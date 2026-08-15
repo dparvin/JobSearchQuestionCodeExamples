@@ -4,3 +4,7 @@ plugins:
 relative_links:
   enabled: true
   collections: true
+
+include:
+  - ".NET"
+  - ".NET Backend Developer"
