@@ -7,6 +7,7 @@ body {
 }
 
 .container {
+    width: 90%;
     max-width: 980px;
     margin: 0 auto;
     padding: 32px;
@@ -31,9 +32,9 @@ a {
     text-decoration: none;
 }
 
-a:hover {
-    text-decoration: underline;
-}
+    a:hover {
+        text-decoration: underline;
+    }
 
 code {
     padding: 0.2em 0.4em;
@@ -50,10 +51,10 @@ pre {
     border-radius: 6px;
 }
 
-pre code {
-    padding: 0;
-    background: transparent;
-}
+    pre code {
+        padding: 0;
+        background: transparent;
+    }
 
 table {
     border-spacing: 0;

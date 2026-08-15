@@ -324,6 +324,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_layouts", "_layouts", "{79
 		Interview Study Guide\_layouts\default.html = Interview Study Guide\_layouts\default.html
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "assets", "assets", "{B76C4706-09FD-47EE-8856-93711ADADA1B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "css", "css", "{4C57A5F2-2158-41EB-836B-D0AB68071BDF}"
+	ProjectSection(SolutionItems) = preProject
+		Interview Study Guide\assets\css\style.css = Interview Study Guide\assets\css\style.css
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -493,6 +500,8 @@ Global
 		{9E6BD4D3-772C-4FF5-96C8-14D036B6765D} = {09885E49-51B2-49DE-A7A5-079AA08CD540}
 		{4F4EA15E-2DC8-4C6A-AD47-C4B32857883A} = {9C7929CA-E68B-4E8C-817A-5B2D9CEE08B0}
 		{7976D801-0E7F-457A-8AE4-1008BAD41B0A} = {09885E49-51B2-49DE-A7A5-079AA08CD540}
+		{B76C4706-09FD-47EE-8856-93711ADADA1B} = {09885E49-51B2-49DE-A7A5-079AA08CD540}
+		{4C57A5F2-2158-41EB-836B-D0AB68071BDF} = {B76C4706-09FD-47EE-8856-93711ADADA1B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AC8F5D60-2040-477F-AA82-78A5906B25FB}
