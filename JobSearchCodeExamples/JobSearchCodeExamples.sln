@@ -26,6 +26,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Interview Study Guide", "Interview Study Guide", "{09885E49-51B2-49DE-A7A5-079AA08CD540}"
 	ProjectSection(SolutionItems) = preProject
 		Interview Study Guide\Study Guide.md = Interview Study Guide\Study Guide.md
+		Interview Study Guide\_config.yml = Interview Study Guide\_config.yml
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "C#", "C#", "{02DDDDAF-DFEC-4312-A080-2897CAC0043E}"
@@ -35,10 +36,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "C#", "C#", "{02DDDDAF-DFEC-
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dot NET", "Dot NET", "{9C7929CA-E68B-4E8C-817A-5B2D9CEE08B0}"
 	ProjectSection(SolutionItems) = preProject
-		Interview Study Guide\Dot NET\Dot NET Application Models.md = Interview Study Guide\Dot NET\Dot NET Application Models.md
-		Interview Study Guide\Dot NET\Dot NET Architecture.md = Interview Study Guide\Dot NET\Dot NET Architecture.md
-		Interview Study Guide\Dot NET\Dot NET Framework vs Modern .NET.md = Interview Study Guide\Dot NET\Dot NET Framework vs Modern .NET.md
-		Interview Study Guide\Dot NET\Dot NET SDK and Runtime.md = Interview Study Guide\Dot NET\Dot NET SDK and Runtime.md
 		Interview Study Guide\Dot NET\Application Deployment.md = Interview Study Guide\Dot NET\Application Deployment.md
 		Interview Study Guide\Dot NET\Assemblies.md = Interview Study Guide\Dot NET\Assemblies.md
 		Interview Study Guide\Dot NET\Asynchronous Programming.md = Interview Study Guide\Dot NET\Asynchronous Programming.md
@@ -50,6 +47,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dot NET", "Dot NET", "{9C79
 		Interview Study Guide\Dot NET\Common Type System.md = Interview Study Guide\Dot NET\Common Type System.md
 		Interview Study Guide\Dot NET\Configuration.md = Interview Study Guide\Dot NET\Configuration.md
 		Interview Study Guide\Dot NET\Deployment.md = Interview Study Guide\Dot NET\Deployment.md
+		Interview Study Guide\Dot NET\Dot NET Application Models.md = Interview Study Guide\Dot NET\Dot NET Application Models.md
+		Interview Study Guide\Dot NET\Dot NET Architecture.md = Interview Study Guide\Dot NET\Dot NET Architecture.md
+		Interview Study Guide\Dot NET\Dot NET Framework vs Modern .NET.md = Interview Study Guide\Dot NET\Dot NET Framework vs Modern .NET.md
+		Interview Study Guide\Dot NET\Dot NET SDK and Runtime.md = Interview Study Guide\Dot NET\Dot NET SDK and Runtime.md
 		Interview Study Guide\Dot NET\Dot NET.md = Interview Study Guide\Dot NET\Dot NET.md
 		Interview Study Guide\Dot NET\Entity Framework.md = Interview Study Guide\Dot NET\Entity Framework.md
 		Interview Study Guide\Dot NET\Exception Handling.md = Interview Study Guide\Dot NET\Exception Handling.md
@@ -318,6 +319,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LINQ", "LINQ", "{4F4EA15E-2
 		Interview Study Guide\Dot NET\LINQ\Where.md = Interview Study Guide\Dot NET\LINQ\Where.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_layouts", "_layouts", "{7976D801-0E7F-457A-8AE4-1008BAD41B0A}"
+	ProjectSection(SolutionItems) = preProject
+		Interview Study Guide\_layouts\default.html = Interview Study Guide\_layouts\default.html
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -486,6 +492,7 @@ Global
 		{9FBFE052-A72F-4680-92A6-A246A8AF3D52} = {09885E49-51B2-49DE-A7A5-079AA08CD540}
 		{9E6BD4D3-772C-4FF5-96C8-14D036B6765D} = {09885E49-51B2-49DE-A7A5-079AA08CD540}
 		{4F4EA15E-2DC8-4C6A-AD47-C4B32857883A} = {9C7929CA-E68B-4E8C-817A-5B2D9CEE08B0}
+		{7976D801-0E7F-457A-8AE4-1008BAD41B0A} = {09885E49-51B2-49DE-A7A5-079AA08CD540}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AC8F5D60-2040-477F-AA82-78A5906B25FB}

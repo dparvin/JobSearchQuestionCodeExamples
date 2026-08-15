@@ -8,3 +8,11 @@ relative_links:
 include:
   - ".NET"
   - ".NET Backend Developer"
+
+theme: null
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
