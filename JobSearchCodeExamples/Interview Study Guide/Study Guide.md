@@ -16,7 +16,7 @@ system design, and behavioral questions. Each section provides explanations,
 examples, and practice problems to reinforce your understanding of the 
 concepts.
 
-- [.NET](./.NET/Dot%20NET.md)
+- [.NET](./Dot%20NET/Dot%20NET.md)
 - [Behavioral Questions](./Behavioral%20Questions/Behavioral%20Questions.md)
 - [Coding Exercises](./Coding%20Exercises/Coding%20Exercises.md)
 - [Design Patterns](./Design%20Patterns/Design%20Patterns.md)
@@ -53,7 +53,7 @@ concepts.
 
 ## Job Type Preparation
 - [Full-Stack Developer](./Full-Stack%20Developer/Full-Stack%20Developer.md)
-- [.NET Backend Developer](./.NET%20Backend%20Developer/.NET%20Backend%20Developer.md)
+- [.NET Backend Developer](./Dot%20NET%20Backend%20Developer/.NET%20Backend%20Developer.md)
 - [System Architect](./System%20Architect/System%20Architect.md)
 - [DevOps Engineer](./DevOps%20Engineer/DevOps%20Engineer.md)
 - [Data Engineer](./Data%20Engineer/Data%20Engineer.md)
