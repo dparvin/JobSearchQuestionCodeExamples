@@ -46,6 +46,11 @@ jobs:
             sudo sed -i -E 's/(href="[^"]*)\.md([^"]*")/\1.html\2/g' "$file"
           done
           
+      - name: Show generated files
+        run: |
+          echo "===== Generated files ====="
+          find ./_site -type f | sort
+      
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
 
