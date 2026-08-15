@@ -9,8 +9,8 @@ learned and interview questions that might be asked about them.
 
 ## Topics
 
-- [.NET Architecture](.NET%20Architecture.md)
-- [.NET Framework vs Modern .NET](.NET%20Framework%20vs%20Modern%20.NET.md)
+- [.NET Architecture](Dot%20NET%20Architecture.md)
+- [.NET Framework vs Modern .NET](Dot%20NET%20Framework%20vs%20Modern%20.NET.md)
 - [Common Language Runtime (CLR)](CLR.md)
 - [Assemblies](Assemblies.md)
 - [Deployment](Deployment.md)
