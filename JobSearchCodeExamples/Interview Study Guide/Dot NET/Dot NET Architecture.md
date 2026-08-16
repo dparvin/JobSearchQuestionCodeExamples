@@ -19,9 +19,9 @@ as well as how the different components of the platform work together.
 - [Common Language Specification (CLS)](Common%20Language%20Specification.md)
 - [Garbage Collection](Garbage%20Collection.md)
 - [Managed and Unmanaged Code](Managed%20and%20Unmanaged%20Code.md)
-- [.NET Application Models](.NET%20Application%20Models.md)
-- [.NET Framework vs. Modern .NET](.NET%20Framework%20vs%20Modern%20.NET.md)
-- [.NET SDK and Runtime](.NET%20SDK%20and%20Runtime.md)
+- [.NET Application Models](Dot%20NET%20Application%20Models.md)
+- [.NET Framework vs. Modern .NET](Dot%20NET%20Framework%20vs%20Modern%20.NET.md)
+- [.NET SDK and Runtime](Dot%20NET%20SDK%20and%20Runtime.md)
 - [Application Deployment](Application%20Deployment.md)
 
 ## Execution Flow
@@ -63,4 +63,3 @@ target processor.
 This allows the same compiled assembly to run on different
 supported platforms without requiring the source code to be
 compiled directly for each processor architecture.
-
