@@ -15,6 +15,10 @@ schedule.
 Because this repository is intended for educational purposes, security
 vulnerabilities may be reported through the repository's public GitHub Issues.
 
+If a report contains sensitive information such as credentials, secrets, or
+personal information, please do not include that information in the public
+issue. Instead, contact the repository owner privately through GitHub.
+
 When reporting a security issue, please provide:
 
 - A description of the vulnerability.
