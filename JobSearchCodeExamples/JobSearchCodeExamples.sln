@@ -229,12 +229,28 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PHP", "PHP", "{D68E6CF6-839
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Git", "Git", "{405F561E-251D-4505-9548-280A9047C277}"
 	ProjectSection(SolutionItems) = preProject
-		Interview Study Guide\Git\Git.md = Interview Study Guide\Git\Git.md
+		Interview Study Guide\Source Control\Git\Branches.md = Interview Study Guide\Source Control\Git\Branches.md
+		Interview Study Guide\Source Control\Git\Commits.md = Interview Study Guide\Source Control\Git\Commits.md
+		Interview Study Guide\Source Control\Git\Configuration.md = Interview Study Guide\Source Control\Git\Configuration.md
+		Interview Study Guide\Source Control\Git\Fetch Pull and Push.md = Interview Study Guide\Source Control\Git\Fetch Pull and Push.md
+		Interview Study Guide\Source Control\Git\Git vs GitHub.md = Interview Study Guide\Source Control\Git\Git vs GitHub.md
+		Interview Study Guide\Source Control\Git\Git vs TFVC.md = Interview Study Guide\Source Control\Git\Git vs TFVC.md
+		Interview Study Guide\Source Control\Git\Git.md = Interview Study Guide\Source Control\Git\Git.md
+		Interview Study Guide\Source Control\Git\Merging.md = Interview Study Guide\Source Control\Git\Merging.md
+		Interview Study Guide\Source Control\Git\Rebasing.md = Interview Study Guide\Source Control\Git\Rebasing.md
+		Interview Study Guide\Source Control\Git\Remote Repositories.md = Interview Study Guide\Source Control\Git\Remote Repositories.md
+		Interview Study Guide\Source Control\Git\Repositories.md = Interview Study Guide\Source Control\Git\Repositories.md
+		Interview Study Guide\Source Control\Git\Resolving Merge Conflicts.md = Interview Study Guide\Source Control\Git\Resolving Merge Conflicts.md
+		Interview Study Guide\Source Control\Git\Stash.md = Interview Study Guide\Source Control\Git\Stash.md
+		Interview Study Guide\Source Control\Git\Tags.md = Interview Study Guide\Source Control\Git\Tags.md
+		Interview Study Guide\Source Control\Git\Undoing Changes.md = Interview Study Guide\Source Control\Git\Undoing Changes.md
+		Interview Study Guide\Source Control\Git\Workflow.md = Interview Study Guide\Source Control\Git\Workflow.md
+		Interview Study Guide\Source Control\Git\Working Directory and Staging Area.md = Interview Study Guide\Source Control\Git\Working Directory and Staging Area.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Azure DevOps", "Azure DevOps", "{C5C35C88-992B-4946-AF44-E3BF42310DBF}"
 	ProjectSection(SolutionItems) = preProject
-		Interview Study Guide\Azure DevOps\Azure DevOps.md = Interview Study Guide\Azure DevOps\Azure DevOps.md
+		Interview Study Guide\Source Control\Azure DevOps\Azure DevOps.md = Interview Study Guide\Source Control\Azure DevOps\Azure DevOps.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CI-CD", "CI-CD", "{7339C8AD-2A0A-4D00-8E43-476696E4795C}"
@@ -329,6 +345,16 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "css", "css", "{4C57A5F2-2158-41EB-836B-D0AB68071BDF}"
 	ProjectSection(SolutionItems) = preProject
 		Interview Study Guide\assets\css\style.css = Interview Study Guide\assets\css\style.css
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GitHub", "GitHub", "{93D5D8D4-15A6-427B-BE96-4F04E8A5D73D}"
+	ProjectSection(SolutionItems) = preProject
+		Interview Study Guide\Source Control\GitHub\GitHub.md = Interview Study Guide\Source Control\GitHub\GitHub.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source Control", "Source Control", "{5A60E111-8ED3-4BBF-881C-AC5611DBB0D1}"
+	ProjectSection(SolutionItems) = preProject
+		Interview Study Guide\Source Control\Source Control.md = Interview Study Guide\Source Control\Source Control.md
 	EndProjectSection
 EndProject
 Global
@@ -487,8 +513,8 @@ Global
 		{AC79C7D7-87D1-4ADE-8638-E4D30A319A7B} = {09885E49-51B2-49DE-A7A5-079AA08CD540}
 		{23760B9B-9629-417C-80DC-7709771E27A4} = {09885E49-51B2-49DE-A7A5-079AA08CD540}
 		{D68E6CF6-8394-47C9-839C-22B24FD5B7D7} = {09885E49-51B2-49DE-A7A5-079AA08CD540}
-		{405F561E-251D-4505-9548-280A9047C277} = {09885E49-51B2-49DE-A7A5-079AA08CD540}
-		{C5C35C88-992B-4946-AF44-E3BF42310DBF} = {09885E49-51B2-49DE-A7A5-079AA08CD540}
+		{405F561E-251D-4505-9548-280A9047C277} = {5A60E111-8ED3-4BBF-881C-AC5611DBB0D1}
+		{C5C35C88-992B-4946-AF44-E3BF42310DBF} = {5A60E111-8ED3-4BBF-881C-AC5611DBB0D1}
 		{7339C8AD-2A0A-4D00-8E43-476696E4795C} = {09885E49-51B2-49DE-A7A5-079AA08CD540}
 		{73E12ABA-23AE-48E4-A6BD-24B7D9AE8CE0} = {09885E49-51B2-49DE-A7A5-079AA08CD540}
 		{A3825F90-A966-4254-BCEE-26BA159C288D} = {09885E49-51B2-49DE-A7A5-079AA08CD540}
@@ -502,6 +528,8 @@ Global
 		{7976D801-0E7F-457A-8AE4-1008BAD41B0A} = {09885E49-51B2-49DE-A7A5-079AA08CD540}
 		{B76C4706-09FD-47EE-8856-93711ADADA1B} = {09885E49-51B2-49DE-A7A5-079AA08CD540}
 		{4C57A5F2-2158-41EB-836B-D0AB68071BDF} = {B76C4706-09FD-47EE-8856-93711ADADA1B}
+		{93D5D8D4-15A6-427B-BE96-4F04E8A5D73D} = {5A60E111-8ED3-4BBF-881C-AC5611DBB0D1}
+		{5A60E111-8ED3-4BBF-881C-AC5611DBB0D1} = {09885E49-51B2-49DE-A7A5-079AA08CD540}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AC8F5D60-2040-477F-AA82-78A5906B25FB}

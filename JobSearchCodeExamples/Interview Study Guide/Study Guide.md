@@ -9,12 +9,17 @@
      experiences. -->
 
 # Interview Study Guide
+This guide is designed to help me prepare for technical interviews.
+It covers a wide range of topics, including data structures,
+algorithms, system design, and behavioral questions. Each section
+provides explanations, examples, and practice problems to reinforce
+my understanding of the concepts.
 
-This guide is designed to help me prepare for technical interviews. It 
-covers a wide range of topics, including data structures, algorithms, 
-system design, and behavioral questions. Each section provides explanations, 
-examples, and practice problems to reinforce your understanding of the 
-concepts.
+The purpose of this guide is not to document everything I know or to
+reproduce existing technical documentation. It is a collection of
+concepts, experiences, and examples that I find useful when
+preparing for technical interviews. Where appropriate, it provides
+links to authoritative documentation for more detailed information.
 
 - [.NET](./Dot%20NET/Dot%20NET.md)
 - [Behavioral Questions](./Behavioral%20Questions/Behavioral%20Questions.md)
@@ -42,9 +47,8 @@ concepts.
 - [C++](./C%2B%2B/C%2B%2B.md)
 - [PHP](./PHP/PHP.md)
 
-## Tools and Practices
-- [Git](./Git/Git.md)
-- [Azure DevOps](./Azure%20DevOps/Azure%20DevOps.md)
+## Tools and Practice
+- [Source Control](./Source%20Control/Source%20Control.md)
 - [CI/CD](./CI-CD/CI-CD.md)
 - [Unit Testing](./Unit%20Testing/Unit%20Testing.md)
 - [Code Coverage](./Code%20Coverage/Code%20Coverage.md)
